@@ -1,0 +1,18 @@
+[
+  {
+    "id": "react-blog-feed",
+    "url": "https://react.dev/rss.xml",
+    "status": 200,
+    "contentType": "application/xml",
+    "bytes": 18181,
+    "checkedAt": "2026-10-31T03:48:31.350Z"
+  },
+  {
+    "id": "vite-blog-feed",
+    "url": "https://vite.dev/blog.rss",
+    "status": 200,
+    "contentType": "application/rss+xml",
+    "bytes": 242873,
+    "checkedAt": "2026-10-31T03:48:31.415Z"
+  }
+]

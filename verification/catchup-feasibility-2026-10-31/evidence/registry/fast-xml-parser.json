@@ -1,0 +1,100 @@
+{
+  "observedAt": "2026-10-31T03:44:34.045Z",
+  "cutoff": "2026-10-28T03:44:34.045Z",
+  "name": "fast-xml-parser",
+  "source": "https://registry.npmjs.org/fast-xml-parser",
+  "distTags": {
+    "legacy": "4.5.7",
+    "latest": "5.11.2"
+  },
+  "latestStable": {
+    "version": "5.11.2",
+    "publishedAt": "2026-09-29T04:45:32.224Z",
+    "dependencies": {
+      "strnum": "^2.4.2",
+      "is-unsafe": "^2.0.0",
+      "xml-naming": "^0.3.0",
+      "fast-xml-builder": "^1.2.0",
+      "@nodable/entities": "^3.0.1",
+      "path-expression-matcher": "^1.6.2"
+    },
+    "scripts": {
+      "lint": "eslint src/**/*.js spec/**/*.js benchmark/**/*.js",
+      "perf": "node ./benchmark/perfTest3.js",
+      "test": "c8 --reporter=lcov --reporter=text jasmine spec/*spec.js",
+      "unit": "jasmine",
+      "bundle": "webpack --config webpack.cjs.config.js",
+      "prettier": "prettier --write src/**/*.js",
+      "preversion": "npm test",
+      "test-types": "tsc --noEmit spec/typings/typings-test.ts"
+    },
+    "dist": {
+      "shasum": "0d4987adf4e7934af11d82a73b2841eca9928a42",
+      "tarball": "https://registry.npmjs.org/fast-xml-parser/-/fast-xml-parser-5.11.2.tgz",
+      "fileCount": 53,
+      "integrity": "sha512-R9iDuNrQYeQut46cn2r2wHKn4HYzVDvDm5J1wW+koZewykv0yuO2HChTYeZtrULyHIDM9cj9TUXloCsueCQUog==",
+      "signatures": [
+        {
+          "sig": "MEYCIQChrdnFCvGJs/3K32Zi2lShSGpaDKLhqgyboNGWsMbDUAIhAKqhgzFR0ZwOFEttqyjQ+An+WICPdRbVehfUyabDZ7Ef",
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+        },
+        {
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+          "sig": "MEQCIGV1qKh9ROaatY0fBTCqKe3atAaE15uft3Qql73uApOiAiBogGCIQNTxy12OhpGgjhvXXTccMYEGEEeZ+j5khf75Jg=="
+        }
+      ],
+      "attestations": {
+        "url": "https://registry.npmjs.org/-/npm/v1/attestations/fast-xml-parser@5.11.2",
+        "provenance": {
+          "predicateType": "https://slsa.dev/provenance/v1"
+        }
+      },
+      "unpackedSize": 1315394
+    }
+  },
+  "eligible": {
+    "version": "5.11.2",
+    "publishedAt": "2026-09-29T04:45:32.224Z",
+    "dependencies": {
+      "strnum": "^2.4.2",
+      "is-unsafe": "^2.0.0",
+      "xml-naming": "^0.3.0",
+      "fast-xml-builder": "^1.2.0",
+      "@nodable/entities": "^3.0.1",
+      "path-expression-matcher": "^1.6.2"
+    },
+    "scripts": {
+      "lint": "eslint src/**/*.js spec/**/*.js benchmark/**/*.js",
+      "perf": "node ./benchmark/perfTest3.js",
+      "test": "c8 --reporter=lcov --reporter=text jasmine spec/*spec.js",
+      "unit": "jasmine",
+      "bundle": "webpack --config webpack.cjs.config.js",
+      "prettier": "prettier --write src/**/*.js",
+      "preversion": "npm test",
+      "test-types": "tsc --noEmit spec/typings/typings-test.ts"
+    },
+    "dist": {
+      "shasum": "0d4987adf4e7934af11d82a73b2841eca9928a42",
+      "tarball": "https://registry.npmjs.org/fast-xml-parser/-/fast-xml-parser-5.11.2.tgz",
+      "fileCount": 53,
+      "integrity": "sha512-R9iDuNrQYeQut46cn2r2wHKn4HYzVDvDm5J1wW+koZewykv0yuO2HChTYeZtrULyHIDM9cj9TUXloCsueCQUog==",
+      "signatures": [
+        {
+          "sig": "MEYCIQChrdnFCvGJs/3K32Zi2lShSGpaDKLhqgyboNGWsMbDUAIhAKqhgzFR0ZwOFEttqyjQ+An+WICPdRbVehfUyabDZ7Ef",
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+        },
+        {
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+          "sig": "MEQCIGV1qKh9ROaatY0fBTCqKe3atAaE15uft3Qql73uApOiAiBogGCIQNTxy12OhpGgjhvXXTccMYEGEEeZ+j5khf75Jg=="
+        }
+      ],
+      "attestations": {
+        "url": "https://registry.npmjs.org/-/npm/v1/attestations/fast-xml-parser@5.11.2",
+        "provenance": {
+          "predicateType": "https://slsa.dev/provenance/v1"
+        }
+      },
+      "unpackedSize": 1315394
+    }
+  }
+}

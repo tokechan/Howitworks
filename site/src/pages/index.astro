@@ -1,0 +1,33 @@
+---
+import Base from '../layouts/Base.astro';
+import SearchBox from '../components/SearchBox.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+import ResourceLinks from '../components/ResourceLinks.astro';
+import { articles, topics } from '../lib/content';
+import { href } from '../../scripts/config.mjs';
+const entries = await articles();
+const latest = entries[0];
+---
+<Base>
+  <section class="home-hero">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="tiny-line"></span> A PERSONAL KNOWLEDGE JOURNAL</p>
+      <h1>「なんで？」を、<br/><span class="highlight-word">わかるまで。</span></h1>
+      <p class="hero-description">ソフトウェアのしくみを、調べて、動かして。<br/>理解したことを、出典と一緒に残すノート。</p>
+      <SearchBox />
+      <div class="quick-search"><span>例えば</span>{['Brotli', 'fetch', '入力待ち'].map(q => <a href={href(`search/?q=${encodeURIComponent(q)}`)}>{q} <span>↗</span></a>)}</div>
+    </div>
+    {latest && <a class="hero-lab" href={href(`articles/${latest.id}/`)} aria-label="Brotliの記事を読む">
+      <div class="lab-caption"><span class="eyebrow">FROM THE NOTEBOOK</span><span class="lab-stamp">実際に<br/>確かめた！</span></div>
+      <div class="lab-question">同じデータ。<br/><strong>受け取り方で、変わる。</strong></div>
+      <div class="lab-flow" aria-hidden="true"><div class="lab-source"><small>HTTP RESPONSE</small><b>103 <em>B</em></b><span>Content-Encoding: br</span></div><div class="flow-branches"><span>↓</span><span>↓</span></div><div class="lab-outputs"><div><code>node:http</code><b>103 <em>B</em></b><small>圧縮されたまま</small></div><div class="decoded"><code>fetch</code><b>4,280 <em>B</em></b><small>自動で展開</small></div></div></div>
+      <div class="lab-footnote"><span>実測 · Node.js v24.22.1 / HTTP/1.1</span><span aria-hidden="true">↗</span></div>
+    </a>}
+  </section>
+  <section class="journal-section" aria-labelledby="latest-title">
+    <div class="section-heading"><div><span class="eyebrow">LATEST NOTES</span><h2 id="latest-title">最近のノート<span class="count">{String(entries.length).padStart(2, '0')}</span></h2></div><a class="text-link" href={href('articles/')}>すべての記事 <span>→</span></a></div>
+    {entries.length ? entries.map((article, i) => <ArticleCard article={article} index={i + 1} />) : <p class="empty-note">公開記事を準備しています。</p>}
+  </section>
+  {latest && <section class="experience-section"><div class="section-heading"><div><span class="eyebrow">READ, TRY, SHARE</span><h2>読む、その先へ。</h2></div><p>Brotliの理解を、別の角度から。</p></div><ResourceLinks simulator={latest.data.simulator} talk={latest.data.talk} /></section>}
+  <section class="topic-strip"><span class="eyebrow">EXPLORE TOPICS</span><div>{topics.map(topic => <a href={href(`topics/${topic.id}/`)}>{topic.label}<span>↗</span></a>)}</div></section>
+</Base>

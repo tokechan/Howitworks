@@ -1,0 +1,13 @@
+[
+  {
+    "id": "preservation",
+    "command": [
+      "node",
+      "probes/preservation.mjs"
+    ],
+    "startedAt": "2026-10-31T03:56:18.832Z",
+    "finishedAt": "2026-10-31T03:56:20.184Z",
+    "exitCode": 0,
+    "status": "passed"
+  }
+]

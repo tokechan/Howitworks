@@ -1,0 +1,13 @@
+[
+  {
+    "id": "versions",
+    "command": [
+      "node",
+      "probes/versions.mjs"
+    ],
+    "startedAt": "2026-10-31T03:44:33.903Z",
+    "finishedAt": "2026-10-31T03:44:38.984Z",
+    "exitCode": 0,
+    "status": "passed"
+  }
+]

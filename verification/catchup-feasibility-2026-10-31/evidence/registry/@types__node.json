@@ -1,0 +1,105 @@
+{
+  "observedAt": "2026-10-31T03:44:34.045Z",
+  "cutoff": "2026-10-28T03:44:34.045Z",
+  "name": "@types/node",
+  "source": "https://registry.npmjs.org/%40types%2Fnode",
+  "distTags": {
+    "ts2.0": "12.12.6",
+    "ts2.2": "12.12.6",
+    "ts2.4": "12.12.6",
+    "ts2.3": "12.12.6",
+    "ts2.7": "12.12.6",
+    "ts2.5": "12.12.6",
+    "ts2.1": "12.12.6",
+    "ts2.6": "12.12.6",
+    "ts2.8": "13.13.4",
+    "ts2.9": "14.0.1",
+    "ts3.0": "14.6.0",
+    "ts3.1": "14.10.1",
+    "ts3.2": "14.14.9",
+    "ts3.3": "14.14.20",
+    "ts3.4": "14.14.31",
+    "ts3.5": "15.6.1",
+    "ts3.6": "16.6.2",
+    "ts3.7": "16.11.7",
+    "ts3.8": "17.0.21",
+    "ts3.9": "17.0.41",
+    "ts4.0": "18.7.14",
+    "ts4.1": "18.11.9",
+    "ts4.2": "18.15.3",
+    "ts4.3": "20.6.0",
+    "ts4.4": "20.6.0",
+    "ts4.5": "20.10.0",
+    "ts4.6": "20.11.25",
+    "ts4.7": "20.14.8",
+    "ts4.8": "22.9.0",
+    "ts4.9": "22.9.3",
+    "ts5.0": "22.13.14",
+    "ts5.1": "24.1.0",
+    "ts5.2": "25.5.0",
+    "ts5.3": "25.9.3",
+    "ts5.5": "25.9.3",
+    "ts5.4": "25.9.3",
+    "old-version": "24.19.2",
+    "ts7.0": "26.6.6",
+    "ts6.0": "26.6.6",
+    "ts5.9": "26.6.6",
+    "ts5.7": "26.6.6",
+    "ts5.8": "26.6.6",
+    "ts5.6": "26.6.6",
+    "ts7.1": "26.6.6",
+    "latest": "26.6.6"
+  },
+  "latestStable": {
+    "version": "26.6.6",
+    "publishedAt": "2026-10-28T18:36:36.455Z",
+    "peers": {},
+    "dependencies": {
+      "undici-types": "~8.9.0"
+    },
+    "scripts": {},
+    "dist": {
+      "shasum": "9ed7b5817e728ed9216ef7c5b7d373fe3b777104",
+      "tarball": "https://registry.npmjs.org/@types/node/-/node-26.6.6.tgz",
+      "fileCount": 109,
+      "integrity": "sha512-MzQj+8Kx3XI40OmUAE6Qoh58ZMNstNNMwn2nfd3qWsfe7nDNSqJNzes4njhz6AHwrSHOffSLwXU6yb474Q4aog==",
+      "signatures": [
+        {
+          "sig": "MEUCIHcSi7pEO72FMEZeNIDd+bzBw9AIYxx9grPD1AX6gZWRAiEA/fTMMgRXn/XqsiUeAvt5XLcc8PUtnTFPDRSYaB/wfH8=",
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+        },
+        {
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+          "sig": "MEUCIQCNB8OeetAA6h1cLh8nQ23dVtV1Vlts4Fz3zrT0WOWKDQIgTBe7om+aQ6ts3NNZPfemprMwZ9nnRN4xPoWjoazWA6Q="
+        }
+      ],
+      "unpackedSize": 2586357
+    }
+  },
+  "eligible": {
+    "version": "26.6.5",
+    "publishedAt": "2026-10-09T18:46:47.657Z",
+    "peers": {},
+    "dependencies": {
+      "undici-types": "~8.9.0"
+    },
+    "scripts": {},
+    "dist": {
+      "shasum": "cb35209e7767c503551b5fa42a48231c7441d979",
+      "tarball": "https://registry.npmjs.org/@types/node/-/node-26.6.5.tgz",
+      "fileCount": 109,
+      "integrity": "sha512-uMzsv9stDdofIZBx4UGh4Z9ZgXnGC9seRDscilBcTHAeOFk67MZg/k9bWVfO+bk4qZmG+l52hRnLwUiH2LnJTg==",
+      "signatures": [
+        {
+          "sig": "MEUCICpys+wvg3B8d5GwZcaXjRtY1v/tZfhWxMGpWP4IOdAdAiEAgcy71FiMA4XW+gZuA1uwcohcHn4HX5XA7kP5acWz1ug=",
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+        },
+        {
+          "sig": "MEQCIEiHeuNSZyMm4RJY9UUaiZV+sUiEfPPm3I+s3NOb0TLkAiAr2YOepe3DCFvKZJpzhpAhACkiMUzzfENI/Lh148EbgA==",
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+        }
+      ],
+      "unpackedSize": 2546175
+    }
+  }
+}

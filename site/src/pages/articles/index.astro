@@ -1,0 +1,10 @@
+---
+import Base from '../../layouts/Base.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import SearchBox from '../../components/SearchBox.astro';
+import { articles } from '../../lib/content';
+const entries = await articles();
+---
+<Base title="記事一覧"><header class="page-heading"><p class="eyebrow">THE NOTEBOOK</p><h1>記事一覧<span class="count">{entries.length}</span></h1><p>疑問から始まった調査と、手元で確かめたこと。</p></header><SearchBox compact />
+  <section class="article-list">{entries.map((article, i) => <ArticleCard article={article} index={i + 1} />)}{!entries.length && <p class="empty-note">公開記事を準備しています。</p>}</section>
+</Base>

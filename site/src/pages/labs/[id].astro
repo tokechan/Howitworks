@@ -1,0 +1,12 @@
+---
+import Base from '../../layouts/Base.astro';
+import { articles } from '../../lib/content';
+import { href } from '../../../scripts/config.mjs';
+export async function getStaticPaths() { return (await articles()).filter(a => a.data.simulator).map(article => ({ params: { id: article.data.simulator }, props: { article } })); }
+const { article } = Astro.props;
+---
+<Base title="Brotli Visualizer — 動かして理解する" wide>
+  <div class="experience-heading" data-pagefind-body data-pagefind-filter="kind:シミュレーター"><div><p class="eyebrow">INTERACTIVE / BROTLI</p><h1 data-pagefind-meta="title">Brotli Visualizer</h1><p>fetchとnode:http、正常な入力待ち、修正前後。3つのモードで1ステップずつ。</p><span class="sr-only">ブロートリ デコーダー ストリーミング Node2Shell CVE-2026-111497</span><span class="sr-only" data-pagefind-filter="tag">HTTP</span><span class="sr-only" data-pagefind-filter="tag">Node.js</span></div><div class="experience-actions"><a class="text-link" href={href(`articles/${article.id}/`)}>← 解説記事に戻る</a><a class="text-link" href={href('evidence/brotli-simulator/')}>操作ガイド ↗</a></div></div>
+  <iframe class="simulator-embed" src={href('demos/brotli/index.html')} title="Brotliのデータの流れを操作するシミュレーター"></iframe>
+  <p class="model-caption">実測値と一次資料をもとにした説明モデルです。カードの動きは模式表現であり、脆弱なデコーダーを実行しません。</p>
+</Base>

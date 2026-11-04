@@ -1,0 +1,83 @@
+{
+  "observedAt": "2026-10-31T03:44:34.045Z",
+  "cutoff": "2026-10-28T03:44:34.045Z",
+  "name": "slidev-theme-geist",
+  "source": "https://registry.npmjs.org/slidev-theme-geist",
+  "distTags": {
+    "latest": "0.8.1"
+  },
+  "latestStable": {
+    "version": "0.8.1",
+    "publishedAt": "2022-02-28T00:14:38.401Z",
+    "engines": {
+      "node": ">=14",
+      "slidev": ">=0.20"
+    },
+    "dependencies": {
+      "@slidev/types": "^0.28.9",
+      "codemirror-theme-vars": "^0.1.1",
+      "prism-theme-vars": "^0.2.2"
+    },
+    "scripts": {
+      "dev": "slidev example.md",
+      "build": "slidev build example.md",
+      "export": "slidev export example.md",
+      "screenshot": "slidev export example.md --format png",
+      "docs:dev": "vitepress dev docs",
+      "docs:build": "vitepress build docs",
+      "format": "prettier --write components/*.vue layouts/* styles.css",
+      "release": "standard-version"
+    },
+    "dist": {
+      "integrity": "sha512-2DET+H1tvaFQyKYimg+4RlShLLnyOdW40GFfOH8kAJbsI1JOwzDiLv1UjyFO11y9O0/074/YIwArz9xg4Zde5A==",
+      "shasum": "a5942c83330d8d9e8ccdff134f7301c8e93d9f23",
+      "tarball": "https://registry.npmjs.org/slidev-theme-geist/-/slidev-theme-geist-0.8.1.tgz",
+      "fileCount": 32,
+      "unpackedSize": 554335,
+      "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJiHBPuACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2Vmp59g//fX4BWxHLrh0d5+YD6P8GHA+I6+F0K5SfMh73w8ADbkF+n1sx\r\nt9+F/jghjR62YnXkizJbFbnjO15DpooApp0lme2HYCN1pcIYsbXWqwu4GT6A\r\nhJacrac/HjdaqwRkD64NHu2pdGqjJXsavVbfvIMMajXbio47HfVC/h5McOiw\r\niEkFlXoE+GoW7yOprIQ0u+NH2IxgA6HWPOqZ2W1FZtjB6bFHZF0TkrwVcFBf\r\nn1zKaTxGvaTYnDyukkJF/EsllpzyLs3a8wVaA0H536304n84PiGLgo2q38Sq\r\nUtp/GhEVQQojunYG5/2v8zVEHUdut79L9IdAYHL40tw4kXyTF3An+J1hzoi8\r\ncONj8qs8viNAkoqtZrobX04ES1+j5fsKO0AgawdTN6J58ni7TvYmyxV1YBXy\r\nVqD1ioprAA6nP3I5gT2DDgg1lsXw86ccNm2PBMj5C83Xy2MJLRsQ7pPC+8kw\r\nuxVbxMoK+MRapHHlq0w/2dgt0k+SKr/XzqgHEbMQJjqkFqpj/MVqFDY40kto\r\njkW7y7Z66nEQ8RRqcbvnZOSl6X8DueqU+78woxDtI6ndMGX61crJPSs/EfLM\r\n99i7HMOImCzbXwt4Ov1nYlVBhlPJSwyEbTD3cVh3tgwIQGmVhD+2NusB61i8\r\n78wrF21hgCAcRYqHQBvvhv9wPdawnJyqEnA=\r\n=TmQT\r\n-----END PGP SIGNATURE-----\r\n",
+      "signatures": [
+        {
+          "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+          "sig": "MEQCIGFFa5WrB4Mq2HYKb5YIF9YWRFJVCPW1N/f1R0+5XImEAiBKnlN91pwpt1q7iJPs9M+WYN5RavS+m7rMjIofgvgZVg=="
+        }
+      ]
+    }
+  },
+  "eligible": {
+    "version": "0.8.1",
+    "publishedAt": "2022-02-28T00:14:38.401Z",
+    "engines": {
+      "node": ">=14",
+      "slidev": ">=0.20"
+    },
+    "dependencies": {
+      "@slidev/types": "^0.28.9",
+      "codemirror-theme-vars": "^0.1.1",
+      "prism-theme-vars": "^0.2.2"
+    },
+    "scripts": {
+      "dev": "slidev example.md",
+      "build": "slidev build example.md",
+      "export": "slidev export example.md",
+      "screenshot": "slidev export example.md --format png",
+      "docs:dev": "vitepress dev docs",
+      "docs:build": "vitepress build docs",
+      "format": "prettier --write components/*.vue layouts/* styles.css",
+      "release": "standard-version"
+    },
+    "dist": {
+      "integrity": "sha512-2DET+H1tvaFQyKYimg+4RlShLLnyOdW40GFfOH8kAJbsI1JOwzDiLv1UjyFO11y9O0/074/YIwArz9xg4Zde5A==",
+      "shasum": "a5942c83330d8d9e8ccdff134f7301c8e93d9f23",
+      "tarball": "https://registry.npmjs.org/slidev-theme-geist/-/slidev-theme-geist-0.8.1.tgz",
+      "fileCount": 32,
+      "unpackedSize": 554335,
+      "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJiHBPuACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2Vmp59g//fX4BWxHLrh0d5+YD6P8GHA+I6+F0K5SfMh73w8ADbkF+n1sx\r\nt9+F/jghjR62YnXkizJbFbnjO15DpooApp0lme2HYCN1pcIYsbXWqwu4GT6A\r\nhJacrac/HjdaqwRkD64NHu2pdGqjJXsavVbfvIMMajXbio47HfVC/h5McOiw\r\niEkFlXoE+GoW7yOprIQ0u+NH2IxgA6HWPOqZ2W1FZtjB6bFHZF0TkrwVcFBf\r\nn1zKaTxGvaTYnDyukkJF/EsllpzyLs3a8wVaA0H536304n84PiGLgo2q38Sq\r\nUtp/GhEVQQojunYG5/2v8zVEHUdut79L9IdAYHL40tw4kXyTF3An+J1hzoi8\r\ncONj8qs8viNAkoqtZrobX04ES1+j5fsKO0AgawdTN6J58ni7TvYmyxV1YBXy\r\nVqD1ioprAA6nP3I5gT2DDgg1lsXw86ccNm2PBMj5C83Xy2MJLRsQ7pPC+8kw\r\nuxVbxMoK+MRapHHlq0w/2dgt0k+SKr/XzqgHEbMQJjqkFqpj/MVqFDY40kto\r\njkW7y7Z66nEQ8RRqcbvnZOSl6X8DueqU+78woxDtI6ndMGX61crJPSs/EfLM\r\n99i7HMOImCzbXwt4Ov1nYlVBhlPJSwyEbTD3cVh3tgwIQGmVhD+2NusB61i8\r\n78wrF21hgCAcRYqHQBvvhv9wPdawnJyqEnA=\r\n=TmQT\r\n-----END PGP SIGNATURE-----\r\n",
+      "signatures": [
+        {
+          "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+          "sig": "MEQCIGFFa5WrB4Mq2HYKb5YIF9YWRFJVCPW1N/f1R0+5XImEAiBKnlN91pwpt1q7iJPs9M+WYN5RavS+m7rMjIofgvgZVg=="
+        }
+      ]
+    }
+  }
+}

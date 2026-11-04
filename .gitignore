@@ -1,0 +1,13 @@
+.DS_Store
+
+# Dependencies and local caches, including isolated verification packages.
+node_modules/
+.npm-cache/
+.cache/
+
+# Local environment and npm configuration stay unpublished until reviewed.
+.env*
+*.npmrc
+
+# Build outputs are excluded by each package's .gitignore.
+# Keep the hand-written simulators/brotli/dist/ and referenced screenshots.

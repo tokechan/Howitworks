@@ -1,0 +1,95 @@
+{
+  "name": "howitworks-feasibility-only",
+  "dependencies": {
+    "@babel/core": {
+      "version": "8.0.9",
+      "resolved": "https://registry.npmjs.org/@babel/core/-/core-8.0.9.tgz",
+      "overridden": false
+    },
+    "@cloudflare/vite-plugin": {
+      "version": "1.65.0",
+      "resolved": "https://registry.npmjs.org/@cloudflare/vite-plugin/-/vite-plugin-1.65.0.tgz",
+      "overridden": false
+    },
+    "@rolldown/plugin-babel": {
+      "version": "0.2.4",
+      "resolved": "https://registry.npmjs.org/@rolldown/plugin-babel/-/plugin-babel-0.2.4.tgz",
+      "overridden": false
+    },
+    "@vitejs/plugin-react": {
+      "version": "6.1.2",
+      "resolved": "https://registry.npmjs.org/@vitejs/plugin-react/-/plugin-react-6.1.2.tgz",
+      "overridden": false
+    },
+    "@vitejs/plugin-vue": {
+      "version": "6.0.10",
+      "resolved": "https://registry.npmjs.org/@vitejs/plugin-vue/-/plugin-vue-6.0.10.tgz",
+      "overridden": false
+    },
+    "babel-plugin-react-compiler": {
+      "version": "1.0.0",
+      "resolved": "https://registry.npmjs.org/babel-plugin-react-compiler/-/babel-plugin-react-compiler-1.0.0.tgz",
+      "overridden": false
+    },
+    "fast-xml-parser": {
+      "version": "5.11.2",
+      "resolved": "https://registry.npmjs.org/fast-xml-parser/-/fast-xml-parser-5.11.2.tgz",
+      "overridden": false
+    },
+    "hono": {
+      "version": "4.13.14",
+      "resolved": "https://registry.npmjs.org/hono/-/hono-4.13.14.tgz",
+      "overridden": false
+    },
+    "miniflare": {
+      "version": "4.20260730.0",
+      "resolved": "https://registry.npmjs.org/miniflare/-/miniflare-4.20260730.0.tgz",
+      "overridden": false
+    },
+    "pagefind": {
+      "version": "1.5.2",
+      "resolved": "https://registry.npmjs.org/pagefind/-/pagefind-1.5.2.tgz",
+      "overridden": false
+    },
+    "react-dom": {
+      "version": "19.3.1",
+      "resolved": "https://registry.npmjs.org/react-dom/-/react-dom-19.3.1.tgz",
+      "overridden": false
+    },
+    "react": {
+      "version": "19.3.1",
+      "resolved": "https://registry.npmjs.org/react/-/react-19.3.1.tgz",
+      "overridden": false
+    },
+    "rss-parser": {
+      "version": "3.13.0",
+      "resolved": "https://registry.npmjs.org/rss-parser/-/rss-parser-3.13.0.tgz",
+      "overridden": false
+    },
+    "solid-js": {
+      "version": "1.9.17",
+      "resolved": "https://registry.npmjs.org/solid-js/-/solid-js-1.9.17.tgz",
+      "overridden": false
+    },
+    "vite-plugin-solid": {
+      "version": "2.11.14",
+      "resolved": "https://registry.npmjs.org/vite-plugin-solid/-/vite-plugin-solid-2.11.14.tgz",
+      "overridden": false
+    },
+    "vite": {
+      "version": "8.3.5",
+      "resolved": "https://registry.npmjs.org/vite/-/vite-8.3.5.tgz",
+      "overridden": false
+    },
+    "vue": {
+      "version": "3.5.44",
+      "resolved": "https://registry.npmjs.org/vue/-/vue-3.5.44.tgz",
+      "overridden": false
+    },
+    "wrangler": {
+      "version": "4.154.0",
+      "resolved": "https://registry.npmjs.org/wrangler/-/wrangler-4.154.0.tgz",
+      "overridden": false
+    }
+  }
+}

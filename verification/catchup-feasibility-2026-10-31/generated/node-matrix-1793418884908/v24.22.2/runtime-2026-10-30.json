@@ -1,0 +1,76 @@
+{
+  "checkedAt": "2026-10-31T03:54:52.662Z",
+  "miniflare": "5.20261023.1-beta",
+  "workerd": "1.20261023.1",
+  "compatibilityDateRequested": "2026-10-30",
+  "compatibilityFlags": [
+    "no_nodejs_compat",
+    "no_nodejs_compat_v2"
+  ],
+  "observations": [
+    {
+      "name": "Hono + XML parser + D1 in actual workerd without nodejs_compat",
+      "passed": true,
+      "rows": 1,
+      "bytes": 207050
+    },
+    {
+      "name": "Repeated scheduled delivery is idempotent; conditional header emitted",
+      "passed": true
+    },
+    {
+      "name": "Same entry updates title, preserves first-seen timestamp",
+      "passed": true
+    },
+    {
+      "name": "Existing rows preserved on 304",
+      "passed": true,
+      "state": "not-modified"
+    },
+    {
+      "name": "Existing rows preserved on http-error",
+      "passed": true,
+      "state": "error: HTTP 503"
+    },
+    {
+      "name": "Existing rows preserved on invalid",
+      "passed": true,
+      "state": "error: Invalid XML"
+    },
+    {
+      "name": "D1 batch rollback on second statement failure",
+      "passed": true
+    },
+    {
+      "name": "Other browser origin not granted CORS; API remains public, not authorization",
+      "passed": true
+    },
+    {
+      "name": "Actual saved cloudflare-workers parsed and stored inside workerd",
+      "passed": true,
+      "rows": 279,
+      "localWallMs": 158
+    },
+    {
+      "name": "Actual saved hono-releases parsed and stored inside workerd",
+      "passed": true,
+      "rows": 289,
+      "localWallMs": 12
+    },
+    {
+      "name": "Actual 8.8 MB feed rejected by experimental 4 MiB cap; stored rows survive",
+      "passed": true
+    }
+  ],
+  "alternateParser": {
+    "browserBundle": false,
+    "unresolved": [
+      "Could not resolve \"http\"",
+      "Could not resolve \"https\"",
+      "Could not resolve \"url\"",
+      "Could not resolve \"events\"",
+      "Could not resolve \"timers\""
+    ]
+  },
+  "run": "generated/runtime-1793418892002"
+}

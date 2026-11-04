@@ -1,0 +1,108 @@
+{
+  "observedAt": "2026-10-31T03:44:34.045Z",
+  "cutoff": "2026-10-28T03:44:34.045Z",
+  "name": "@babel/core",
+  "source": "https://registry.npmjs.org/%40babel%2Fcore",
+  "distTags": {
+    "bridge6": "6.0.0-bridge.1",
+    "esm": "7.21.4-esm.4",
+    "next": "8.0.0-rc.6",
+    "latest": "8.0.10"
+  },
+  "latestStable": {
+    "version": "8.0.10",
+    "publishedAt": "2026-10-29T16:35:13.333Z",
+    "engines": {
+      "node": "^22.18.0 || >=24.11.0"
+    },
+    "dependencies": {
+      "obug": "^3.0.0",
+      "json5": "^2.2.3",
+      "verkit": "^0.5.0",
+      "gensync": "^1.0.0-beta.2",
+      "empathic": "^2.0.1",
+      "@babel/types": "^8.0.10",
+      "@babel/parser": "^8.0.10",
+      "@babel/helpers": "^8.0.10",
+      "@types/gensync": "^1.0.5",
+      "@babel/template": "^8.0.0",
+      "@babel/traverse": "^8.0.10",
+      "@babel/generator": "^8.0.10",
+      "@babel/code-frame": "^8.0.6",
+      "convert-source-map": "^2.0.0",
+      "import-meta-resolve": "^4.2.0",
+      "@babel/helper-compilation-targets": "^8.0.7"
+    },
+    "dist": {
+      "shasum": "b02ced26bcc8f87e564143d7ca964993f9d4fad7",
+      "tarball": "https://registry.npmjs.org/@babel/core/-/core-8.0.10.tgz",
+      "fileCount": 18,
+      "integrity": "sha512-T6dEcoMJ3L1hyLuNfRXcVlqQrN79kU/SB5bDygVgQNIOUgStdyEGzigtRA9K+9Coh7SZUSt543oWRBxvqYdyuQ==",
+      "signatures": [
+        {
+          "sig": "MEYCIQDV3NWUV2MsPVLGZE2FlECkO9ZwgKTfQdKHtSKhtDfQ5AIhAME9CUlUCkPABTMhbe/Gl4Vnt2vY/KCkbxwmrPVt4LT1",
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+        },
+        {
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+          "sig": "MEUCIQCN7ZYGthmSnqkLrt2nFDtRcfEf6fy9bKrSw0ER+cmdJAIgdgimo39rKJl3Kgp3hPB2yn9ttz7gJpWlLYSj65vBxSg="
+        }
+      ],
+      "attestations": {
+        "url": "https://registry.npmjs.org/-/npm/v1/attestations/@babel%2fcore@8.0.10",
+        "provenance": {
+          "predicateType": "https://slsa.dev/provenance/v1"
+        }
+      },
+      "unpackedSize": 168582
+    }
+  },
+  "eligible": {
+    "version": "8.0.9",
+    "publishedAt": "2026-10-23T15:11:22.697Z",
+    "engines": {
+      "node": "^22.18.0 || >=24.11.0"
+    },
+    "dependencies": {
+      "obug": "^3.0.0",
+      "json5": "^2.2.3",
+      "verkit": "^0.5.0",
+      "gensync": "^1.0.0-beta.2",
+      "empathic": "^2.0.1",
+      "@babel/types": "^8.0.8",
+      "@babel/parser": "^8.0.8",
+      "@babel/helpers": "^8.0.8",
+      "@types/gensync": "^1.0.5",
+      "@babel/template": "^8.0.0",
+      "@babel/traverse": "^8.0.7",
+      "@babel/generator": "^8.0.6",
+      "@babel/code-frame": "^8.0.6",
+      "convert-source-map": "^2.0.0",
+      "import-meta-resolve": "^4.2.0",
+      "@babel/helper-compilation-targets": "^8.0.7"
+    },
+    "dist": {
+      "shasum": "4d597c512a119d16ffab53a71b967b3a48088cbf",
+      "tarball": "https://registry.npmjs.org/@babel/core/-/core-8.0.9.tgz",
+      "fileCount": 18,
+      "integrity": "sha512-wXtyKlpR/pXf/u0vmib+OBakQaIzLglLcRoKpWxCHW/whqq7YfQYPD0IAAl9H/evi40MyLIjYYdvb6N+9DI2yA==",
+      "signatures": [
+        {
+          "sig": "MEYCIQCCHXL/kBqWAZkypH8ETpFnCv39Aj9qUGv4MBWQNQF6KAIhAIeTfLmctGc6HTZmXS/NOlMVpvFWCJw4lnACG4xZZQcG",
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+        },
+        {
+          "sig": "MEUCIQCJdVhM6zk6U4aDdOE8eg4r0AcsDKH5nOnU2vER5TRB1wIgX4T11kLbXhjKT1yNxQI7mh2U3/CQUZ2tASHs9Jvx6v0=",
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+        }
+      ],
+      "attestations": {
+        "url": "https://registry.npmjs.org/-/npm/v1/attestations/@babel%2fcore@8.0.9",
+        "provenance": {
+          "predicateType": "https://slsa.dev/provenance/v1"
+        }
+      },
+      "unpackedSize": 167878
+    }
+  }
+}

@@ -1,0 +1,22 @@
+service core:user:catchup-probe: This Worker requires compatibility date "2026-10-31", but the newest date supported by this server binary is "2026-10-30".
+/Users/svc-tokeshi/dev/Howitworks/verification/catchup-feasibility-2026-10-31/node_modules/wrangler/node_modules/miniflare/dist/src/index.js:119476
+      throw new MiniflareCoreError(
+            ^
+
+MiniflareCoreError [ERR_RUNTIME_FAILURE]: The Workers runtime failed to start. There was likely a problem with the workerd binary or your configuration.
+Runtime stderr:
+{"timestamp":"1793418548263","level":"error","source":"src/workerd/server/server/entry.rs:169","message":"service core:user:catchup-probe: This Worker requires compatibility date \"2026-10-31\", but the newest date supported by this server binary is \"2026-10-30\".","context_depth":0}
+    at StartupLogBuffer.handleStartupFailure (/Users/svc-tokeshi/dev/Howitworks/verification/catchup-feasibility-2026-10-31/node_modules/wrangler/node_modules/miniflare/dist/src/index.js:119476:13)
+    at Runtime.updateConfig (/Users/svc-tokeshi/dev/Howitworks/verification/catchup-feasibility-2026-10-31/node_modules/wrangler/node_modules/miniflare/dist/src/index.js:119556:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async #assembleAndUpdateConfigInternal (/Users/svc-tokeshi/dev/Howitworks/verification/catchup-feasibility-2026-10-31/node_modules/wrangler/node_modules/miniflare/dist/src/index.js:139074:30)
+    at async #assembleAndUpdateConfig (/Users/svc-tokeshi/dev/Howitworks/verification/catchup-feasibility-2026-10-31/node_modules/wrangler/node_modules/miniflare/dist/src/index.js:138996:7)
+    at async /Users/svc-tokeshi/dev/Howitworks/verification/catchup-feasibility-2026-10-31/node_modules/wrangler/node_modules/miniflare/dist/src/index.js:137895:7
+    at async Mutex.runWith (/Users/svc-tokeshi/dev/Howitworks/verification/catchup-feasibility-2026-10-31/node_modules/wrangler/node_modules/miniflare/dist/src/index.js:80854:16)
+    at async #waitForReady (/Users/svc-tokeshi/dev/Howitworks/verification/catchup-feasibility-2026-10-31/node_modules/wrangler/node_modules/miniflare/dist/src/index.js:139210:5)
+    at async file:///Users/svc-tokeshi/dev/Howitworks/verification/catchup-feasibility-2026-10-31/probes/runtime.mjs:30:3 {
+  code: 'ERR_RUNTIME_FAILURE',
+  cause: undefined
+}
+
+Node.js v24.22.1

@@ -1,0 +1,151 @@
+[
+  {
+    "id": "cloudflare-workers",
+    "url": "https://developers.cloudflare.com/changelog/rss/workers.xml",
+    "kind": "rss",
+    "checkedAt": "2026-10-31T03:45:20.551Z",
+    "status": 200,
+    "finalUrl": "https://developers.cloudflare.com/changelog/rss/workers.xml",
+    "headers": {
+      "content-type": "application/xml",
+      "etag": "W/\"4ce176e43e271b2c7073576c100bb051\"",
+      "last-modified": null,
+      "cache-control": "public, max-age=0, must-revalidate"
+    },
+    "bytes": 2940780,
+    "feedRoot": "rss",
+    "discovered": [],
+    "conditionalStatus": 304
+  },
+  {
+    "id": "cloudflare-changelog",
+    "url": "https://developers.cloudflare.com/changelog/rss/index.xml",
+    "kind": "rss",
+    "checkedAt": "2026-10-31T03:45:21.065Z",
+    "status": 200,
+    "finalUrl": "https://developers.cloudflare.com/changelog/rss/index.xml",
+    "headers": {
+      "content-type": "application/xml",
+      "etag": "W/\"38ca2634f513134019ac20ef40f07d6d\"",
+      "last-modified": null,
+      "cache-control": "public, max-age=0, must-revalidate"
+    },
+    "bytes": 8778655,
+    "feedRoot": "rss",
+    "discovered": [],
+    "conditionalStatus": 304
+  },
+  {
+    "id": "react-blog",
+    "url": "https://react.dev/blog",
+    "kind": "discover",
+    "checkedAt": "2026-10-31T03:45:21.245Z",
+    "status": 200,
+    "finalUrl": "https://react.dev/blog",
+    "headers": {
+      "content-type": "text/html; charset=utf-8",
+      "etag": "W/\"a2e2a703201a0d86bc5c6be14fbfae2e\"",
+      "last-modified": null,
+      "cache-control": "public, max-age=0, must-revalidate"
+    },
+    "bytes": 107339,
+    "feedRoot": null,
+    "discovered": [
+      {
+        "tag": "<link rel=\"alternate\" type=\"application/rss+xml\" title=\"React Blog RSS Feed\" href=\"/rss.xml\" data-next-head=\"\"/>",
+        "url": "https://react.dev/rss.xml"
+      }
+    ]
+  },
+  {
+    "id": "vite-blog",
+    "url": "https://vite.dev/blog",
+    "kind": "discover",
+    "checkedAt": "2026-10-31T03:45:23.482Z",
+    "status": 200,
+    "finalUrl": "https://vite.dev/blog",
+    "headers": {
+      "content-type": "text/html; charset=UTF-8",
+      "etag": "\"eec5bdf0bbf690736629e78c1eb0d511-ssl-df\"",
+      "last-modified": null,
+      "cache-control": "public,max-age=0,must-revalidate"
+    },
+    "bytes": 39824,
+    "feedRoot": null,
+    "discovered": [
+      {
+        "tag": "<link rel=\"alternate\" type=\"application/rss+xml\" href=\"/blog.rss\">",
+        "url": "https://vite.dev/blog.rss"
+      }
+    ]
+  },
+  {
+    "id": "hono-releases",
+    "url": "https://github.com/honojs/hono/releases.atom",
+    "kind": "atom",
+    "checkedAt": "2026-10-31T03:45:23.957Z",
+    "status": 200,
+    "finalUrl": "https://github.com/honojs/hono/releases.atom",
+    "headers": {
+      "content-type": "application/atom+xml; charset=utf-8",
+      "etag": "W/\"7f4b3134e961e94e92c1f40832a89c9b\"",
+      "last-modified": null,
+      "cache-control": "max-age=0, private, must-revalidate"
+    },
+    "bytes": 27485,
+    "feedRoot": "feed",
+    "discovered": [
+      {
+        "tag": "<link type=\"application/atom+xml\" rel=\"self\" href=\"https://github.com/honojs/hono/releases.atom\"/>",
+        "url": "https://github.com/honojs/hono/releases.atom"
+      }
+    ],
+    "conditionalStatus": 304
+  },
+  {
+    "id": "vite-releases",
+    "url": "https://github.com/vitejs/vite/releases.atom",
+    "kind": "atom",
+    "checkedAt": "2026-10-31T03:45:24.596Z",
+    "status": 200,
+    "finalUrl": "https://github.com/vitejs/vite/releases.atom",
+    "headers": {
+      "content-type": "application/atom+xml; charset=utf-8",
+      "etag": "W/\"f2900aa60ff4a3b7184839b0d9504633\"",
+      "last-modified": null,
+      "cache-control": "max-age=0, private, must-revalidate"
+    },
+    "bytes": 38468,
+    "feedRoot": "feed",
+    "discovered": [
+      {
+        "tag": "<link type=\"application/atom+xml\" rel=\"self\" href=\"https://github.com/vitejs/vite/releases.atom\"/>",
+        "url": "https://github.com/vitejs/vite/releases.atom"
+      }
+    ],
+    "conditionalStatus": 304
+  },
+  {
+    "id": "react-releases",
+    "url": "https://github.com/facebook/react/releases.atom",
+    "kind": "atom",
+    "checkedAt": "2026-10-31T03:45:25.536Z",
+    "status": 200,
+    "finalUrl": "https://github.com/react/react/releases.atom",
+    "headers": {
+      "content-type": "application/atom+xml; charset=utf-8",
+      "etag": "W/\"2e72072eaa0b2dd5bc86319f7a106649\"",
+      "last-modified": null,
+      "cache-control": "max-age=0, private, must-revalidate"
+    },
+    "bytes": 139105,
+    "feedRoot": "feed",
+    "discovered": [
+      {
+        "tag": "<link type=\"application/atom+xml\" rel=\"self\" href=\"https://github.com/react/react/releases.atom\"/>",
+        "url": "https://github.com/react/react/releases.atom"
+      }
+    ],
+    "conditionalStatus": 304
+  }
+]

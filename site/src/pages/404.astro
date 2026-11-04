@@ -1,0 +1,5 @@
+---
+import Base from '../layouts/Base.astro';
+import { href } from '../../scripts/config.mjs';
+---
+<Base title="ページが見つかりません"><div class="page-heading"><p class="eyebrow">404 / NOT FOUND</p><h1>このページは、<br/>見つかりませんでした。</h1><p>URLを確認するか、検索から探してみてください。</p><div class="talk-actions"><a class="button-primary" href={href('search/')}>検索する →</a><a class="button-secondary" href={href()}>ホームに戻る</a></div></div></Base>

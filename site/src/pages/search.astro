@@ -1,0 +1,97 @@
+---
+import Base from '../layouts/Base.astro';
+import { topics } from '../lib/content';
+import { href } from '../../scripts/config.mjs';
+---
+<Base title="検索">
+  <header class="page-heading search-heading"><p class="eyebrow">FIND YOUR NEXT ANSWER</p><h1>覚えている言葉から。</h1><p>記事の本文・別名・検証記録から、知りたいことを探す。</p></header>
+  <div id="search-app" data-pagefind-url={href('pagefind/pagefind.js')}>
+    <form id="search-form" class="search-box" role="search"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" stroke="currentColor" stroke-width="1.7"/><path d="m16 16 5 5" stroke="currentColor" stroke-width="1.7"/></svg><label class="sr-only" for="search-input">検索する言葉</label><input id="search-input" name="q" type="search" autocomplete="off" placeholder="Brotli、入力待ち、CVE番号…"/><button type="submit">検索 →</button></form>
+    <div class="search-filters"><label>種類 <select id="kind-filter"><option value="">すべて</option><option>記事</option><option>シミュレーター</option><option>LT資料</option><option>検証記録</option><option>調査ノート</option><option>操作ガイド</option></select></label><label>テーマ <select id="tag-filter"><option value="">すべて</option>{topics.map(t => <option>{t.label}</option>)}</select></label><button id="clear-search" type="button">条件をクリア</button></div>
+    <p id="search-status" role="status" aria-live="polite" class="search-status">タイトルだけでなく、本文の言葉からも検索できます。</p>
+    <ol id="search-results" class="search-results"></ol>
+    <div id="search-empty" class="search-empty"><span class="empty-symbol" aria-hidden="true">⌕</span><h2>あの「しくみ」を、もう一度。</h2><p>日本語、API名、CVE番号から検索できます。</p><div class="suggestion-row">{['Brotli','ブロートリ','入力待ち','静的リンク','CVE-2026-111497'].map(q => <button type="button" data-search-example={q}>{q} ↗</button>)}</div></div>
+    <noscript><p>全文検索にはJavaScriptが必要です。<a href={href('articles/')}>記事一覧</a>からも探せます。</p></noscript>
+  </div>
+  <script>
+    const app = document.querySelector<HTMLElement>('#search-app')!;
+    const input = document.querySelector<HTMLInputElement>('#search-input')!;
+    const kind = document.querySelector<HTMLSelectElement>('#kind-filter')!;
+    const tag = document.querySelector<HTMLSelectElement>('#tag-filter')!;
+    const status = document.querySelector<HTMLElement>('#search-status')!;
+    const results = document.querySelector<HTMLOListElement>('#search-results')!;
+    const empty = document.querySelector<HTMLElement>('#search-empty')!;
+    let pagefind: any;
+    let generation = 0;
+    let timer: ReturnType<typeof setTimeout>;
+    function readUrl() {
+      const params = new URL(location.href).searchParams;
+      input.value = params.get('q') || ''; kind.value = params.get('kind') || ''; tag.value = params.get('tag') || '';
+    }
+    function snippet(html: string) {
+      const parsed = new DOMParser().parseFromString(html, 'text/html');
+      const fragment = document.createDocumentFragment();
+      function copy(node: Node, parent: Node) {
+        if (node.nodeType === Node.TEXT_NODE) parent.appendChild(document.createTextNode(node.textContent || ''));
+        else {
+          const target = node.nodeName === 'MARK' ? document.createElement('mark') : parent;
+          if (target !== parent) parent.appendChild(target);
+          node.childNodes.forEach(child => copy(child, target));
+        }
+      }
+      parsed.body.childNodes.forEach(node => copy(node, fragment));
+      return fragment;
+    }
+    async function search(sync = true) {
+      const version = ++generation;
+      const query = input.value.trim();
+      const filters: Record<string,string> = {};
+      if (kind.value) filters.kind = kind.value;
+      if (tag.value) filters.tag = tag.value;
+      if (sync) {
+        const url = new URL(location.href); url.search = '';
+        if (query) url.searchParams.set('q', query);
+        if (kind.value) url.searchParams.set('kind', kind.value);
+        if (tag.value) url.searchParams.set('tag', tag.value);
+        history.replaceState(null, '', url);
+      }
+      results.replaceChildren();
+      const active = !!query || !!Object.keys(filters).length;
+      empty.hidden = active;
+      if (!active) { status.textContent = 'タイトルだけでなく、本文の言葉からも検索できます。'; return; }
+      status.textContent = '検索しています…';
+      try {
+        pagefind ||= await import(/* @vite-ignore */ app.dataset.pagefindUrl!);
+        const response = await pagefind.search(query || null, { filters });
+        const items = await Promise.all(response.results.slice(0, 30).map((result: any) => result.data()));
+        const priority: Record<string, number> = { '記事': 0, 'シミュレーター': 1, 'LT資料': 1, '検証記録': 2, '操作ガイド': 3, '調査ノート': 4 };
+        items.sort((a: any, b: any) => (priority[a.filters?.kind?.[0]] ?? 5) - (priority[b.filters?.kind?.[0]] ?? 5));
+        if (version !== generation) return;
+        status.textContent = `${response.results.length} 件見つかりました${response.results.length > 30 ? '（先頭30件を表示）' : ''}`;
+        for (const item of items) {
+          const li = document.createElement('li');
+          const meta = document.createElement('div'); meta.className = 'result-meta';
+          meta.textContent = [item.filters?.kind?.[0], ...(item.filters?.tag || []), item.meta.date].filter(Boolean).join(' · ');
+          const h2 = document.createElement('h2'); const link = document.createElement('a');
+          link.href = item.url; link.textContent = item.meta.title || '本文を読む'; h2.append(link);
+          const p = document.createElement('p'); p.append(snippet(item.excerpt || ''));
+          li.append(meta, h2, p); results.append(li);
+        }
+        if (!items.length) {
+          const p = document.createElement('li'); p.className = 'no-results';
+          p.textContent = '一致する内容がありません。短い言葉にするか、種類・テーマの条件を外してみてください。'; results.append(p);
+        }
+      } catch {
+        if (version !== generation) return;
+        status.textContent = '検索データを読み込めませんでした。もう一度「検索」を押してください。';
+      }
+    }
+    document.querySelector('#search-form')!.addEventListener('submit', e => { e.preventDefault(); clearTimeout(timer); search(); });
+    input.addEventListener('input', () => { clearTimeout(timer); timer = setTimeout(search, 180); });
+    [kind, tag].forEach(el => el.addEventListener('change', () => search()));
+    document.querySelector('#clear-search')!.addEventListener('click', () => { clearTimeout(timer); input.value = ''; kind.value = ''; tag.value = ''; search(); input.focus(); });
+    document.querySelectorAll<HTMLButtonElement>('[data-search-example]').forEach(button => button.addEventListener('click', () => { input.value = button.dataset.searchExample!; search(); input.focus(); }));
+    window.addEventListener('popstate', () => { readUrl(); search(false); });
+    readUrl(); search(false);
+  </script>
+</Base>

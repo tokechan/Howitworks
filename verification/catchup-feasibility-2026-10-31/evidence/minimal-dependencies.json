@@ -1,0 +1,823 @@
+{
+  "dir": "/Users/svc-tokeshi/dev/Howitworks/verification/catchup-feasibility-2026-10-31/generated/dependency-alternative-1793418756772",
+  "checkedAt": "2026-10-31T03:52:38.206Z",
+  "cutoff": "2026-10-28T03:44:34.045Z",
+  "dependencies": {
+    "hono": "4.13.14",
+    "fast-xml-parser": "5.11.2",
+    "wrangler": "4.154.0"
+  },
+  "auditExit": 0,
+  "auditSummary": {
+    "info": 0,
+    "low": 0,
+    "moderate": 0,
+    "high": 0,
+    "critical": 0,
+    "total": 0
+  },
+  "checks": [
+    {
+      "name": "@cloudflare/kv-asset-handler",
+      "version": "0.5.0",
+      "publishedAt": "2026-04-30T16:58:56.693Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@cloudflare/unenv-preset",
+      "version": "2.16.2",
+      "publishedAt": "2026-09-21T16:52:56.671Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@cloudflare/workerd-darwin-64",
+      "version": "1.20261023.1",
+      "publishedAt": "2026-10-23T01:17:04.383Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@cloudflare/workerd-darwin-arm64",
+      "version": "1.20261023.1",
+      "publishedAt": "2026-10-23T01:17:31.867Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@cloudflare/workerd-linux-64",
+      "version": "1.20261023.1",
+      "publishedAt": "2026-10-23T01:17:30.298Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@cloudflare/workerd-linux-arm64",
+      "version": "1.20261023.1",
+      "publishedAt": "2026-10-23T01:17:06.420Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@cloudflare/workerd-windows-64",
+      "version": "1.20261023.1",
+      "publishedAt": "2026-10-23T01:17:04.669Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@cspotcode/source-map-support",
+      "version": "0.8.1",
+      "publishedAt": "2022-05-02T13:24:38.399Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@emnapi/runtime",
+      "version": "1.11.3",
+      "publishedAt": "2026-07-25T07:00:08.497Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@esbuild/aix-ppc64",
+      "version": "0.28.2",
+      "publishedAt": "2026-08-08T19:58:20.989Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@esbuild/android-arm",
+      "version": "0.28.2",
+      "publishedAt": "2026-08-08T19:57:26.487Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@esbuild/android-arm64",
+      "version": "0.28.2",
+      "publishedAt": "2026-08-08T19:59:33.520Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@esbuild/android-x64",
+      "version": "0.28.2",
+      "publishedAt": "2026-08-08T19:59:39.478Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@esbuild/darwin-arm64",
+      "version": "0.28.2",
+      "publishedAt": "2026-08-08T19:58:43.690Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@esbuild/darwin-x64",
+      "version": "0.28.2",
+      "publishedAt": "2026-08-08T19:57:49.027Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@esbuild/freebsd-arm64",
+      "version": "0.28.2",
+      "publishedAt": "2026-08-08T19:58:54.493Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@esbuild/freebsd-x64",
+      "version": "0.28.2",
+      "publishedAt": "2026-08-08T19:57:59.211Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@esbuild/linux-arm",
+      "version": "0.28.2",
+      "publishedAt": "2026-08-08T19:59:05.063Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@esbuild/linux-arm64",
+      "version": "0.28.2",
+      "publishedAt": "2026-08-08T19:58:09.809Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@esbuild/linux-ia32",
+      "version": "0.28.2",
+      "publishedAt": "2026-08-08T19:59:16.606Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@esbuild/linux-loong64",
+      "version": "0.28.2",
+      "publishedAt": "2026-08-08T19:58:20.989Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@esbuild/linux-mips64el",
+      "version": "0.28.2",
+      "publishedAt": "2026-08-08T19:59:27.374Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@esbuild/linux-ppc64",
+      "version": "0.28.2",
+      "publishedAt": "2026-08-08T19:58:31.588Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@esbuild/linux-riscv64",
+      "version": "0.28.2",
+      "publishedAt": "2026-08-08T19:58:36.707Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@esbuild/linux-s390x",
+      "version": "0.28.2",
+      "publishedAt": "2026-08-08T19:58:42.447Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@esbuild/linux-x64",
+      "version": "0.28.2",
+      "publishedAt": "2026-08-08T19:58:48.257Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@esbuild/netbsd-arm64",
+      "version": "0.28.2",
+      "publishedAt": "2026-08-08T19:58:52.524Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@esbuild/netbsd-x64",
+      "version": "0.28.2",
+      "publishedAt": "2026-08-08T19:58:58.511Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@esbuild/openbsd-arm64",
+      "version": "0.28.2",
+      "publishedAt": "2026-08-08T19:59:03.431Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@esbuild/openbsd-x64",
+      "version": "0.28.2",
+      "publishedAt": "2026-08-08T20:00:09.977Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@esbuild/openharmony-arm64",
+      "version": "0.28.2",
+      "publishedAt": "2026-08-08T20:03:17.337Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@esbuild/sunos-x64",
+      "version": "0.28.2",
+      "publishedAt": "2026-08-08T19:59:20.135Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@esbuild/win32-arm64",
+      "version": "0.28.2",
+      "publishedAt": "2026-08-08T19:59:31.389Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@esbuild/win32-ia32",
+      "version": "0.28.2",
+      "publishedAt": "2026-08-08T20:01:38.665Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@esbuild/win32-x64",
+      "version": "0.28.2",
+      "publishedAt": "2026-08-08T20:00:43.500Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@img/colour",
+      "version": "1.1.0",
+      "publishedAt": "2026-03-01T10:42:44.217Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@img/sharp-darwin-arm64",
+      "version": "0.35.5",
+      "publishedAt": "2026-09-27T13:45:21.388Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@img/sharp-darwin-x64",
+      "version": "0.35.5",
+      "publishedAt": "2026-09-27T13:47:07.861Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@img/sharp-freebsd-wasm32",
+      "version": "0.35.5",
+      "publishedAt": "2026-09-27T13:45:49.555Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@img/sharp-libvips-darwin-arm64",
+      "version": "1.3.4",
+      "publishedAt": "2026-09-27T12:10:42.328Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@img/sharp-libvips-darwin-x64",
+      "version": "1.3.4",
+      "publishedAt": "2026-09-27T12:10:37.715Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@img/sharp-libvips-linux-arm",
+      "version": "1.3.4",
+      "publishedAt": "2026-09-27T12:10:47.428Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@img/sharp-libvips-linux-arm64",
+      "version": "1.3.4",
+      "publishedAt": "2026-09-27T12:10:53.588Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@img/sharp-libvips-linux-ppc64",
+      "version": "1.3.4",
+      "publishedAt": "2026-09-27T12:11:07.582Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@img/sharp-libvips-linux-riscv64",
+      "version": "1.3.4",
+      "publishedAt": "2026-09-27T12:11:13.523Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@img/sharp-libvips-linux-s390x",
+      "version": "1.3.4",
+      "publishedAt": "2026-09-27T12:11:18.421Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@img/sharp-libvips-linux-x64",
+      "version": "1.3.4",
+      "publishedAt": "2026-09-27T12:11:24.775Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@img/sharp-libvips-linuxmusl-arm64",
+      "version": "1.3.4",
+      "publishedAt": "2026-09-27T12:10:57.585Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@img/sharp-libvips-linuxmusl-x64",
+      "version": "1.3.4",
+      "publishedAt": "2026-09-27T12:11:03.153Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@img/sharp-linux-arm",
+      "version": "0.35.5",
+      "publishedAt": "2026-09-27T13:47:45.455Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@img/sharp-linux-arm64",
+      "version": "0.35.5",
+      "publishedAt": "2026-09-27T13:45:56.196Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@img/sharp-linux-ppc64",
+      "version": "0.35.5",
+      "publishedAt": "2026-09-27T13:45:59.613Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@img/sharp-linux-riscv64",
+      "version": "0.35.5",
+      "publishedAt": "2026-09-27T13:45:42.118Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@img/sharp-linux-s390x",
+      "version": "0.35.5",
+      "publishedAt": "2026-09-27T13:46:05.751Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@img/sharp-linux-x64",
+      "version": "0.35.5",
+      "publishedAt": "2026-09-27T13:45:49.001Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@img/sharp-linuxmusl-arm64",
+      "version": "0.35.5",
+      "publishedAt": "2026-09-27T13:47:04.679Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@img/sharp-linuxmusl-x64",
+      "version": "0.35.5",
+      "publishedAt": "2026-09-27T13:46:37.431Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@img/sharp-wasm32",
+      "version": "0.35.5",
+      "publishedAt": "2026-09-27T13:46:20.726Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@img/sharp-webcontainers-wasm32",
+      "version": "0.35.5",
+      "publishedAt": "2026-09-27T13:45:43.110Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@img/sharp-win32-arm64",
+      "version": "0.35.5",
+      "publishedAt": "2026-09-27T13:46:30.234Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@img/sharp-win32-ia32",
+      "version": "0.35.5",
+      "publishedAt": "2026-09-27T13:46:35.530Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@img/sharp-win32-x64",
+      "version": "0.35.5",
+      "publishedAt": "2026-09-27T13:47:32.335Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@jridgewell/resolve-uri",
+      "version": "3.1.2",
+      "publishedAt": "2024-02-14T19:32:38.143Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@jridgewell/sourcemap-codec",
+      "version": "1.6.0",
+      "publishedAt": "2026-08-28T01:14:47.331Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@jridgewell/trace-mapping",
+      "version": "0.3.9",
+      "publishedAt": "2022-04-20T21:42:39.301Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@nodable/entities",
+      "version": "3.1.0",
+      "publishedAt": "2026-09-29T04:15:42.785Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@poppinss/colors",
+      "version": "4.1.6",
+      "publishedAt": "2025-12-12T07:33:08.556Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@poppinss/dumper",
+      "version": "0.6.5",
+      "publishedAt": "2025-11-03T04:57:39.681Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@poppinss/exception",
+      "version": "1.2.3",
+      "publishedAt": "2025-12-12T10:03:58.256Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@sindresorhus/is",
+      "version": "7.2.0",
+      "publishedAt": "2025-12-27T10:44:14.788Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "@speed-highlight/core",
+      "version": "1.2.24",
+      "publishedAt": "2026-08-09T04:16:43.241Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "anynum",
+      "version": "1.0.1",
+      "publishedAt": "2026-06-18T10:00:14.796Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "blake3-wasm",
+      "version": "2.1.5",
+      "publishedAt": "2020-11-29T08:20:10.136Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "cookie",
+      "version": "1.1.1",
+      "publishedAt": "2025-11-26T17:50:20.759Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "detect-libc",
+      "version": "2.1.2",
+      "publishedAt": "2025-10-05T12:46:33.077Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "error-stack-parser-es",
+      "version": "1.0.5",
+      "publishedAt": "2025-01-09T08:51:58.305Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "esbuild",
+      "version": "0.28.2",
+      "publishedAt": "2026-08-08T20:00:55.454Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "fast-xml-builder",
+      "version": "1.3.1",
+      "publishedAt": "2026-08-14T07:02:38.815Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "fast-xml-parser",
+      "version": "5.11.2",
+      "publishedAt": "2026-09-29T04:45:32.224Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "fsevents",
+      "version": "2.3.3",
+      "publishedAt": "2023-08-21T16:24:22.854Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "hono",
+      "version": "4.13.14",
+      "publishedAt": "2026-10-25T07:19:30.732Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "is-unsafe",
+      "version": "2.0.2",
+      "publishedAt": "2026-08-19T12:35:19.774Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "kleur",
+      "version": "4.1.5",
+      "publishedAt": "2022-06-26T18:50:12.559Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "miniflare",
+      "version": "5.20261023.1-beta",
+      "publishedAt": "2026-10-27T17:03:19.161Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "path-expression-matcher",
+      "version": "1.6.2",
+      "publishedAt": "2026-07-08T09:46:12.523Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "path-to-regexp",
+      "version": "6.3.0",
+      "publishedAt": "2024-09-12T01:09:36.065Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "pathe",
+      "version": "2.0.3",
+      "publishedAt": "2025-02-11T19:47:35.862Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "semver",
+      "version": "7.8.5",
+      "publishedAt": "2026-06-19T18:32:48.972Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "sharp",
+      "version": "0.35.5",
+      "publishedAt": "2026-09-27T13:46:24.509Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "strnum",
+      "version": "2.5.1",
+      "publishedAt": "2026-10-10T11:45:05.127Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "supports-color",
+      "version": "10.2.2",
+      "publishedAt": "2025-09-08T14:49:55.476Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "tslib",
+      "version": "2.8.1",
+      "publishedAt": "2024-10-31T22:42:48.624Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "undici",
+      "version": "7.30.1",
+      "publishedAt": "2026-10-15T14:18:31.283Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "unenv",
+      "version": "2.0.0-rc.24",
+      "publishedAt": "2025-10-29T17:00:12.481Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "workerd",
+      "version": "1.20261023.1",
+      "publishedAt": "2026-10-23T01:18:33.958Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "wrangler",
+      "version": "4.154.0",
+      "publishedAt": "2026-10-27T17:06:48.223Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "ws",
+      "version": "8.21.0",
+      "publishedAt": "2026-05-22T17:59:59.453Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "xml-naming",
+      "version": "0.3.0",
+      "publishedAt": "2026-07-02T08:05:56.436Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "youch",
+      "version": "4.1.0-beta.10",
+      "publishedAt": "2025-07-04T10:44:02.983Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    },
+    {
+      "name": "youch-core",
+      "version": "0.3.3",
+      "publishedAt": "2025-07-04T10:19:54.659Z",
+      "agePass": true,
+      "registryPass": true,
+      "integrityPass": true
+    }
+  ],
+  "violations": [],
+  "note": "Metadata/lockfile-only alternative. No application dependency adoption or package execution."
+}

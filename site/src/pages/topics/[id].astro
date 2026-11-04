@@ -1,0 +1,10 @@
+---
+import Base from '../../layouts/Base.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import { articles, topics } from '../../lib/content';
+import { href } from '../../../scripts/config.mjs';
+export function getStaticPaths() { return topics.map(topic => ({ params: { id: topic.id }, props: { topic } })); }
+const { topic } = Astro.props;
+const entries = (await articles()).filter(e => e.data.tags.includes(topic.label));
+---
+<Base title={`${topic.label}の記事`}><nav class="breadcrumb"><a href={href('topics/')}>テーマ</a><span>/</span><span>{topic.label}</span></nav><header class="page-heading"><p class="eyebrow">TOPIC / {entries.length} NOTES</p><h1>{topic.label}</h1><p>{topic.description}</p></header>{entries.map((article, i) => <ArticleCard article={article} index={i+1} />)}{!entries.length && <p class="empty-note">このテーマの記事を準備しています。</p>}</Base>

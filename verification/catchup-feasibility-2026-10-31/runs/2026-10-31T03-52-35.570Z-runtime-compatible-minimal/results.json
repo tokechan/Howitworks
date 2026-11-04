@@ -1,0 +1,25 @@
+[
+  {
+    "id": "runtime-compatible",
+    "command": [
+      "node",
+      "probes/runtime.mjs",
+      "2026-10-30"
+    ],
+    "startedAt": "2026-10-31T03:52:35.571Z",
+    "finishedAt": "2026-10-31T03:52:36.619Z",
+    "exitCode": 0,
+    "status": "passed"
+  },
+  {
+    "id": "minimal",
+    "command": [
+      "node",
+      "probes/minimal-dependencies.mjs"
+    ],
+    "startedAt": "2026-10-31T03:52:36.619Z",
+    "finishedAt": "2026-10-31T03:52:38.212Z",
+    "exitCode": 0,
+    "status": "passed"
+  }
+]

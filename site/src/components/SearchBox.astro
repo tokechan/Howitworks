@@ -1,0 +1,10 @@
+---
+import { href } from '../../scripts/config.mjs';
+const { compact = false } = Astro.props;
+---
+<form class:list={['search-box', { compact }]} role="search" action={href('search/')}>
+  <svg width="23" height="23" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" stroke="currentColor" stroke-width="1.7"/><path d="m16 16 5 5" stroke="currentColor" stroke-width="1.7"/></svg>
+  <label class="sr-only" for="site-query">知りたい言葉を検索</label>
+  <input id="site-query" name="q" type="search" placeholder="知りたい言葉から探す" autocomplete="off" />
+  <button type="submit">検索 <span aria-hidden="true">→</span></button>
+</form>

@@ -1,0 +1,92 @@
+Checked registry metadata 6/231
+Checked registry metadata 12/231
+Checked registry metadata 18/231
+Checked registry metadata 24/231
+Checked registry metadata 30/231
+Checked registry metadata 36/231
+Checked registry metadata 42/231
+Checked registry metadata 48/231
+Checked registry metadata 54/231
+Checked registry metadata 60/231
+Checked registry metadata 66/231
+Checked registry metadata 72/231
+Checked registry metadata 78/231
+Checked registry metadata 84/231
+Checked registry metadata 90/231
+Checked registry metadata 96/231
+Checked registry metadata 102/231
+Checked registry metadata 108/231
+Checked registry metadata 114/231
+Checked registry metadata 120/231
+Checked registry metadata 126/231
+Checked registry metadata 132/231
+Checked registry metadata 138/231
+Checked registry metadata 144/231
+Checked registry metadata 150/231
+Checked registry metadata 156/231
+Checked registry metadata 162/231
+Checked registry metadata 168/231
+Checked registry metadata 174/231
+Checked registry metadata 180/231
+Checked registry metadata 186/231
+Checked registry metadata 192/231
+Checked registry metadata 198/231
+Checked registry metadata 204/231
+Checked registry metadata 210/231
+Checked registry metadata 216/231
+Checked registry metadata 222/231
+Checked registry metadata 228/231
+Checked registry metadata 231/231
+{
+  "lockedPackages": 369,
+  "violations": [],
+  "prereleases": [
+    {
+      "name": "@jridgewell/gen-mapping",
+      "version": "0.4.0-beta.0"
+    },
+    {
+      "name": "miniflare",
+      "version": "5.20261019.2-beta"
+    },
+    {
+      "name": "miniflare",
+      "version": "5.20261023.1-beta"
+    },
+    {
+      "name": "gensync",
+      "version": "1.0.0-beta.2"
+    },
+    {
+      "name": "unenv",
+      "version": "2.0.0-rc.24"
+    },
+    {
+      "name": "youch",
+      "version": "4.1.0-beta.10"
+    }
+  ],
+  "deprecated": [],
+  "installScripts": [
+    {
+      "name": "workerd",
+      "script": "node install.js"
+    },
+    {
+      "name": "workerd",
+      "script": "node install.js"
+    },
+    {
+      "name": "workerd",
+      "script": "node install.js"
+    },
+    {
+      "name": "esbuild",
+      "script": "node install.js"
+    },
+    {
+      "name": "fsevents",
+      "script": "node-gyp rebuild"
+    }
+  ]
+}

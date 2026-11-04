@@ -1,0 +1,26 @@
+{
+  "name": "howitworks-feasibility-only",
+  "private": true,
+  "type": "module",
+  "description": "Disposable validation probes; not application implementation",
+  "dependencies": {
+    "@babel/core": "8.0.9",
+    "@cloudflare/vite-plugin": "1.65.0",
+    "@rolldown/plugin-babel": "0.2.4",
+    "@vitejs/plugin-react": "6.1.2",
+    "@vitejs/plugin-vue": "6.0.10",
+    "babel-plugin-react-compiler": "1.0.0",
+    "fast-xml-parser": "5.11.2",
+    "hono": "4.13.14",
+    "miniflare": "4.20260730.0",
+    "pagefind": "1.5.2",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "rss-parser": "3.13.0",
+    "solid-js": "1.9.17",
+    "vite": "8.3.5",
+    "vite-plugin-solid": "2.11.14",
+    "vue": "3.5.44",
+    "wrangler": "4.154.0"
+  }
+}

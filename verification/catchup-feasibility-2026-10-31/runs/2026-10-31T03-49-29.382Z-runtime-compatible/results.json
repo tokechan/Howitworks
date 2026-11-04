@@ -1,0 +1,14 @@
+[
+  {
+    "id": "runtime-compatible",
+    "command": [
+      "node",
+      "probes/runtime.mjs",
+      "2026-10-30"
+    ],
+    "startedAt": "2026-10-31T03:49:29.383Z",
+    "finishedAt": "2026-10-31T03:49:30.027Z",
+    "exitCode": 0,
+    "status": "passed"
+  }
+]

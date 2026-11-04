@@ -1,0 +1,34 @@
+service core:user:rss-parser-probe: Uncaught Error: No such module "node:module".
+  imported from "script-0.mjs"
+[
+  {
+    "mode": "default",
+    "flags": [],
+    "passed": true,
+    "result": {
+      "count": 10,
+      "title": "v4.13.14"
+    }
+  },
+  {
+    "mode": "explicit-on",
+    "flags": [
+      "nodejs_compat"
+    ],
+    "passed": true,
+    "result": {
+      "count": 10,
+      "title": "v4.13.14"
+    }
+  },
+  {
+    "mode": "explicit-off",
+    "flags": [
+      "no_nodejs_compat",
+      "no_nodejs_compat_v2"
+    ],
+    "passed": false,
+    "error": "MiniflareCoreError [ERR_RUNTIME_FAILURE]: The Workers runtime failed to start. There was likely a problem with the workerd binary or your configuration.\nRuntime stderr:\n{\"timestamp\":\"1793418847389\",\"level\":\"error\",\"source\":\"src/workerd/server/server/entry.rs:169\",\"message\":\"service core:user:rss-parser-probe: Uncaught Error: No such module \\\"node:module\\\".\\n  imported from \\\"script-0.mjs\\\"\",\"context_depth\":0}",
+    "disposeError": "MiniflareCoreError [ERR_RUNTIME_FAILURE]: The Workers runtime failed to start. There was likely a problem with the workerd binary or your configuration.\nRuntime stderr:\n{\"timestamp\":\"1793418847389\",\"level\":\"error\",\"source\":\"src/workerd/server/server/entry.rs:169\",\"message\":\"service core:user:rss-parser-probe: Uncaught Error: No such module \\\"node:module\\\".\\n  imported from \\\"script-0.mjs\\\"\",\"context_depth\":0}"
+  }
+]

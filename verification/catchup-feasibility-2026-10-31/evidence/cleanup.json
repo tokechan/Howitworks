@@ -1,0 +1,13 @@
+{
+  "checkedAt": "2026-10-31T03:58:50.398Z",
+  "removed": [
+    "/Users/svc-tokeshi/dev/Howitworks/verification/catchup-feasibility-2026-10-31/.npm-cache",
+    "/Users/svc-tokeshi/dev/Howitworks/verification/catchup-feasibility-2026-10-31/node_modules",
+    "/Users/svc-tokeshi/dev/Howitworks/verification/catchup-feasibility-2026-10-31/generated/node-matrix-1793418884908/v24.22.2/node-v24.22.2-darwin-arm64.tar.gz",
+    "/Users/svc-tokeshi/dev/Howitworks/verification/catchup-feasibility-2026-10-31/generated/node-matrix-1793418884908/v24.22.2/node-v24.22.2-darwin-arm64",
+    "/Users/svc-tokeshi/dev/Howitworks/verification/catchup-feasibility-2026-10-31/generated/node-matrix-1793418884908/v26.12.1/node-v26.12.1-darwin-arm64.tar.gz",
+    "/Users/svc-tokeshi/dev/Howitworks/verification/catchup-feasibility-2026-10-31/generated/node-matrix-1793418884908/v26.12.1/node-v26.12.1-darwin-arm64"
+  ],
+  "retained": "Probe code, manifests, lockfiles, registry metadata, saved feeds, generated fixture builds, test logs, SHA256 records and reports",
+  "authority": "User explicitly allowed deleting data newly created for verification; no pre-existing project path is in this allowlist."
+}

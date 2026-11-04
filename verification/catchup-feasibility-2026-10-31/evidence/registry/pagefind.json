@@ -1,0 +1,76 @@
+{
+  "observedAt": "2026-10-31T03:44:34.045Z",
+  "cutoff": "2026-10-28T03:44:34.045Z",
+  "name": "pagefind",
+  "source": "https://registry.npmjs.org/pagefind",
+  "distTags": {
+    "rc": "1.4.0-rc.3",
+    "alpha": "1.5.0-alpha.4",
+    "beta": "1.5.0-beta.2",
+    "latest": "1.5.2"
+  },
+  "latestStable": {
+    "version": "1.5.2",
+    "publishedAt": "2026-04-12T12:46:44.475Z",
+    "optionalDependencies": {
+      "@pagefind/darwin-arm64": "1.5.2",
+      "@pagefind/darwin-x64": "1.5.2",
+      "@pagefind/freebsd-x64": "1.5.2",
+      "@pagefind/linux-arm64": "1.5.2",
+      "@pagefind/linux-x64": "1.5.2",
+      "@pagefind/windows-arm64": "1.5.2",
+      "@pagefind/windows-x64": "1.5.2"
+    },
+    "dist": {
+      "integrity": "sha512-XTUaK0hXMCu2jszWE584JGQT7y284TmMV9l/HX3rnG5uo3rHI/uHU56XTyyyPFjeWEBxECbAi0CaFDJOONtG0Q==",
+      "shasum": "447dd80018d7fd0c2924a56639f7b72bbbd1f165",
+      "tarball": "https://registry.npmjs.org/pagefind/-/pagefind-1.5.2.tgz",
+      "fileCount": 27,
+      "unpackedSize": 37395,
+      "attestations": {
+        "url": "https://registry.npmjs.org/-/npm/v1/attestations/pagefind@1.5.2",
+        "provenance": {
+          "predicateType": "https://slsa.dev/provenance/v1"
+        }
+      },
+      "signatures": [
+        {
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+          "sig": "MEYCIQCvvJW9cgN5iT82wlxwfpJ1NL0EwBq/m/wJRQqDuNLk+AIhAI95ttWg4EEWpEDjPlQcoDYjHfvWbbrqnmwRmNo+qyHF"
+        }
+      ]
+    }
+  },
+  "eligible": {
+    "version": "1.5.2",
+    "publishedAt": "2026-04-12T12:46:44.475Z",
+    "optionalDependencies": {
+      "@pagefind/darwin-arm64": "1.5.2",
+      "@pagefind/darwin-x64": "1.5.2",
+      "@pagefind/freebsd-x64": "1.5.2",
+      "@pagefind/linux-arm64": "1.5.2",
+      "@pagefind/linux-x64": "1.5.2",
+      "@pagefind/windows-arm64": "1.5.2",
+      "@pagefind/windows-x64": "1.5.2"
+    },
+    "dist": {
+      "integrity": "sha512-XTUaK0hXMCu2jszWE584JGQT7y284TmMV9l/HX3rnG5uo3rHI/uHU56XTyyyPFjeWEBxECbAi0CaFDJOONtG0Q==",
+      "shasum": "447dd80018d7fd0c2924a56639f7b72bbbd1f165",
+      "tarball": "https://registry.npmjs.org/pagefind/-/pagefind-1.5.2.tgz",
+      "fileCount": 27,
+      "unpackedSize": 37395,
+      "attestations": {
+        "url": "https://registry.npmjs.org/-/npm/v1/attestations/pagefind@1.5.2",
+        "provenance": {
+          "predicateType": "https://slsa.dev/provenance/v1"
+        }
+      },
+      "signatures": [
+        {
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+          "sig": "MEYCIQCvvJW9cgN5iT82wlxwfpJ1NL0EwBq/m/wJRQqDuNLk+AIhAI95ttWg4EEWpEDjPlQcoDYjHfvWbbrqnmwRmNo+qyHF"
+        }
+      ]
+    }
+  }
+}

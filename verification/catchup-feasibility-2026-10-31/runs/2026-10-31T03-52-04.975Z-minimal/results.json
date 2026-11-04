@@ -1,0 +1,13 @@
+[
+  {
+    "id": "minimal",
+    "command": [
+      "node",
+      "probes/minimal-dependencies.mjs"
+    ],
+    "startedAt": "2026-10-31T03:52:04.976Z",
+    "finishedAt": "2026-10-31T03:52:07.608Z",
+    "exitCode": 0,
+    "status": "passed"
+  }
+]

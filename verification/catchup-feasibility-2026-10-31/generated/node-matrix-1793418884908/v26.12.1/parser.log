@@ -1,0 +1,21 @@
+✔ RSS identity, missing dates, relative links, deduplication, body exclusion (2.860292ms)
+✔ Atom namespaced entry selects alternate HTML link and distinguishes updated from published (1.61475ms)
+✔ bad XML, non-feed, DTD and unsafe link handling (0.518959ms)
+✔ title is plain data; markup stays text for escaping at render time (0.213ms)
+✔ streaming cap rejects an oversized response without depending on Content-Length (12.585167ms)
+{"feed":"cloudflare-changelog.xml","bytes":8778655,"entries":1433,"accepted":1433,"rejected":0,"adapterMs":333,"rssParserMs":228,"sample":{"id":"https://developers.cloudflare.com/changelog/post/2026-10-30-scim-population-viewer/","title":"Cloudflare One, Access - Inspect provisioned users and groups with the SCIM population viewer","url":"https://developers.cloudflare.com/changelog/post/2026-10-30-scim-population-viewer/","publishedAt":"2026-10-30T00:00:00.000Z","updatedAt":null}}
+{"feed":"cloudflare-workers.xml","bytes":2940780,"entries":278,"accepted":278,"rejected":0,"adapterMs":112,"rssParserMs":72,"sample":{"id":"https://developers.cloudflare.com/changelog/post/2026-10-30-durable-objects-deferred-code-updates/","title":"Durable Objects, Workers - Durable Objects now defer code updates by default","url":"https://developers.cloudflare.com/changelog/post/2026-10-30-durable-objects-deferred-code-updates/","publishedAt":"2026-10-30T00:00:00.000Z","updatedAt":null}}
+{"feed":"hono-releases.xml","bytes":27485,"entries":10,"accepted":10,"rejected":0,"adapterMs":3,"rssParserMs":14,"sample":{"id":"tag:github.com,2008:Repository/438384984/v4.13.14","title":"v4.13.14","url":"https://github.com/honojs/hono/releases/tag/v4.13.14","publishedAt":null,"updatedAt":"2026-10-25T07:19:38.000Z"}}
+{"feed":"react-blog-feed.xml","bytes":18181,"entries":24,"accepted":24,"rejected":0,"adapterMs":2,"rssParserMs":2,"sample":{"id":"https://react.dev/blog/2026/09/09/react-19-3","title":"React 19.3","url":"https://react.dev/blog/2026/09/09/react-19-3","publishedAt":"2026-09-09T00:00:00.000Z","updatedAt":null}}
+{"feed":"react-releases.xml","bytes":139105,"entries":10,"accepted":10,"rejected":0,"adapterMs":6,"rssParserMs":3,"sample":{"id":"tag:github.com,2008:Repository/10270250/v19.3.1","title":"19.3.1 (October 14th, 2026)","url":"https://github.com/react/react/releases/tag/v19.3.1","publishedAt":null,"updatedAt":"2026-10-14T17:06:15.000Z"}}
+{"feed":"vite-blog-feed.xml","bytes":242873,"entries":12,"accepted":12,"rejected":0,"adapterMs":1,"rssParserMs":8,"sample":{"id":"https://vite.dev/blog/announcing-vite8-1","title":"Vite 8.1 is out!","url":"https://vite.dev/blog/announcing-vite8-1","publishedAt":"2026-06-23T00:00:00.000Z","updatedAt":null}}
+{"feed":"vite-releases.xml","bytes":38468,"entries":10,"accepted":10,"rejected":0,"adapterMs":2,"rssParserMs":1,"sample":{"id":"tag:github.com,2008:Repository/257485422/create-vite@9.3.3","title":"create-vite@9.3.3","url":"https://github.com/vitejs/vite/releases/tag/create-vite%409.3.3","publishedAt":null,"updatedAt":"2026-10-27T09:27:16.000Z"}}
+✔ actual feeds: compare entry counts and parser timings in Node, not cloud CPU (803.806208ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 903.382833

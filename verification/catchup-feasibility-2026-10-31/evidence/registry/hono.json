@@ -1,0 +1,117 @@
+{
+  "observedAt": "2026-10-31T03:44:34.045Z",
+  "cutoff": "2026-10-28T03:44:34.045Z",
+  "name": "hono",
+  "source": "https://registry.npmjs.org/hono",
+  "distTags": {
+    "v4": "4.0.0-rc.4",
+    "latest": "4.13.14",
+    "next": "5.0.0-rc.1"
+  },
+  "latestStable": {
+    "version": "4.13.14",
+    "publishedAt": "2026-10-25T07:19:30.732Z",
+    "engines": {
+      "node": ">=16.9.0"
+    },
+    "scripts": {
+      "lint": "vp lint src runtime-tests build perf-measures benchmarks adapters",
+      "test": "tsc -p tsconfig.spec.json && vp test --run",
+      "build": "pnpm run remove-dist && vp pack && pnpm run copy:package.cjs.json && publint",
+      "check": "vp check",
+      "watch": "pnpm run remove-dist && vp pack --watch && pnpm run copy:package.cjs.json",
+      "format": "vp fmt --check \"src/**/*.{js,ts,tsx}\" \"runtime-tests/**/*.{js,ts,tsx}\" \"build/**/*.{js,ts,tsx}\" \"perf-measures/**/*.{js,ts,tsx}\" \"benchmarks/**/*.{js,ts,tsx}\" \"adapters/**/*.{js,ts,tsx}\"",
+      "release": "np --no-publish",
+      "coverage": "vp test --run --coverage",
+      "lint:fix": "vp lint --fix src runtime-tests build perf-measures benchmarks adapters",
+      "test:all": "pnpm run test && pnpm run test:deno && pnpm run test:bun",
+      "test:bun": "bun test --jsx-import-source ../../src/jsx runtime-tests/bun",
+      "check:fix": "vp check --fix",
+      "test:deno": "deno test --allow-read --allow-env --allow-write --allow-net -c runtime-tests/deno/deno.json runtime-tests/deno && deno test --no-lock -c runtime-tests/deno-jsx/deno.precompile.json runtime-tests/deno-jsx && deno test --no-lock -c runtime-tests/deno-jsx/deno.react-jsx.json runtime-tests/deno-jsx",
+      "test:node": "vp test --run --project node",
+      "format:fix": "vp fmt \"src/**/*.{js,ts,tsx}\" \"runtime-tests/**/*.{js,ts,tsx}\" \"build/**/*.{js,ts,tsx}\" \"perf-measures/**/*.{js,ts,tsx}\" \"benchmarks/**/*.{js,ts,tsx}\" \"adapters/**/*.{js,ts,tsx}\"",
+      "prerelease": "pnpm run test:deno && pnpm run build",
+      "test:watch": "vp test --watch",
+      "remove-dist": "rm -rf dist",
+      "test:fastly": "vp test --run --project fastly",
+      "test:workerd": "vp test --run --project workerd",
+      "test:adapters": "pnpm -r --filter \"./adapters/*\" run test",
+      "build:adapters": "pnpm -r --filter \"./adapters/*\" run build",
+      "release:adapter": "node ./build/release-adapter.ts",
+      "editorconfig-checker": "editorconfig-checker",
+      "copy:package.cjs.json": "cp ./package.cjs.json ./dist/cjs/package.json && cp ./package.cjs.json ./dist/types/package.json"
+    },
+    "dist": {
+      "shasum": "234489b07bd7bb7b069c9e362f4d39ca85376638",
+      "tarball": "https://registry.npmjs.org/hono/-/hono-4.13.14.tgz",
+      "integrity": "sha512-yhRLQ21U6qa9Hsu2N7Qcbh8tE+WKEcoErjIo56LeSGiGXGp9sA7UpE86Ui9uexb61KakiGwuHMn2QdV7w6i6kQ==",
+      "fileCount": 574,
+      "unpackedSize": 1296954,
+      "attestations": {
+        "url": "https://registry.npmjs.org/-/npm/v1/attestations/hono@4.13.14",
+        "provenance": {
+          "predicateType": "https://slsa.dev/provenance/v1"
+        }
+      },
+      "signatures": [
+        {
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+          "sig": "MEQCIEfDwt+J/WVEiAbB+4NmnkX7JDa5zIo0D32kbwGjyuPmAiB2nE9gZYcdMtloTG0FeSbKfvUNtP7rOdlIurcxBWJC8w=="
+        }
+      ]
+    }
+  },
+  "eligible": {
+    "version": "4.13.14",
+    "publishedAt": "2026-10-25T07:19:30.732Z",
+    "engines": {
+      "node": ">=16.9.0"
+    },
+    "scripts": {
+      "lint": "vp lint src runtime-tests build perf-measures benchmarks adapters",
+      "test": "tsc -p tsconfig.spec.json && vp test --run",
+      "build": "pnpm run remove-dist && vp pack && pnpm run copy:package.cjs.json && publint",
+      "check": "vp check",
+      "watch": "pnpm run remove-dist && vp pack --watch && pnpm run copy:package.cjs.json",
+      "format": "vp fmt --check \"src/**/*.{js,ts,tsx}\" \"runtime-tests/**/*.{js,ts,tsx}\" \"build/**/*.{js,ts,tsx}\" \"perf-measures/**/*.{js,ts,tsx}\" \"benchmarks/**/*.{js,ts,tsx}\" \"adapters/**/*.{js,ts,tsx}\"",
+      "release": "np --no-publish",
+      "coverage": "vp test --run --coverage",
+      "lint:fix": "vp lint --fix src runtime-tests build perf-measures benchmarks adapters",
+      "test:all": "pnpm run test && pnpm run test:deno && pnpm run test:bun",
+      "test:bun": "bun test --jsx-import-source ../../src/jsx runtime-tests/bun",
+      "check:fix": "vp check --fix",
+      "test:deno": "deno test --allow-read --allow-env --allow-write --allow-net -c runtime-tests/deno/deno.json runtime-tests/deno && deno test --no-lock -c runtime-tests/deno-jsx/deno.precompile.json runtime-tests/deno-jsx && deno test --no-lock -c runtime-tests/deno-jsx/deno.react-jsx.json runtime-tests/deno-jsx",
+      "test:node": "vp test --run --project node",
+      "format:fix": "vp fmt \"src/**/*.{js,ts,tsx}\" \"runtime-tests/**/*.{js,ts,tsx}\" \"build/**/*.{js,ts,tsx}\" \"perf-measures/**/*.{js,ts,tsx}\" \"benchmarks/**/*.{js,ts,tsx}\" \"adapters/**/*.{js,ts,tsx}\"",
+      "prerelease": "pnpm run test:deno && pnpm run build",
+      "test:watch": "vp test --watch",
+      "remove-dist": "rm -rf dist",
+      "test:fastly": "vp test --run --project fastly",
+      "test:workerd": "vp test --run --project workerd",
+      "test:adapters": "pnpm -r --filter \"./adapters/*\" run test",
+      "build:adapters": "pnpm -r --filter \"./adapters/*\" run build",
+      "release:adapter": "node ./build/release-adapter.ts",
+      "editorconfig-checker": "editorconfig-checker",
+      "copy:package.cjs.json": "cp ./package.cjs.json ./dist/cjs/package.json && cp ./package.cjs.json ./dist/types/package.json"
+    },
+    "dist": {
+      "shasum": "234489b07bd7bb7b069c9e362f4d39ca85376638",
+      "tarball": "https://registry.npmjs.org/hono/-/hono-4.13.14.tgz",
+      "integrity": "sha512-yhRLQ21U6qa9Hsu2N7Qcbh8tE+WKEcoErjIo56LeSGiGXGp9sA7UpE86Ui9uexb61KakiGwuHMn2QdV7w6i6kQ==",
+      "fileCount": 574,
+      "unpackedSize": 1296954,
+      "attestations": {
+        "url": "https://registry.npmjs.org/-/npm/v1/attestations/hono@4.13.14",
+        "provenance": {
+          "predicateType": "https://slsa.dev/provenance/v1"
+        }
+      },
+      "signatures": [
+        {
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+          "sig": "MEQCIEfDwt+J/WVEiAbB+4NmnkX7JDa5zIo0D32kbwGjyuPmAiB2nE9gZYcdMtloTG0FeSbKfvUNtP7rOdlIurcxBWJC8w=="
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,184 @@
+<div id="brotli-flow-20261027">
+  <h3>HTTPの本文から、Brotliデコーダーへ</h3>
+  <div class="viz-controls">
+    <label class="form-label">見る場面
+      <select class="form-select" data-scene>
+        <option value="normal">正常な展開：103 → 4,280バイト</option>
+        <option value="before">不正な入力：修正前</option>
+        <option value="after">不正な入力：修正後</option>
+      </select>
+    </label>
+    <button type="button" class="btn btn-primary" data-play>流れを再生</button>
+  </div>
+  <svg class="brotli-diagram" role="img" aria-labelledby="brotli-diagram-title brotli-diagram-desc">
+    <title id="brotli-diagram-title">Brotli展開の処理経路</title>
+    <desc id="brotli-diagram-desc">fetchがContent-Encoding: brを読み、Brotliデコーダーを経由して本文をアプリへ渡します。</desc>
+  </svg>
+  <div class="brotli-status" role="status" aria-live="polite" data-status>正常な展開。本文のバイト数は、手元の実験で観測した値です。</div>
+  <div class="text-small text-muted" data-caption>動き・区切り・所要時間は模式表現</div>
+</div>
+<style>
+#brotli-flow-20261027 { color: var(--foreground); }
+#brotli-flow-20261027 .viz-controls { margin-top: 16px; }
+#brotli-flow-20261027 .brotli-diagram { display: block; width: 100%; margin-top: 12px; overflow: visible; }
+#brotli-flow-20261027 .brotli-diagram text { fill: var(--foreground); font: inherit; font-weight: 400; }
+#brotli-flow-20261027 .brotli-diagram .label { font-weight: 500; }
+#brotli-flow-20261027 .brotli-diagram .muted { fill: var(--muted-foreground); }
+#brotli-flow-20261027 .node { fill: var(--muted); stroke: var(--border); stroke-width: 1; }
+#brotli-flow-20261027 .node.active { fill: color-mix(in srgb, var(--viz-series-1) 14%, var(--background)); }
+#brotli-flow-20261027 .node.danger { fill: color-mix(in srgb, var(--viz-series-2) 16%, var(--background)); }
+#brotli-flow-20261027 .connector { stroke: var(--muted-foreground); stroke-width: 1.5; fill: none; }
+#brotli-flow-20261027 .packet { fill: var(--viz-series-1); }
+#brotli-flow-20261027 .packet.danger { fill: var(--viz-series-2); }
+#brotli-flow-20261027 .buffer-cell { fill: var(--muted); }
+#brotli-flow-20261027 .buffer-cell.filled { fill: var(--viz-series-1); }
+#brotli-flow-20261027 .buffer-cell.spill { fill: var(--viz-series-2); }
+#brotli-flow-20261027 .boundary { stroke: var(--foreground); stroke-width: 1.5; stroke-dasharray: 4 4; }
+#brotli-flow-20261027 .brotli-status { margin: 4px 0 8px; min-height: 3em; }
+@media print { #brotli-flow-20261027 .viz-controls { display: none; } }
+</style>
+<script>
+(() => {
+  const root = document.getElementById('brotli-flow-20261027');
+  const svg = root.querySelector('.brotli-diagram');
+  const select = root.querySelector('[data-scene]');
+  const button = root.querySelector('[data-play]');
+  const status = root.querySelector('[data-status]');
+  const caption = root.querySelector('[data-caption]');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const ns = 'http://www.w3.org/2000/svg';
+  const data = {
+    normal: {
+      nodes: [ ['HTTP応答の本文', '圧縮済み：103バイト', 'Content-Encoding: br'], ['Brotliデコーダー', 'fetch内部で選ばれる', '元のバイト列を復元'], ['アプリが読む本文', '展開済み：4,280バイト', '元の本文と完全一致'] ],
+      states: ['正常な展開。本文のバイト数は、手元の実験で観測した値です。', '① HTTP応答から、圧縮された本文を受け取る。', '② fetchがbrヘッダーに応じてデコーダーを使う。', '③ デコーダーが受け取ったデータを展開する。', '④ アプリには元の4,280バイトが渡る。'],
+      foot: '比較：node:http は自動展開せず、103バイトを渡した',
+      caption: '正常なHTTP/1.1実験の観測値 ／ 動き・区切り・所要時間は模式表現'
+    },
+    before: {
+      nodes: [ ['細工された本文', '不正なブロック切り替え', 'Content-Encoding: br'], ['修正前のデコーダー', '形式エラーを', '「入力待ち」と誤認'], ['プロセスのメモリ', '境界外へ書き込み', 'メモリ破損が起こり得る'] ],
+      states: ['修正前：不正な入力を受け取った場合の、公式説明に基づく模式図です。', '① 不正なBrotliデータがデコーダーに届く。', '② 「形式が不正」を「まだ入力が足りない」と扱ってしまう。', '③ 入力を追加し続け、8バイトの内部バッファの境界を越え得る。', '④ 周辺のメモリを壊し、クラッシュなどにつながり得る。'],
+      foot: '入力待ち → 追加 → 再び入力待ち …',
+      caption: '公式説明に基づく模式図 ／ 脆弱性・攻撃の実行再現ではありません'
+    },
+    after: {
+      nodes: [ ['同じ種類の不正入力', '不正なブロック切り替え', 'Content-Encoding: br'], ['修正後のデコーダー', '「形式エラー」を返す', '入力待ちと区別する'], ['展開をエラーで終了', '不正な処理を止める', '成功した本文として渡さない'] ],
+      states: ['修正後：入力待ちと形式エラーを分け、呼び出し側まで伝えます。', '① 不正なBrotliデータがデコーダーに届く。', '② 不正なブロック切り替えを形式エラーとして識別する。', '③ エラーを呼び出し側へ伝え、展開処理を止める。', '④ 不正な状態のまま、入力を追加し続ける経路を断つ。'],
+      foot: '入力不足：待つ ／ 形式エラー：止める',
+      caption: '上流の修正差分に基づく模式図 ／ 処理順序の細部は省略'
+    }
+  };
+  let scene = 'normal', progress = 0, running = false, frame = 0, start = 0, lastStage = -1;
+  const duration = 9500;
+  function el(tag, attrs = {}, text) {
+    const item = document.createElementNS(ns, tag);
+    for (const [key, value] of Object.entries(attrs)) item.setAttribute(key, value);
+    if (text !== undefined) item.textContent = text;
+    svg.append(item);
+    return item;
+  }
+  function label(x, y, text, cls = '', anchor = 'middle') {
+    return el('text', { x, y, 'text-anchor': anchor, class: cls }, text);
+  }
+  function draw() {
+    const width = Math.max(260, root.getBoundingClientRect().width);
+    const vertical = width < 590;
+    const stage = Math.min(4, Math.floor(progress * 4.99));
+    const current = data[scene];
+    const boxW = vertical ? Math.min(330, width - 20) : (width - 64) / 3;
+    const boxH = 100, gap = 28;
+    const boxes = Array.from({ length: 3 }, (_, i) => ({
+      x: vertical ? (width - boxW) / 2 : 4 + i * (boxW + gap),
+      y: vertical ? 12 + i * 128 : 16,
+      w: boxW, h: boxH
+    }));
+    const bottom = vertical ? 380 : 128;
+    const height = bottom + (scene === 'before' ? 132 : 66);
+    svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
+    svg.setAttribute('height', height);
+    svg.replaceChildren();
+    el('title', { id: 'brotli-diagram-title' }, scene === 'normal' ? '正常なBrotli展開のパイプライン' : '不正な入力を受け取ったBrotliデコーダー');
+    el('desc', { id: 'brotli-diagram-desc' }, current.nodes.map(n => n.join('、')).join('。次に、'));
+    const defs = el('defs');
+    const marker = document.createElementNS(ns, 'marker');
+    for (const [k, v] of Object.entries({ id: 'brotli-arrow', viewBox: '0 0 10 10', refX: 8, refY: 5, markerWidth: 6, markerHeight: 6, orient: 'auto-start-reverse' })) marker.setAttribute(k, v);
+    const tip = document.createElementNS(ns, 'path');
+    tip.setAttribute('d', 'M 1 1 L 8 5 L 1 9');
+    tip.setAttribute('class', 'connector');
+    marker.append(tip); defs.append(marker);
+    for (let i = 0; i < 2; i++) {
+      const a = boxes[i], b = boxes[i + 1];
+      const x1 = vertical ? a.x + a.w / 2 : a.x + a.w;
+      const y1 = vertical ? a.y + a.h : a.y + a.h / 2;
+      const x2 = vertical ? b.x + b.w / 2 : b.x;
+      const y2 = vertical ? b.y : b.y + b.h / 2;
+      el('path', { d: `M ${x1} ${y1} L ${x2} ${y2}`, class: 'connector', 'marker-end': 'url(#brotli-arrow)' });
+      const part = i === 0 ? (progress - 0.1) / 0.3 : (progress - 0.6) / 0.3;
+      if (part >= 0 && part <= 1 && !reducedMotion.matches) {
+        el('circle', { cx: x1 + (x2 - x1) * part, cy: y1 + (y2 - y1) * part, r: 5, class: `packet${scene === 'before' && i === 1 ? ' danger' : ''}` });
+      }
+    }
+    boxes.forEach((b, i) => {
+      const active = (i === 0 && stage >= 1) || (i === 1 && stage >= 2) || (i === 2 && stage >= 4);
+      const danger = scene === 'before' && i === 2 && stage >= 4;
+      el('rect', { x: b.x, y: b.y, width: b.w, height: b.h, rx: 8, class: `node${active ? ' active' : ''}${danger ? ' danger' : ''}` });
+      current.nodes[i].forEach((s, j) => label(b.x + b.w / 2, b.y + 28 + j * 25, s, j === 0 ? 'label' : ''));
+    });
+    if (scene === 'before') {
+      const cell = Math.min(30, (width - 32) / 11), gapCell = 4;
+      const total = cell * 9 + gapCell * 8 + 16;
+      const x = (width - total) / 2;
+      label(width / 2, bottom + 18, '内部バッファ：入力を8バイト保持', 'label');
+      const filled = progress < 0.4 ? 0 : Math.min(9, Math.floor((progress - 0.4) / 0.4 * 9));
+      for (let i = 0; i < 9; i++) {
+        const cellX = x + i * (cell + gapCell) + (i === 8 ? 16 : 0);
+        el('rect', { x: cellX, y: bottom + 32, width: cell, height: 24, rx: 3, class: `buffer-cell${i < filled ? (i === 8 ? ' spill' : ' filled') : ''}` });
+      }
+      const boundary = x + 8 * (cell + gapCell) + 6;
+      el('line', { x1: boundary, x2: boundary, y1: bottom + 26, y2: bottom + 65, class: 'boundary' });
+      label(x + (cell * 8 + gapCell * 7) / 2, bottom + 80, '確保された範囲', 'muted');
+      label(width - 6, bottom + 80, '範囲外', '', 'end');
+      label(width / 2, bottom + 112, current.foot, 'muted');
+    } else if (vertical && scene === 'normal') {
+      label(width / 2, bottom + 24, '比較：node:http は自動展開せず、', 'muted');
+      label(width / 2, bottom + 47, '103バイトを渡した', 'muted');
+    } else {
+      label(width / 2, bottom + 32, current.foot, 'muted');
+    }
+    if (lastStage !== stage) { status.textContent = current.states[stage]; lastStage = stage; }
+    caption.textContent = current.caption;
+  }
+  function stop() { running = false; cancelAnimationFrame(frame); }
+  function tick(now) {
+    progress = Math.min(1, (now - start) / duration);
+    draw();
+    if (progress < 1 && running) frame = requestAnimationFrame(tick);
+    else { running = false; button.textContent = 'もう一度再生'; }
+  }
+  function save() {
+    const host = window.openai;
+    if (host?.setWidgetState) host.setWidgetState({ modelContent: { scene }, privateContent: null }).catch(() => {});
+  }
+  function choose(value) {
+    stop(); scene = Object.hasOwn(data, value) ? value : 'normal';
+    select.value = scene; progress = 0; lastStage = -1;
+    button.textContent = '流れを再生'; draw();
+  }
+  button.addEventListener('click', () => {
+    if (running) { stop(); button.textContent = '続きを再生'; return; }
+    if (progress >= 1) progress = 0;
+    if (reducedMotion.matches) { progress = 1; draw(); button.textContent = 'もう一度再生'; return; }
+    running = true; start = performance.now() - progress * duration;
+    button.textContent = '一時停止'; frame = requestAnimationFrame(tick);
+  });
+  select.addEventListener('change', () => { choose(select.value); save(); });
+  window.addEventListener('openai:set_globals', event => {
+    const value = event.detail?.globals?.widgetState?.modelContent?.scene;
+    if (value && value !== scene) choose(value);
+  });
+  reducedMotion.addEventListener('change', () => {
+    if (reducedMotion.matches && running) { stop(); progress = 1; button.textContent = 'もう一度再生'; draw(); }
+  });
+  new ResizeObserver(draw).observe(root);
+  choose(window.openai?.widgetState?.modelContent?.scene || 'normal');
+})();
+</script>

@@ -1,0 +1,13 @@
+[
+  {
+    "id": "feeds",
+    "command": [
+      "node",
+      "probes/feeds.mjs"
+    ],
+    "startedAt": "2026-10-31T03:45:20.189Z",
+    "finishedAt": "2026-10-31T03:45:25.573Z",
+    "exitCode": 0,
+    "status": "passed"
+  }
+]

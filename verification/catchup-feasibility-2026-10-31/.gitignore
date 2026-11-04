@@ -1,0 +1,26 @@
+# Downloaded third-party feed bodies stay local pending publication review.
+# The real-feed probes require these inputs; retain their result JSON and logs.
+/evidence/feeds/
+
+# Disposable probe builds and runtime state. Preserve evidence listed below.
+/generated/*
+!/generated/dependency-alternative-*/
+!/generated/node-matrix-*/
+
+# Preserve the exact dependency alternatives, audits, and installation results.
+/generated/dependency-alternative-*/*
+!/generated/dependency-alternative-*/package.json
+!/generated/dependency-alternative-*/package-lock.json
+!/generated/dependency-alternative-*/npm-audit.json
+!/generated/dependency-alternative-*/install.log
+
+# Preserve per-version measurements and checksums, without downloaded runtimes.
+/generated/node-matrix-*/*
+!/generated/node-matrix-*/host/
+!/generated/node-matrix-*/v[0-9]*/
+/generated/node-matrix-*/*/*
+!/generated/node-matrix-*/*/*.json
+!/generated/node-matrix-*/*/*.log
+!/generated/node-matrix-*/*/SHASUMS256.txt
+
+# Keep probes/, runs/, baseline.json, and the remaining evidence/ files.

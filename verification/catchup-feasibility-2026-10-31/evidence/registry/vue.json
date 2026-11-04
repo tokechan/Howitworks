@@ -1,0 +1,99 @@
+{
+  "observedAt": "2026-10-31T03:44:34.045Z",
+  "cutoff": "2026-10-28T03:44:34.045Z",
+  "name": "vue",
+  "source": "https://registry.npmjs.org/vue",
+  "distTags": {
+    "csp": "1.0.28-csp",
+    "v2-latest": "2.7.16",
+    "legacy": "2.7.16",
+    "alpha": "3.6.0-alpha.7",
+    "beta": "3.6.0-beta.17",
+    "latest": "3.5.44",
+    "rc": "3.6.0-rc.14"
+  },
+  "latestStable": {
+    "version": "3.5.44",
+    "publishedAt": "2026-10-13T07:45:32.806Z",
+    "peers": {
+      "typescript": "*"
+    },
+    "peerMeta": {
+      "typescript": {
+        "optional": true
+      }
+    },
+    "dependencies": {
+      "@vue/shared": "3.5.44",
+      "@vue/runtime-dom": "3.5.44",
+      "@vue/compiler-dom": "3.5.44",
+      "@vue/compiler-sfc": "3.5.44",
+      "@vue/server-renderer": "3.5.44"
+    },
+    "dist": {
+      "shasum": "de7828ab2cf53757ecb920564b7b6c36bf187aca",
+      "tarball": "https://registry.npmjs.org/vue/-/vue-3.5.44.tgz",
+      "fileCount": 37,
+      "integrity": "sha512-dvvmaOCG7lAMkJTPqPwWeGMsPS6DIsFsfZDUgBp9V6mHf9b3+/wyVwYR4Es+WV6uJC0FKRxp81Obcq0ZwUcGFQ==",
+      "signatures": [
+        {
+          "sig": "MEYCIQCSIWX80OVq1tXjuN3XILFcY715uX2h56IlzW45xHJxfAIhAPg6tyYvDwqpk+EU4JNvgJujosFp/9NNCwZbFtP7cf7/",
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+        },
+        {
+          "sig": "MEUCIGr61ePd+PckjL222TPrrQXasW1D/KaBJvkeSP8FoLDXAiEA1quzUM/NMuiaJbXQ0oaEHoEETXNqrnCi1wI/yDYzcHM=",
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+        }
+      ],
+      "attestations": {
+        "url": "https://registry.npmjs.org/-/npm/v1/attestations/vue@3.5.44",
+        "provenance": {
+          "predicateType": "https://slsa.dev/provenance/v1"
+        }
+      },
+      "unpackedSize": 2581780
+    }
+  },
+  "eligible": {
+    "version": "3.5.44",
+    "publishedAt": "2026-10-13T07:45:32.806Z",
+    "peers": {
+      "typescript": "*"
+    },
+    "peerMeta": {
+      "typescript": {
+        "optional": true
+      }
+    },
+    "dependencies": {
+      "@vue/shared": "3.5.44",
+      "@vue/runtime-dom": "3.5.44",
+      "@vue/compiler-dom": "3.5.44",
+      "@vue/compiler-sfc": "3.5.44",
+      "@vue/server-renderer": "3.5.44"
+    },
+    "dist": {
+      "shasum": "de7828ab2cf53757ecb920564b7b6c36bf187aca",
+      "tarball": "https://registry.npmjs.org/vue/-/vue-3.5.44.tgz",
+      "fileCount": 37,
+      "integrity": "sha512-dvvmaOCG7lAMkJTPqPwWeGMsPS6DIsFsfZDUgBp9V6mHf9b3+/wyVwYR4Es+WV6uJC0FKRxp81Obcq0ZwUcGFQ==",
+      "signatures": [
+        {
+          "sig": "MEYCIQCSIWX80OVq1tXjuN3XILFcY715uX2h56IlzW45xHJxfAIhAPg6tyYvDwqpk+EU4JNvgJujosFp/9NNCwZbFtP7cf7/",
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+        },
+        {
+          "sig": "MEUCIGr61ePd+PckjL222TPrrQXasW1D/KaBJvkeSP8FoLDXAiEA1quzUM/NMuiaJbXQ0oaEHoEETXNqrnCi1wI/yDYzcHM=",
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+        }
+      ],
+      "attestations": {
+        "url": "https://registry.npmjs.org/-/npm/v1/attestations/vue@3.5.44",
+        "provenance": {
+          "predicateType": "https://slsa.dev/provenance/v1"
+        }
+      },
+      "unpackedSize": 2581780
+    }
+  }
+}

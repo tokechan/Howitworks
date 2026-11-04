@@ -1,0 +1,104 @@
+{
+  "observedAt": "2026-10-31T03:44:34.045Z",
+  "cutoff": "2026-10-28T03:44:34.045Z",
+  "name": "@types/react",
+  "source": "https://registry.npmjs.org/%40types%2Freact",
+  "distTags": {
+    "ts2.0": "15.0.1",
+    "ts2.1": "15.0.20",
+    "ts2.2": "15.0.30",
+    "ts2.4": "16.0.36",
+    "ts2.3": "16.0.36",
+    "ts2.5": "16.0.36",
+    "ts2.7": "16.4.7",
+    "ts2.6": "16.4.7",
+    "ts2.8": "16.9.34",
+    "ts2.9": "16.9.35",
+    "ts3.0": "16.9.46",
+    "ts3.1": "16.9.49",
+    "ts3.2": "16.9.56",
+    "ts3.3": "17.0.0",
+    "ts3.4": "17.0.2",
+    "ts3.5": "17.0.8",
+    "ts3.6": "17.0.19",
+    "ts3.7": "17.0.35",
+    "ts3.8": "17.0.39",
+    "ts3.9": "18.0.12",
+    "ts4.0": "18.0.18",
+    "ts4.1": "18.0.25",
+    "ts4.2": "18.0.28",
+    "ts4.3": "18.2.21",
+    "ts4.4": "18.2.21",
+    "ts4.5": "18.2.39",
+    "ts4.6": "18.2.64",
+    "ts4.7": "18.3.3",
+    "ts4.9": "18.3.12",
+    "ts4.8": "18.3.12",
+    "ts5.0": "19.0.12",
+    "ts5.1": "19.1.9",
+    "ts5.2": "19.2.14",
+    "ts5.4": "19.2.17",
+    "ts5.3": "19.2.17",
+    "ts5.5": "19.2.17",
+    "ts5.9": "19.3.0",
+    "ts5.6": "19.3.0",
+    "ts5.8": "19.3.0",
+    "ts7.0": "19.3.0",
+    "ts5.7": "19.3.0",
+    "ts6.0": "19.3.0",
+    "latest": "19.3.0",
+    "ts7.1": "19.3.0"
+  },
+  "latestStable": {
+    "version": "19.3.0",
+    "publishedAt": "2026-09-09T18:08:49.750Z",
+    "peers": {},
+    "dependencies": {
+      "csstype": "^3.2.2"
+    },
+    "scripts": {},
+    "dist": {
+      "shasum": "3b3ce8d8c1627fb5ccd4dadd57ef445c5a153b77",
+      "tarball": "https://registry.npmjs.org/@types/react/-/react-19.3.0.tgz",
+      "fileCount": 18,
+      "integrity": "sha512-N0rFCuH9YoxG9/m61l9MfpJKfmLOVU0em7ipIz6TRgSSkvReLB9vL85GB+yr8Bs5leqpvg96JSwF4ZS1s4viQg==",
+      "signatures": [
+        {
+          "sig": "MEQCICO9E9W9sN+6oHDGno2fJYJ8YEsNOa01MoJJmauunAjGAiAVusL8FBYYoRgnVrnz0RY2KMSjP1OlJ7GunY0YhIr0GA==",
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+        },
+        {
+          "sig": "MEYCIQCG/2kbQCjMBz9wJNsFnPRUQFtQzxGIbkrwTxQ3ZYlQrwIhAKZAxRpE46wtsHz27OGDgRmXLV83Q5GivNToLaMzF7Q2",
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+        }
+      ],
+      "unpackedSize": 408108
+    }
+  },
+  "eligible": {
+    "version": "19.3.0",
+    "publishedAt": "2026-09-09T18:08:49.750Z",
+    "peers": {},
+    "dependencies": {
+      "csstype": "^3.2.2"
+    },
+    "scripts": {},
+    "dist": {
+      "shasum": "3b3ce8d8c1627fb5ccd4dadd57ef445c5a153b77",
+      "tarball": "https://registry.npmjs.org/@types/react/-/react-19.3.0.tgz",
+      "fileCount": 18,
+      "integrity": "sha512-N0rFCuH9YoxG9/m61l9MfpJKfmLOVU0em7ipIz6TRgSSkvReLB9vL85GB+yr8Bs5leqpvg96JSwF4ZS1s4viQg==",
+      "signatures": [
+        {
+          "sig": "MEQCICO9E9W9sN+6oHDGno2fJYJ8YEsNOa01MoJJmauunAjGAiAVusL8FBYYoRgnVrnz0RY2KMSjP1OlJ7GunY0YhIr0GA==",
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+        },
+        {
+          "sig": "MEYCIQCG/2kbQCjMBz9wJNsFnPRUQFtQzxGIbkrwTxQ3ZYlQrwIhAKZAxRpE46wtsHz27OGDgRmXLV83Q5GivNToLaMzF7Q2",
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+        }
+      ],
+      "unpackedSize": 408108
+    }
+  }
+}

@@ -1,0 +1,84 @@
+:root {
+  --talk-blue: var(--geist-success, #0070f3);
+  --talk-pink: var(--geist-highlight-purple, #f81ce5);
+  --talk-mint: var(--geist-cyan, #50e3c2);
+}
+
+/* Keep Geist's white canvas, black headings, Inter and flat composition.
+   These sizes/spacing are tuned for a short Japanese talk. */
+#slide-content { padding: 0; }
+:is(.slidev-layout, .cover) {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 58px 58px 62px;
+  color: #000;
+  background: #fff;
+  font-family: 'Inter Variable', 'Noto Sans JP Variable', sans-serif;
+}
+:is(.slidev-layout, .cover) h1 {
+  margin: 0 0 44px;
+  font-size: 44px;
+  line-height: 1.4;
+  font-weight: 800;
+  letter-spacing: -.045em;
+}
+:is(.slidev-layout, .cover).cover { align-items: center; }
+:is(.slidev-layout, .cover).cover h1 { font-size: 68px; line-height: 1.45; margin: 14px 0 20px; }
+:is(.slidev-layout, .cover) .eyebrow { font-size: 16px; color: #666; letter-spacing: .1em; font-weight: 500; margin: 0 0 18px; }
+:is(.slidev-layout, .cover) .subtitle { font-size: 23px; color: #555; margin: 10px 0 0; }
+:is(.slidev-layout, .cover) .blue { color: var(--talk-blue); }
+:is(.slidev-layout, .cover) .pink { color: var(--talk-pink); }
+:is(.slidev-layout, .cover) .mint-mark { color: #000; box-shadow: inset 0 -.19em var(--talk-mint); }
+:is(.slidev-layout, .cover) .muted { color: #666; }
+:is(.slidev-layout, .cover) .mono { font-family: Menlo, ui-monospace, monospace; }
+:is(.slidev-layout, .cover) .arrow { color: #a0a0a0; font-weight: 400; }
+:is(.slidev-layout, .cover) .footnote { position: absolute; bottom: 34px; left: 58px; right: 82px; font-size: 13px; line-height: 1.5; color: #666; }
+:is(.slidev-layout, .cover) .label { font-size: 24px; font-weight: 600; }
+:is(.slidev-layout, .cover) .caption { font-size: 22px; color: #555; margin-top: 17px; }
+:is(.slidev-layout, .cover) .number { font-size: 94px; font-weight: 750; letter-spacing: -.07em; line-height: 1.25; white-space: nowrap; }
+:is(.slidev-layout, .cover) .number > span { font-size: 28px; font-weight: 500; margin-left: 12px; letter-spacing: 0; }
+.comparison { display: grid; grid-template-columns: 1fr 1.15fr; gap: 56px; padding-top: 28px; }
+.comparison > div + div { border-left: 1px solid #eaeaea; padding-left: 52px; }
+.header-name { font-size: 26px; color: #666; margin-top: 4px; margin-bottom: 20px; }
+.plain-rows { font-size: 42px; }
+.plain-rows > div { display: grid; grid-template-columns: 1.2fr .4fr 1fr; align-items: center; padding: 20px 0; }
+.plain-rows > div + div { border-top: 1px solid #eaeaea; }
+.plain-rows strong { color: #000; font-weight: 650; }
+.pipeline { display: grid; grid-template-columns: 120px 90px 35px 180px 35px 130px; align-items: center; justify-content: space-between; row-gap: 72px; padding-top: 32px; font-size: 28px; font-weight: 600; }
+.pipeline-label { font-size: 22px; }
+.pipeline .mint-mark { justify-self: center; white-space: nowrap; }
+.sequence { display: flex; align-items: center; justify-content: space-between; gap: 26px; padding-top: 56px; font-size: 43px; font-weight: 600; white-space: nowrap; }
+.sequence.compact { font-size: 28px; padding-top: 26px; gap: 18px; }
+.large-caption { font-size: 26px; color: #555; margin-top: 48px; line-height: 1.6; }
+.merge-comparison { display: grid; grid-template-columns: 1fr 90px 1.1fr; align-items: center; gap: 35px; padding-top: 40px; font-size: 38px; }
+.merge-comparison > div:first-child { display: grid; gap: 42px; }
+.fault-comparison { padding-top: 4px; }
+.fault-comparison + .large-caption { margin-top: 28px; font-size: 28px; }
+.inventory-rows, .response-rows { padding-top: 4px; }
+.inventory-rows > div, .response-rows > div { display: grid; grid-template-columns: 220px 1fr; align-items: baseline; gap: 28px; padding: 20px 0; font-size: 29px; }
+.inventory-rows > div + div, .response-rows > div + div { border-top: 1px solid #eaeaea; }
+.inventory-rows strong { color: var(--talk-blue); font-size: 31px; }
+.response-rows > div { grid-template-columns: 285px 1fr; }
+.response-rows strong { font-size: 27px; }
+.giant { font-size: 92px; font-weight: 750; letter-spacing: -.06em; line-height: 1.2; }
+.buffer-fact { display: flex; align-items: center; gap: 42px; margin-top: -17px; }
+.buffer-fact > div + div { font-size: 23px; color: #555; }
+.fix-rows { padding-top: 12px; }
+.static-link { font-size: 56px; font-weight: 650; padding-top: 40px; white-space: nowrap; }
+.bracket { color: #999; margin: 0 13px; font-weight: 400; }
+.version-example { padding-top: 5px; }
+.version-example .label { font-size: 20px; color: #666; margin-bottom: 14px; }
+.version-example + .large-caption { font-size: 24px; margin-top: 28px; }
+.takeaway { display: flex; gap: 24px; font-size: 24px; margin-top: 40px; align-items: center; }
+.reference-links { display: grid; gap: 28px; font-size: 26px; }
+.reference-links a { display: flex; align-items: baseline; justify-content: space-between; color: #000; border: 0; padding-bottom: 16px; border-bottom: 1px solid #eaeaea; }
+.reference-links a span { font-size: 20px; color: var(--talk-blue); }
+:is(.slidev-layout, .cover) .evidence-table { font-size: 27px; margin-top: 18px; }
+:is(.slidev-layout, .cover) .evidence-table th { font-size: 16px; text-transform: none; }
+:is(.slidev-layout, .cover) .evidence-table td { padding: 16px 12px; color: #000; }
+:is(.slidev-layout, .cover) .evidence-table td.blue { color: var(--talk-blue); font-weight: 650; }
+:is(.slidev-layout, .cover) a:focus-visible, :is(.slidev-layout, .cover) button:focus-visible { outline: 3px solid var(--talk-blue); outline-offset: 5px; }
+@media (prefers-reduced-motion: reduce) {
+  .slidev-vclick-target, :is(.slidev-layout, .cover) { transition: none !important; }
+}

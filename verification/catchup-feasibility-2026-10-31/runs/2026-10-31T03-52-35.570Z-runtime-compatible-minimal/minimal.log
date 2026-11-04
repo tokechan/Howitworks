@@ -1,0 +1,22 @@
+{
+  "dir": "/Users/svc-tokeshi/dev/Howitworks/verification/catchup-feasibility-2026-10-31/generated/dependency-alternative-1793418756772",
+  "checkedAt": "2026-10-31T03:52:38.206Z",
+  "cutoff": "2026-10-28T03:44:34.045Z",
+  "dependencies": {
+    "hono": "4.13.14",
+    "fast-xml-parser": "5.11.2",
+    "wrangler": "4.154.0"
+  },
+  "auditExit": 0,
+  "auditSummary": {
+    "info": 0,
+    "low": 0,
+    "moderate": 0,
+    "high": 0,
+    "critical": 0,
+    "total": 0
+  },
+  "checks": 100,
+  "violations": [],
+  "note": "Metadata/lockfile-only alternative. No application dependency adoption or package execution."
+}

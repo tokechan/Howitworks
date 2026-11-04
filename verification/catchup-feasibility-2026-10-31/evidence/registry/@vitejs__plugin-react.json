@@ -1,0 +1,123 @@
+{
+  "observedAt": "2026-10-31T03:44:34.045Z",
+  "cutoff": "2026-10-28T03:44:34.045Z",
+  "name": "@vitejs/plugin-react",
+  "source": "https://registry.npmjs.org/%40vitejs%2Fplugin-react",
+  "distTags": {
+    "alpha": "3.0.0-alpha.2",
+    "beta": "6.0.0-beta.0",
+    "latest": "6.1.2"
+  },
+  "latestStable": {
+    "version": "6.1.2",
+    "publishedAt": "2026-10-05T10:08:27.143Z",
+    "engines": {
+      "node": "^20.19.0 || >=22.12.0"
+    },
+    "peers": {
+      "vite": "^8.0.0",
+      "oxc-transform-react": "^0.152.0",
+      "@rolldown/plugin-babel": "^0.1.7 || ^0.2.0",
+      "babel-plugin-react-compiler": "^1.0.0"
+    },
+    "peerMeta": {
+      "oxc-transform-react": {
+        "optional": true
+      },
+      "@rolldown/plugin-babel": {
+        "optional": true
+      },
+      "babel-plugin-react-compiler": {
+        "optional": true
+      }
+    },
+    "dependencies": {
+      "@rolldown/pluginutils": "^1.0.1"
+    },
+    "scripts": {
+      "dev": "tsdown --watch ./src --watch ../common",
+      "build": "tsdown",
+      "test-unit": "vitest run",
+      "prepublishOnly": "npm run build"
+    },
+    "dist": {
+      "shasum": "924d47e890a78cdf2b72f3f41fe8ab98e089b81e",
+      "tarball": "https://registry.npmjs.org/@vitejs/plugin-react/-/plugin-react-6.1.2.tgz",
+      "fileCount": 8,
+      "integrity": "sha512-fhJNGUdscQa4HkI0xFxwonWyhnVReCPDbXI7FH7jmzpnVCrFQI7PRrhWecO263610vOrs9tr2Y4xcf8uAdFxbw==",
+      "signatures": [
+        {
+          "sig": "MEUCIQCgpYsgjqTlOLHoKHGebF/CVGDeZXj631NLMep/SKoPxwIgQWZS4mOR+zKRUVL7FUDOOFDZyuMuywEGKrwry5GdV1Q=",
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+        },
+        {
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+          "sig": "MEUCIQDLH4vCHenzBgP8wEYtZ9kCyKB71ErIPflGwaTlK1x9UwIgD2g6OSfhpU2OeghhDhPrAlwcunG8FMKXva4cki2sYlM="
+        }
+      ],
+      "attestations": {
+        "url": "https://registry.npmjs.org/-/npm/v1/attestations/@vitejs%2fplugin-react@6.1.2",
+        "provenance": {
+          "predicateType": "https://slsa.dev/provenance/v1"
+        }
+      },
+      "unpackedSize": 46296
+    }
+  },
+  "eligible": {
+    "version": "6.1.2",
+    "publishedAt": "2026-10-05T10:08:27.143Z",
+    "engines": {
+      "node": "^20.19.0 || >=22.12.0"
+    },
+    "peers": {
+      "vite": "^8.0.0",
+      "oxc-transform-react": "^0.152.0",
+      "@rolldown/plugin-babel": "^0.1.7 || ^0.2.0",
+      "babel-plugin-react-compiler": "^1.0.0"
+    },
+    "peerMeta": {
+      "oxc-transform-react": {
+        "optional": true
+      },
+      "@rolldown/plugin-babel": {
+        "optional": true
+      },
+      "babel-plugin-react-compiler": {
+        "optional": true
+      }
+    },
+    "dependencies": {
+      "@rolldown/pluginutils": "^1.0.1"
+    },
+    "scripts": {
+      "dev": "tsdown --watch ./src --watch ../common",
+      "build": "tsdown",
+      "test-unit": "vitest run",
+      "prepublishOnly": "npm run build"
+    },
+    "dist": {
+      "shasum": "924d47e890a78cdf2b72f3f41fe8ab98e089b81e",
+      "tarball": "https://registry.npmjs.org/@vitejs/plugin-react/-/plugin-react-6.1.2.tgz",
+      "fileCount": 8,
+      "integrity": "sha512-fhJNGUdscQa4HkI0xFxwonWyhnVReCPDbXI7FH7jmzpnVCrFQI7PRrhWecO263610vOrs9tr2Y4xcf8uAdFxbw==",
+      "signatures": [
+        {
+          "sig": "MEUCIQCgpYsgjqTlOLHoKHGebF/CVGDeZXj631NLMep/SKoPxwIgQWZS4mOR+zKRUVL7FUDOOFDZyuMuywEGKrwry5GdV1Q=",
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+        },
+        {
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+          "sig": "MEUCIQDLH4vCHenzBgP8wEYtZ9kCyKB71ErIPflGwaTlK1x9UwIgD2g6OSfhpU2OeghhDhPrAlwcunG8FMKXva4cki2sYlM="
+        }
+      ],
+      "attestations": {
+        "url": "https://registry.npmjs.org/-/npm/v1/attestations/@vitejs%2fplugin-react@6.1.2",
+        "provenance": {
+          "predicateType": "https://slsa.dev/provenance/v1"
+        }
+      },
+      "unpackedSize": 46296
+    }
+  }
+}

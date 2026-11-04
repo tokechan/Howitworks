@@ -1,0 +1,25 @@
+[
+  {
+    "id": "runtime-compatible",
+    "command": [
+      "node",
+      "probes/runtime.mjs",
+      "2026-10-30"
+    ],
+    "startedAt": "2026-10-31T03:53:45.758Z",
+    "finishedAt": "2026-10-31T03:53:46.683Z",
+    "exitCode": 0,
+    "status": "passed"
+  },
+  {
+    "id": "rss-compat",
+    "command": [
+      "node",
+      "probes/rss-compat.mjs"
+    ],
+    "startedAt": "2026-10-31T03:53:46.683Z",
+    "finishedAt": "2026-10-31T03:53:47.275Z",
+    "exitCode": 1,
+    "status": "failed"
+  }
+]

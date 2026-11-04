@@ -1,0 +1,8 @@
+{
+  "talks/brotli/slides.md": "420bfb903c283eed279c6b92a81db994992d9596800979f4d04f550c502dcfa3",
+  "talks/brotli/styles/talk.css": "fc789c54fc6f7c6c8311c9a95cd1222a0c3db164b740f3149e820b8efe104513",
+  "talks/brotli/components/CompressionFlow.vue": "011019bb21110abc3e6ed5dd55b0eefbf421baa31298fd1784c65f64cf038eba",
+  "talks/brotli/components/ParcelWorkbench.vue": "a27b699ae63f0406beafa313fcd4c8da1a5fb224ef3ec1227a317fa74cee1eca",
+  "talks/brotli/package.json": "8dec6545ff6c09c75c10e69500e77dc66f3d999c95cb4c33310836ef329b7163",
+  "talks/brotli/package-lock.json": "10e7ba9a9ad7b6c673089320f3e7a6b04c3bac0292e8f3ce58215b70c6bd810a"
+}

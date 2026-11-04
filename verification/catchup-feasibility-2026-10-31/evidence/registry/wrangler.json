@@ -1,0 +1,143 @@
+{
+  "observedAt": "2026-10-31T03:44:34.045Z",
+  "cutoff": "2026-10-28T03:44:34.045Z",
+  "name": "wrangler",
+  "source": "https://registry.npmjs.org/wrangler",
+  "distTags": {
+    "wrangler@2.2.4": "2.2.4",
+    "legacy": "3.114.17",
+    "latest": "4.156.0"
+  },
+  "latestStable": {
+    "version": "4.156.0",
+    "publishedAt": "2026-10-29T18:42:47.181Z",
+    "engines": {
+      "node": ">=22.0.0"
+    },
+    "peers": {
+      "@cloudflare/workers-types": "^5.20261023.1"
+    },
+    "peerMeta": {
+      "@cloudflare/workers-types": {
+        "optional": true
+      }
+    },
+    "dependencies": {
+      "unenv": "2.0.0-rc.24",
+      "esbuild": "0.28.2",
+      "workerd": "1.20261023.1",
+      "miniflare": "5.20261023.3-beta",
+      "blake3-wasm": "2.1.5",
+      "path-to-regexp": "6.3.0",
+      "@cloudflare/unenv-preset": "2.16.2",
+      "@cloudflare/kv-asset-handler": "0.5.0"
+    },
+    "optionalDependencies": {
+      "fsevents": "2.3.3"
+    },
+    "scripts": {
+      "dev": "pnpm run clean && concurrently -c black,blue --kill-others-on-fail false \"pnpm tsup --watch src --watch ../containers-shared/src --watch ../cli\" \"pnpm run check:type --watch --preserveWatchOutput\"",
+      "test": "dotenv -- pnpm run assert-git-version && cross-env NODE_OPTIONS=\"$(node scripts/node-options-for-tests.js)\" dotenv -- vitest",
+      "build": "pnpm run clean && pnpm tsup && pnpm tsdown && pnpm run generate-json-schema",
+      "clean": "node -r esbuild-register ../../tools/clean/clean.ts wrangler-dist miniflare-dist emitted-types",
+      "start": "pnpm run build && cross-env NODE_OPTIONS=--enable-source-maps ./bin/wrangler.js",
+      "test:ci": "cross-env NODE_OPTIONS=\"$(node scripts/node-options-for-tests.js)\" pnpm run test run",
+      "test:e2e": "dotenv -- vitest run -c ./e2e/vitest.config.mts",
+      "check:type": "tsc -p ./tsconfig.json && tsc -p ./templates/tsconfig.json",
+      "test:debug": "pnpm run test --silent=false --verbose=true",
+      "test:watch": "pnpm run test --testTimeout=50000 --watch",
+      "type:tests": "tsc -p ./src/__tests__/tsconfig.json && tsc -p ./e2e/tsconfig.json",
+      "assert-git-version": "node -r esbuild-register scripts/assert-git-version.ts",
+      "generate-json-schema": "node -r esbuild-register scripts/generate-json-schema.ts"
+    },
+    "dist": {
+      "shasum": "b5aae4bb2de3b6236dd109515768196c2bcea66c",
+      "tarball": "https://registry.npmjs.org/wrangler/-/wrangler-4.156.0.tgz",
+      "fileCount": 30,
+      "integrity": "sha512-kVLAShuLiNgE3jcrmXcymDf/iPKDPrSxACe5ueugW/33HeNB9E9CkKYchudCeBwgmsnl4k+1zt4NO7vqb/fRuQ==",
+      "signatures": [
+        {
+          "sig": "MEUCIGNHaqicZz9ByGyekM1iB/fg9FEom4NsQhviu2hyPiKzAiEA7LTrHnZY4bOp9wJZv2tzJx9vHx9DMADWgus5VLswisk=",
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+        },
+        {
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+          "sig": "MEUCIQDMMOKgQbK+IIIdPqPrylDu8xwIu6ErVv40MLwCErOk4AIgV/Qlxj14hHqX4/M96/b3XrXQ0iYHMkdXvwlmo/a33EE="
+        }
+      ],
+      "attestations": {
+        "url": "https://registry.npmjs.org/-/npm/v1/attestations/wrangler@4.156.0",
+        "provenance": {
+          "predicateType": "https://slsa.dev/provenance/v1"
+        }
+      },
+      "unpackedSize": 15794028
+    }
+  },
+  "eligible": {
+    "version": "4.154.0",
+    "publishedAt": "2026-10-27T17:06:48.223Z",
+    "engines": {
+      "node": ">=22.0.0"
+    },
+    "peers": {
+      "@cloudflare/workers-types": "^5.20261023.1"
+    },
+    "peerMeta": {
+      "@cloudflare/workers-types": {
+        "optional": true
+      }
+    },
+    "dependencies": {
+      "unenv": "2.0.0-rc.24",
+      "esbuild": "0.28.2",
+      "workerd": "1.20261023.1",
+      "miniflare": "5.20261023.1-beta",
+      "blake3-wasm": "2.1.5",
+      "path-to-regexp": "6.3.0",
+      "@cloudflare/unenv-preset": "2.16.2",
+      "@cloudflare/kv-asset-handler": "0.5.0"
+    },
+    "optionalDependencies": {
+      "fsevents": "2.3.3"
+    },
+    "scripts": {
+      "dev": "pnpm run clean && concurrently -c black,blue --kill-others-on-fail false \"pnpm tsup --watch src --watch ../containers-shared/src --watch ../cli\" \"pnpm run check:type --watch --preserveWatchOutput\"",
+      "test": "dotenv -- pnpm run assert-git-version && cross-env NODE_OPTIONS=\"$(node scripts/node-options-for-tests.js)\" dotenv -- vitest",
+      "build": "pnpm run clean && pnpm tsup && pnpm tsdown && pnpm run generate-json-schema",
+      "clean": "node -r esbuild-register ../../tools/clean/clean.ts wrangler-dist miniflare-dist emitted-types",
+      "start": "pnpm run build && cross-env NODE_OPTIONS=--enable-source-maps ./bin/wrangler.js",
+      "test:ci": "cross-env NODE_OPTIONS=\"$(node scripts/node-options-for-tests.js)\" pnpm run test run",
+      "test:e2e": "dotenv -- vitest run -c ./e2e/vitest.config.mts",
+      "check:type": "tsc -p ./tsconfig.json && tsc -p ./templates/tsconfig.json",
+      "test:debug": "pnpm run test --silent=false --verbose=true",
+      "test:watch": "pnpm run test --testTimeout=50000 --watch",
+      "type:tests": "tsc -p ./src/__tests__/tsconfig.json && tsc -p ./e2e/tsconfig.json",
+      "assert-git-version": "node -r esbuild-register scripts/assert-git-version.ts",
+      "generate-json-schema": "node -r esbuild-register scripts/generate-json-schema.ts"
+    },
+    "dist": {
+      "shasum": "0b3085a5f40b158683b2e771f69dfd4d67a89b58",
+      "tarball": "https://registry.npmjs.org/wrangler/-/wrangler-4.154.0.tgz",
+      "fileCount": 30,
+      "integrity": "sha512-duA4dckBE/51ibAlGh2mUYcvGiu7sZFcn61I+KfNEeK5KQzKKEth9Xf5ROatoPBOebYPz0gfknXOCjBhwLOo8Q==",
+      "signatures": [
+        {
+          "sig": "MEUCIHY5+KPB2wuFInM3MlyKWwthcofcUIyiHYg/Qmr2GOV0AiEAthDbOU6WpytOA5EEMX/UjOdzEq1GHQLEjJv4B6TfhyM=",
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+        },
+        {
+          "sig": "MEUCIEDrRHJ1vjLLHejbnSU6XgcuJb2pvZIty6t+PVTgiT/PAiEAtRr7TKuG0tST/mrpS8hy6DwYUVLAbeubpTzsAlg+644=",
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+        }
+      ],
+      "attestations": {
+        "url": "https://registry.npmjs.org/-/npm/v1/attestations/wrangler@4.154.0",
+        "provenance": {
+          "predicateType": "https://slsa.dev/provenance/v1"
+        }
+      },
+      "unpackedSize": 15779604
+    }
+  }
+}

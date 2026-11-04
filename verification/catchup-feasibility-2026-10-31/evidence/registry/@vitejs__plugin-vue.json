@@ -1,0 +1,94 @@
+{
+  "observedAt": "2026-10-31T03:44:34.045Z",
+  "cutoff": "2026-10-28T03:44:34.045Z",
+  "name": "@vitejs/plugin-vue",
+  "source": "https://registry.npmjs.org/%40vitejs%2Fplugin-vue",
+  "distTags": {
+    "alpha": "5.0.0-alpha.0",
+    "previous": "4.6.2",
+    "beta": "6.0.0-beta.2",
+    "latest": "6.0.10"
+  },
+  "latestStable": {
+    "version": "6.0.10",
+    "publishedAt": "2026-10-10T07:40:21.880Z",
+    "engines": {
+      "node": "^20.19.0 || >=22.12.0"
+    },
+    "peers": {
+      "vue": "^3.2.25 || ^3.6.0-rc.10",
+      "vite": "^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0"
+    },
+    "dependencies": {
+      "@rolldown/pluginutils": "^1.0.1"
+    },
+    "scripts": {
+      "dev": "tsdown --watch",
+      "build": "tsdown"
+    },
+    "dist": {
+      "shasum": "fa58b9f63a6062d537a7db5040de0f7a873d8de3",
+      "tarball": "https://registry.npmjs.org/@vitejs/plugin-vue/-/plugin-vue-6.0.10.tgz",
+      "fileCount": 5,
+      "integrity": "sha512-b80aUQh3n+qEzzZm5oQp3rT2QImeCx58K6eFl/RkJ3d65KW0kTuv5lNsLRVAjbW9YRUpo/wzmvzMgV34bTAItA==",
+      "signatures": [
+        {
+          "sig": "MEUCIQCR7Z/nTXmLjhiIYqlZPPdk+nJCNhpS33Lc4FDI1/wC+gIgFYZ253JhhSDBB0XDAzXNGIRfO7H/KftQOZ9ScCLywQc=",
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+        },
+        {
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+          "sig": "MEUCIFgOAfL3BqTaYNP+YQ7YKW0EammSqmQQc0ViaaS6okymAiEAzHZhTJjHpo2X/lU5+tTH0JGq27REyBXRT7rb/l0jNPs="
+        }
+      ],
+      "attestations": {
+        "url": "https://registry.npmjs.org/-/npm/v1/attestations/@vitejs%2fplugin-vue@6.0.10",
+        "provenance": {
+          "predicateType": "https://slsa.dev/provenance/v1"
+        }
+      },
+      "unpackedSize": 77691
+    }
+  },
+  "eligible": {
+    "version": "6.0.10",
+    "publishedAt": "2026-10-10T07:40:21.880Z",
+    "engines": {
+      "node": "^20.19.0 || >=22.12.0"
+    },
+    "peers": {
+      "vue": "^3.2.25 || ^3.6.0-rc.10",
+      "vite": "^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0"
+    },
+    "dependencies": {
+      "@rolldown/pluginutils": "^1.0.1"
+    },
+    "scripts": {
+      "dev": "tsdown --watch",
+      "build": "tsdown"
+    },
+    "dist": {
+      "shasum": "fa58b9f63a6062d537a7db5040de0f7a873d8de3",
+      "tarball": "https://registry.npmjs.org/@vitejs/plugin-vue/-/plugin-vue-6.0.10.tgz",
+      "fileCount": 5,
+      "integrity": "sha512-b80aUQh3n+qEzzZm5oQp3rT2QImeCx58K6eFl/RkJ3d65KW0kTuv5lNsLRVAjbW9YRUpo/wzmvzMgV34bTAItA==",
+      "signatures": [
+        {
+          "sig": "MEUCIQCR7Z/nTXmLjhiIYqlZPPdk+nJCNhpS33Lc4FDI1/wC+gIgFYZ253JhhSDBB0XDAzXNGIRfO7H/KftQOZ9ScCLywQc=",
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+        },
+        {
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+          "sig": "MEUCIFgOAfL3BqTaYNP+YQ7YKW0EammSqmQQc0ViaaS6okymAiEAzHZhTJjHpo2X/lU5+tTH0JGq27REyBXRT7rb/l0jNPs="
+        }
+      ],
+      "attestations": {
+        "url": "https://registry.npmjs.org/-/npm/v1/attestations/@vitejs%2fplugin-vue@6.0.10",
+        "provenance": {
+          "predicateType": "https://slsa.dev/provenance/v1"
+        }
+      },
+      "unpackedSize": 77691
+    }
+  }
+}

@@ -1,0 +1,13 @@
+[
+  {
+    "id": "islands",
+    "command": [
+      "node",
+      "probes/islands.mjs"
+    ],
+    "startedAt": "2026-10-31T03:49:49.077Z",
+    "finishedAt": "2026-10-31T03:49:51.574Z",
+    "exitCode": 0,
+    "status": "passed"
+  }
+]

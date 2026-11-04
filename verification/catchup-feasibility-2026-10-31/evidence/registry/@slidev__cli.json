@@ -1,0 +1,258 @@
+{
+  "observedAt": "2026-10-31T03:44:34.045Z",
+  "cutoff": "2026-10-28T03:44:34.045Z",
+  "name": "@slidev/cli",
+  "source": "https://registry.npmjs.org/%40slidev%2Fcli",
+  "distTags": {
+    "next": "0.14.0-beta.14",
+    "latest": "53.0.0"
+  },
+  "latestStable": {
+    "version": "53.0.0",
+    "publishedAt": "2026-09-16T04:25:01.328Z",
+    "engines": {
+      "node": ">=22.12.0"
+    },
+    "peers": {
+      "vite-plugin-pwa": "^1.0.0",
+      "playwright-chromium": "^1.10.0"
+    },
+    "peerMeta": {
+      "vite-plugin-pwa": {
+        "optional": true
+      },
+      "playwright-chromium": {
+        "optional": true
+      }
+    },
+    "dependencies": {
+      "uqr": "^0.1.3",
+      "vue": "^3.5.42",
+      "zod": "^4.6.5",
+      "jiti": "^2.7.0",
+      "mlly": "^1.8.2",
+      "obug": "^3.0.0",
+      "open": "^11.0.4",
+      "sirv": "^3.0.2",
+      "vite": "^8.3.0",
+      "yaml": "^2.9.1",
+      "ansis": "^4.4.0",
+      "katex": "^0.18.7",
+      "pathe": "^2.0.3",
+      "shiki": "^4.4.3",
+      "untun": "^0.2.2",
+      "yargs": "^18.1.0",
+      "unhead": "^3.4.1",
+      "unocss": "^66.10.4",
+      "verkit": "^0.4.0",
+      "vitefu": "^1.1.3",
+      "connect": "^3.7.0",
+      "pdf-lib": "^1.17.1",
+      "prompts": "^2.4.2",
+      "chokidar": "^5.0.0",
+      "@antfu/ni": "^30.5.0",
+      "fast-glob": "^3.3.3",
+      "local-pkg": "^1.2.1",
+      "lz-string": "^1.5.0",
+      "picomatch": "^4.0.7",
+      "pptxgenjs": "^4.0.1",
+      "public-ip": "^8.0.0",
+      "typescript": "^6.0.3",
+      "htmlparser2": "^12.0.0",
+      "@antfu/utils": "^9.3.0",
+      "cli-progress": "^3.12.0",
+      "magic-string": "^1.4.1",
+      "resolve-from": "^5.0.0",
+      "@slidev/types": "53.0.0",
+      "@unocss/reset": "^66.10.4",
+      "markdown-exit": "^1.3.0",
+      "monaco-editor": "^0.56.0",
+      "source-map-js": "^1.2.1",
+      "@slidev/client": "53.0.0",
+      "@slidev/parser": "53.0.0",
+      "postcss-nested": "^8.0.1",
+      "resolve-global": "^2.0.0",
+      "unplugin-icons": "^24.0.0",
+      "fast-deep-equal": "^3.1.3",
+      "get-port-please": "^3.2.0",
+      "@iconify-json/ph": "^1.2.2",
+      "global-directory": "^5.0.0",
+      "plantuml-encoder": "^1.4.0",
+      "@shikijs/twoslash": "^4.4.3",
+      "@vitejs/plugin-vue": "^6.0.9",
+      "magic-string-stack": "^2.0.0",
+      "@comark/markdown-it": "^0.3.4",
+      "@shikijs/magic-move": "^4.4.3",
+      "vite-plugin-inspect": "^12.0.2",
+      "@iconify-json/carbon": "^1.2.27",
+      "@shikijs/markdown-it": "^4.4.3",
+      "markdown-it-footnote": "^4.0.0",
+      "@unocss/extractor-mdc": "^66.10.4",
+      "is-installed-globally": "^1.0.0",
+      "unplugin-vue-markdown": "^32.1.1",
+      "@lillallol/outline-pdf": "^4.0.0",
+      "@vitejs/plugin-vue-jsx": "^5.1.6",
+      "unplugin-vue-components": "^32.1.0",
+      "vite-plugin-static-copy": "^4.1.1",
+      "markdown-it-github-alerts": "^1.0.1",
+      "vite-plugin-remote-assets": "^2.1.0",
+      "@iconify-json/svg-spinners": "^1.2.4",
+      "@modelcontextprotocol/node": "^2.0.0",
+      "vite-plugin-vue-server-ref": "^1.0.0",
+      "@shikijs/vitepress-twoslash": "^4.4.3",
+      "@modelcontextprotocol/server": "^2.0.0"
+    },
+    "scripts": {
+      "dev": "nr build --watch",
+      "build": "tsdown node/index.ts node/cli.ts",
+      "start": "tsx node/cli.ts"
+    },
+    "dist": {
+      "shasum": "6bf5b82c9f981302474dfdbd60b60f6423982dfe",
+      "tarball": "https://registry.npmjs.org/@slidev/cli/-/cli-53.0.0.tgz",
+      "fileCount": 71,
+      "integrity": "sha512-/Ex5GNsu0tuR9WKaikJiHsu3wlWwvNoTeliLVHdsuE5qkdD6Fphhi6/l9uNvWjSB3JxLDZUle8Cu9LazBiQ7tA==",
+      "signatures": [
+        {
+          "sig": "MEUCIBOEsUP2biwWeOJd6YDKcx1nDWPy+m/u/C9yOwxKjCXHAiEA5V1G18OAUIMsRlOu9c+jPFN/JRTILeYrMUqlPoSuD3Y=",
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+        },
+        {
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+          "sig": "MEUCIGd0sLQmB7P30yit+A55OFd1b4w2FbrzsIN5rpjnadZuAiEAzTK0scUeOUa7rcwWXqTax+oUvJQxiS0ArV80b8YWjqQ="
+        }
+      ],
+      "attestations": {
+        "url": "https://registry.npmjs.org/-/npm/v1/attestations/@slidev%2fcli@53.0.0",
+        "provenance": {
+          "predicateType": "https://slsa.dev/provenance/v1"
+        }
+      },
+      "unpackedSize": 338782
+    }
+  },
+  "eligible": {
+    "version": "53.0.0",
+    "publishedAt": "2026-09-16T04:25:01.328Z",
+    "engines": {
+      "node": ">=22.12.0"
+    },
+    "peers": {
+      "vite-plugin-pwa": "^1.0.0",
+      "playwright-chromium": "^1.10.0"
+    },
+    "peerMeta": {
+      "vite-plugin-pwa": {
+        "optional": true
+      },
+      "playwright-chromium": {
+        "optional": true
+      }
+    },
+    "dependencies": {
+      "uqr": "^0.1.3",
+      "vue": "^3.5.42",
+      "zod": "^4.6.5",
+      "jiti": "^2.7.0",
+      "mlly": "^1.8.2",
+      "obug": "^3.0.0",
+      "open": "^11.0.4",
+      "sirv": "^3.0.2",
+      "vite": "^8.3.0",
+      "yaml": "^2.9.1",
+      "ansis": "^4.4.0",
+      "katex": "^0.18.7",
+      "pathe": "^2.0.3",
+      "shiki": "^4.4.3",
+      "untun": "^0.2.2",
+      "yargs": "^18.1.0",
+      "unhead": "^3.4.1",
+      "unocss": "^66.10.4",
+      "verkit": "^0.4.0",
+      "vitefu": "^1.1.3",
+      "connect": "^3.7.0",
+      "pdf-lib": "^1.17.1",
+      "prompts": "^2.4.2",
+      "chokidar": "^5.0.0",
+      "@antfu/ni": "^30.5.0",
+      "fast-glob": "^3.3.3",
+      "local-pkg": "^1.2.1",
+      "lz-string": "^1.5.0",
+      "picomatch": "^4.0.7",
+      "pptxgenjs": "^4.0.1",
+      "public-ip": "^8.0.0",
+      "typescript": "^6.0.3",
+      "htmlparser2": "^12.0.0",
+      "@antfu/utils": "^9.3.0",
+      "cli-progress": "^3.12.0",
+      "magic-string": "^1.4.1",
+      "resolve-from": "^5.0.0",
+      "@slidev/types": "53.0.0",
+      "@unocss/reset": "^66.10.4",
+      "markdown-exit": "^1.3.0",
+      "monaco-editor": "^0.56.0",
+      "source-map-js": "^1.2.1",
+      "@slidev/client": "53.0.0",
+      "@slidev/parser": "53.0.0",
+      "postcss-nested": "^8.0.1",
+      "resolve-global": "^2.0.0",
+      "unplugin-icons": "^24.0.0",
+      "fast-deep-equal": "^3.1.3",
+      "get-port-please": "^3.2.0",
+      "@iconify-json/ph": "^1.2.2",
+      "global-directory": "^5.0.0",
+      "plantuml-encoder": "^1.4.0",
+      "@shikijs/twoslash": "^4.4.3",
+      "@vitejs/plugin-vue": "^6.0.9",
+      "magic-string-stack": "^2.0.0",
+      "@comark/markdown-it": "^0.3.4",
+      "@shikijs/magic-move": "^4.4.3",
+      "vite-plugin-inspect": "^12.0.2",
+      "@iconify-json/carbon": "^1.2.27",
+      "@shikijs/markdown-it": "^4.4.3",
+      "markdown-it-footnote": "^4.0.0",
+      "@unocss/extractor-mdc": "^66.10.4",
+      "is-installed-globally": "^1.0.0",
+      "unplugin-vue-markdown": "^32.1.1",
+      "@lillallol/outline-pdf": "^4.0.0",
+      "@vitejs/plugin-vue-jsx": "^5.1.6",
+      "unplugin-vue-components": "^32.1.0",
+      "vite-plugin-static-copy": "^4.1.1",
+      "markdown-it-github-alerts": "^1.0.1",
+      "vite-plugin-remote-assets": "^2.1.0",
+      "@iconify-json/svg-spinners": "^1.2.4",
+      "@modelcontextprotocol/node": "^2.0.0",
+      "vite-plugin-vue-server-ref": "^1.0.0",
+      "@shikijs/vitepress-twoslash": "^4.4.3",
+      "@modelcontextprotocol/server": "^2.0.0"
+    },
+    "scripts": {
+      "dev": "nr build --watch",
+      "build": "tsdown node/index.ts node/cli.ts",
+      "start": "tsx node/cli.ts"
+    },
+    "dist": {
+      "shasum": "6bf5b82c9f981302474dfdbd60b60f6423982dfe",
+      "tarball": "https://registry.npmjs.org/@slidev/cli/-/cli-53.0.0.tgz",
+      "fileCount": 71,
+      "integrity": "sha512-/Ex5GNsu0tuR9WKaikJiHsu3wlWwvNoTeliLVHdsuE5qkdD6Fphhi6/l9uNvWjSB3JxLDZUle8Cu9LazBiQ7tA==",
+      "signatures": [
+        {
+          "sig": "MEUCIBOEsUP2biwWeOJd6YDKcx1nDWPy+m/u/C9yOwxKjCXHAiEA5V1G18OAUIMsRlOu9c+jPFN/JRTILeYrMUqlPoSuD3Y=",
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+        },
+        {
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+          "sig": "MEUCIGd0sLQmB7P30yit+A55OFd1b4w2FbrzsIN5rpjnadZuAiEAzTK0scUeOUa7rcwWXqTax+oUvJQxiS0ArV80b8YWjqQ="
+        }
+      ],
+      "attestations": {
+        "url": "https://registry.npmjs.org/-/npm/v1/attestations/@slidev%2fcli@53.0.0",
+        "provenance": {
+          "predicateType": "https://slsa.dev/provenance/v1"
+        }
+      },
+      "unpackedSize": 338782
+    }
+  }
+}

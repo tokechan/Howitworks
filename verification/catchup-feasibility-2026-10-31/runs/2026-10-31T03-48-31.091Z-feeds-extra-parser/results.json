@@ -1,0 +1,25 @@
+[
+  {
+    "id": "feeds-extra",
+    "command": [
+      "node",
+      "probes/feeds-extra.mjs"
+    ],
+    "startedAt": "2026-10-31T03:48:31.092Z",
+    "finishedAt": "2026-10-31T03:48:31.421Z",
+    "exitCode": 0,
+    "status": "passed"
+  },
+  {
+    "id": "parser",
+    "command": [
+      "node",
+      "--test",
+      "probes/parser.test.mjs"
+    ],
+    "startedAt": "2026-10-31T03:48:31.421Z",
+    "finishedAt": "2026-10-31T03:48:32.541Z",
+    "exitCode": 0,
+    "status": "passed"
+  }
+]

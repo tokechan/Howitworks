@@ -1,0 +1,13 @@
+[
+  {
+    "id": "rss-compat",
+    "command": [
+      "node",
+      "probes/rss-compat.mjs"
+    ],
+    "startedAt": "2026-10-31T03:54:06.727Z",
+    "finishedAt": "2026-10-31T03:54:07.445Z",
+    "exitCode": 0,
+    "status": "passed"
+  }
+]

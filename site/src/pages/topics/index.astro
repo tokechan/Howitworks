@@ -1,0 +1,7 @@
+---
+import Base from '../../layouts/Base.astro';
+import { articles, topics } from '../../lib/content';
+import { href } from '../../../scripts/config.mjs';
+const entries = await articles();
+---
+<Base title="テーマから探す"><header class="page-heading"><p class="eyebrow">EXPLORE TOPICS</p><h1>テーマから探す。</h1><p>ひとつの疑問を、いくつかの視点から。</p></header><div class="topic-grid">{topics.map((topic,i) => <a class="topic-card" href={href(`topics/${topic.id}/`)}><span class="eyebrow">0{i+1} / TOPIC</span><h2>{topic.label}<span>↗</span></h2><p>{topic.description}</p><small>{entries.filter(e => e.data.tags.includes(topic.label)).length} 記事</small></a>)}</div></Base>

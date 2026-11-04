@@ -1,0 +1,127 @@
+{
+  "observedAt": "2026-10-31T03:44:34.045Z",
+  "cutoff": "2026-10-28T03:44:34.045Z",
+  "name": "@tanstack/react-query",
+  "source": "https://registry.npmjs.org/%40tanstack%2Freact-query",
+  "distTags": {
+    "alpha": "5.0.0-alpha.91",
+    "beta": "5.0.0-beta.35",
+    "rc": "5.0.0-rc.16",
+    "previous": "4.44.0",
+    "latest": "5.105.0"
+  },
+  "latestStable": {
+    "version": "5.105.0",
+    "publishedAt": "2026-10-26T09:31:29.126Z",
+    "peers": {
+      "react": "^18 || ^19",
+      "@types/react": "^18 || ^19"
+    },
+    "peerMeta": {
+      "@types/react": {
+        "optional": true
+      }
+    },
+    "dependencies": {
+      "@tanstack/query-core": "5.105.0"
+    },
+    "scripts": {
+      "build": "pnpm build:tsdown && pnpm build:codemods",
+      "clean": "premove ./build ./coverage ./dist-ts ./.cache/test-types",
+      "compile": "tsc --project tsconfig.json",
+      "test:lib": "vitest",
+      "test:build": "publint --strict && attw --pack",
+      "test:types": "npm-run-all --serial test:types:*",
+      "test:oxlint": "oxlint ./src",
+      "build:tsdown": "tsdown --tsconfig tsconfig.prod.json",
+      "test:lib:dev": "pnpm run test:lib --watch",
+      "build:codemods": "rm -rf ./build/codemods && mkdir ./build/codemods && cp -r ../query-codemods/src/* ./build/codemods",
+      "test:types:ts57": "node ../../node_modules/typescript57/lib/tsc.js --project tsconfig.legacy.json --outDir .cache/test-types/ts57 --tsBuildInfoFile .cache/test-types/ts57.tsbuildinfo",
+      "test:types:ts58": "node ../../node_modules/typescript58/lib/tsc.js --project tsconfig.legacy.json --outDir .cache/test-types/ts58 --tsBuildInfoFile .cache/test-types/ts58.tsbuildinfo",
+      "test:types:ts59": "node ../../node_modules/typescript59/lib/tsc.js --project tsconfig.legacy.json --outDir .cache/test-types/ts59 --tsBuildInfoFile .cache/test-types/ts59.tsbuildinfo",
+      "test:types:ts70": "node ../../node_modules/typescript70/lib/tsc.js --project tsconfig.legacy.json --outDir .cache/test-types/ts70 --tsBuildInfoFile .cache/test-types/ts70.tsbuildinfo",
+      "test:types:ts71": "node ../../node_modules/typescript71/lib/tsc.js --project tsconfig.legacy.json --outDir .cache/test-types/ts71 --tsBuildInfoFile .cache/test-types/ts71.tsbuildinfo",
+      "test:types:tscurrent": "tsc --project tsconfig.json --outDir .cache/test-types/tscurrent --tsBuildInfoFile .cache/test-types/tscurrent.tsbuildinfo"
+    },
+    "dist": {
+      "shasum": "16605f0d0fcae9d179071cf48434c4adc4a59497",
+      "tarball": "https://registry.npmjs.org/@tanstack/react-query/-/react-query-5.105.0.tgz",
+      "fileCount": 410,
+      "integrity": "sha512-y+hMuDERvgg6ay1da0V1a6ZC0ZONt7dELxSFkqRZuwm7p1TTZs0MoXrPlBRflIpRoYjvzQVYxycnLImpFLhWrw==",
+      "signatures": [
+        {
+          "sig": "MEUCIQDwZPqV6Hh8OwA68D6i7ONej/Rjx1rc26iL0D71tcQFdAIgWvM6/f2ybZRQZJtNVc+8A1MABN+GO/MkPYeczwZykeU=",
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+        },
+        {
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+          "sig": "MEUCIBbSsb2UeZWmUlyIGUDvOk1Ms+CIFrLprQigxAb5FXBkAiEAjQpsE/AGJ1ohBZUBtQWfJdQwwgxdvskV/+5eEgz2orY="
+        }
+      ],
+      "attestations": {
+        "url": "https://registry.npmjs.org/-/npm/v1/attestations/@tanstack%2freact-query@5.105.0",
+        "provenance": {
+          "predicateType": "https://slsa.dev/provenance/v1"
+        }
+      },
+      "unpackedSize": 1797389
+    }
+  },
+  "eligible": {
+    "version": "5.105.0",
+    "publishedAt": "2026-10-26T09:31:29.126Z",
+    "peers": {
+      "react": "^18 || ^19",
+      "@types/react": "^18 || ^19"
+    },
+    "peerMeta": {
+      "@types/react": {
+        "optional": true
+      }
+    },
+    "dependencies": {
+      "@tanstack/query-core": "5.105.0"
+    },
+    "scripts": {
+      "build": "pnpm build:tsdown && pnpm build:codemods",
+      "clean": "premove ./build ./coverage ./dist-ts ./.cache/test-types",
+      "compile": "tsc --project tsconfig.json",
+      "test:lib": "vitest",
+      "test:build": "publint --strict && attw --pack",
+      "test:types": "npm-run-all --serial test:types:*",
+      "test:oxlint": "oxlint ./src",
+      "build:tsdown": "tsdown --tsconfig tsconfig.prod.json",
+      "test:lib:dev": "pnpm run test:lib --watch",
+      "build:codemods": "rm -rf ./build/codemods && mkdir ./build/codemods && cp -r ../query-codemods/src/* ./build/codemods",
+      "test:types:ts57": "node ../../node_modules/typescript57/lib/tsc.js --project tsconfig.legacy.json --outDir .cache/test-types/ts57 --tsBuildInfoFile .cache/test-types/ts57.tsbuildinfo",
+      "test:types:ts58": "node ../../node_modules/typescript58/lib/tsc.js --project tsconfig.legacy.json --outDir .cache/test-types/ts58 --tsBuildInfoFile .cache/test-types/ts58.tsbuildinfo",
+      "test:types:ts59": "node ../../node_modules/typescript59/lib/tsc.js --project tsconfig.legacy.json --outDir .cache/test-types/ts59 --tsBuildInfoFile .cache/test-types/ts59.tsbuildinfo",
+      "test:types:ts70": "node ../../node_modules/typescript70/lib/tsc.js --project tsconfig.legacy.json --outDir .cache/test-types/ts70 --tsBuildInfoFile .cache/test-types/ts70.tsbuildinfo",
+      "test:types:ts71": "node ../../node_modules/typescript71/lib/tsc.js --project tsconfig.legacy.json --outDir .cache/test-types/ts71 --tsBuildInfoFile .cache/test-types/ts71.tsbuildinfo",
+      "test:types:tscurrent": "tsc --project tsconfig.json --outDir .cache/test-types/tscurrent --tsBuildInfoFile .cache/test-types/tscurrent.tsbuildinfo"
+    },
+    "dist": {
+      "shasum": "16605f0d0fcae9d179071cf48434c4adc4a59497",
+      "tarball": "https://registry.npmjs.org/@tanstack/react-query/-/react-query-5.105.0.tgz",
+      "fileCount": 410,
+      "integrity": "sha512-y+hMuDERvgg6ay1da0V1a6ZC0ZONt7dELxSFkqRZuwm7p1TTZs0MoXrPlBRflIpRoYjvzQVYxycnLImpFLhWrw==",
+      "signatures": [
+        {
+          "sig": "MEUCIQDwZPqV6Hh8OwA68D6i7ONej/Rjx1rc26iL0D71tcQFdAIgWvM6/f2ybZRQZJtNVc+8A1MABN+GO/MkPYeczwZykeU=",
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+        },
+        {
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+          "sig": "MEUCIBbSsb2UeZWmUlyIGUDvOk1Ms+CIFrLprQigxAb5FXBkAiEAjQpsE/AGJ1ohBZUBtQWfJdQwwgxdvskV/+5eEgz2orY="
+        }
+      ],
+      "attestations": {
+        "url": "https://registry.npmjs.org/-/npm/v1/attestations/@tanstack%2freact-query@5.105.0",
+        "provenance": {
+          "predicateType": "https://slsa.dev/provenance/v1"
+        }
+      },
+      "unpackedSize": 1797389
+    }
+  }
+}

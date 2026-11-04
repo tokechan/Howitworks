@@ -1,0 +1,14 @@
+---
+import Base from '../../layouts/Base.astro';
+import { articles } from '../../lib/content';
+import { href } from '../../../scripts/config.mjs';
+export async function getStaticPaths() { return (await articles()).filter(a => a.data.talk).map(article => ({ params: { id: article.data.talk }, props: { article } })); }
+const { article } = Astro.props;
+---
+<Base title="Brotli — 呼んでないのに、なぜ？ / 5分LT">
+  <nav class="breadcrumb"><a href={href(`articles/${article.id}/`)}>Brotliの記事</a><span>/</span><span>LT資料</span></nav>
+  <header class="page-heading talk-heading" data-pagefind-body data-pagefind-filter="kind:LT資料"><p class="eyebrow">LIGHTNING TALK / 5 MIN</p><h1 data-pagefind-meta="title">呼んでないのに、<span class="coral-text">なぜ？</span></h1><p>Brotliの自動展開から、脆弱性の修正まで。</p><p class="talk-summary">同じ103 Bを受け取るfetchとnode:httpの違い。正常な入力待ちと形式エラーの分岐、静的リンク、Vercelの暫定保護を5分でたどります。</p><div class="tag-row"><span class="tag" data-pagefind-filter="tag">Node.js</span><span class="tag" data-pagefind-filter="tag">セキュリティ</span><span class="tag">本編12枚＋参考3枚</span><span class="tag">2026.10.28 作成</span></div><span class="sr-only">ブロートリ Brotli Node2Shell CVE-2026-111497</span></header>
+  <div class="talk-actions"><a class="button-primary" href={href('decks/brotli/#/1')}>スライドを開く ↗</a><a class="button-secondary" href={href('decks/brotli/#/presenter/1')}>発表者ノートを見る ↗</a></div>
+  <iframe class="deck-embed" src={href('decks/brotli/#/1')} title="Brotli 5分LTスライド" loading="lazy" allow="fullscreen"></iframe>
+  <div class="talk-bottom"><p>スライド内の左右キーでページを移動できます。詳しい説明と出典は発表者ノートへ。</p><a class="text-link" href={href(`articles/${article.id}/`)}>← 解説記事に戻る</a><a class="text-link" href={href('evidence/brotli-talk/')}>資料の使い方・構成 ↗</a></div>
+</Base>

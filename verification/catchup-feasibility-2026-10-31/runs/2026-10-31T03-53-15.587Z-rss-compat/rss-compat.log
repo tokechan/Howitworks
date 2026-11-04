@@ -1,0 +1,36 @@
+[
+  {
+    "nodejsCompat": false,
+    "passed": true,
+    "result": {
+      "count": 10,
+      "title": "v4.13.14"
+    }
+  },
+  {
+    "nodejsCompat": true,
+    "passed": true,
+    "result": {
+      "count": 10,
+      "title": "v4.13.14"
+    }
+  }
+]
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+true !== false
+
+    at file:///Users/svc-tokeshi/dev/Howitworks/verification/catchup-feasibility-2026-10-31/probes/rss-compat.mjs:20:8 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: true,
+  expected: false,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.22.1

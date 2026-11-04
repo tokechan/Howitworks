@@ -1,0 +1,21 @@
+PASS Hono + XML parser + D1 in actual workerd without nodejs_compat { rows: 1, bytes: 207050 }
+PASS Repeated scheduled delivery is idempotent; conditional header emitted {}
+PASS Same entry updates title, preserves first-seen timestamp {}
+PASS Existing rows preserved on 304 { state: 'not-modified' }
+PASS Existing rows preserved on http-error { state: 'error: HTTP 503' }
+PASS Existing rows preserved on invalid { state: 'error: Invalid XML' }
+PASS D1 batch rollback on second statement failure {}
+PASS Other browser origin not granted CORS; API remains public, not authorization {}
+PASS Actual saved cloudflare-workers parsed and stored inside workerd { rows: 279, localWallMs: 158 }
+PASS Actual saved hono-releases parsed and stored inside workerd { rows: 289, localWallMs: 12 }
+PASS Actual 8.8 MB feed rejected by experimental 4 MiB cap; stored rows survive {}
+rss-parser browser target: {
+  browserBundle: false,
+  unresolved: [
+    'Could not resolve "http"',
+    'Could not resolve "https"',
+    'Could not resolve "url"',
+    'Could not resolve "events"',
+    'Could not resolve "timers"'
+  ]
+}

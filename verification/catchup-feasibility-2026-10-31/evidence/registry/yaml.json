@@ -1,0 +1,104 @@
+{
+  "observedAt": "2026-10-31T03:44:34.045Z",
+  "cutoff": "2026-10-28T03:44:34.045Z",
+  "name": "yaml",
+  "source": "https://registry.npmjs.org/yaml",
+  "distTags": {
+    "next": "3.0.0-2",
+    "latest": "2.9.1"
+  },
+  "latestStable": {
+    "version": "2.9.1",
+    "publishedAt": "2026-09-11T20:30:10.905Z",
+    "engines": {
+      "node": ">= 14.6"
+    },
+    "scripts": {
+      "docs": "cd docs-slate && bundle exec middleman server",
+      "lint": "eslint config/ src/",
+      "test": "jest --config config/jest.config.js",
+      "build": "npm run build:node && npm run build:browser",
+      "clean": "git clean -fdxe node_modules",
+      "start": "node --enable-source-maps -i -e 'YAML=require(\"./dist/index.js\");const{parse,parseDocument,parseAllDocuments}=YAML'",
+      "predocs": "node docs/prepare-docs.mjs",
+      "prestart": "rollup --sourcemap -c config/rollup.node-config.mjs",
+      "prettier": "prettier --write .",
+      "test:all": "npm test && npm run test:types && npm run test:dist && npm run test:dist:types",
+      "test:dist": "npm run build:node && jest --config config/jest.config.js",
+      "build:node": "rollup -c config/rollup.node-config.mjs",
+      "preversion": "npm test && npm run build",
+      "test:types": "tsc --noEmit && tsc --noEmit -p tests/tsconfig.json",
+      "docs:deploy": "cd docs-slate && ./deploy.sh",
+      "docs:install": "cd docs-slate && bundle install",
+      "build:browser": "rollup -c config/rollup.browser-config.mjs",
+      "test:browsers": "cd playground && npm test",
+      "predocs:deploy": "node docs/prepare-docs.mjs",
+      "prepublishOnly": "npm run clean && npm test && npm run build",
+      "test:dist:types": "tsc --allowJs --moduleResolution node --noEmit --target es5 dist/index.js"
+    },
+    "dist": {
+      "shasum": "c16233fb31944e705cfefaff38795587f57588ce",
+      "tarball": "https://registry.npmjs.org/yaml/-/yaml-2.9.1.tgz",
+      "fileCount": 233,
+      "integrity": "sha512-3NxN8+78OdzbT7C/WjGsyfPAtJaN3FNDsWxv7Y7mcDsT/oOmgW8BpyQQFFBnvZE3j9Y2Sdz1ULFLezL7Eb2yFw==",
+      "signatures": [
+        {
+          "sig": "MEYCIQCXweoDJonUiEWYTyxwNhwkcM8EXhvt9mDlbSZLSz5y+AIhANjA4bIT0WVdnUVFH8/fMfgste4HrAyiPTXuCIhRWrwO",
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+        },
+        {
+          "sig": "MEQCIH44ZynxSWIsGoaau+xjdzwJYPox6tD96SXMBvb2bdD1AiA16ZB3In4BqY1xyaT9TLO1cFCFGDZ8ovTGdN6yzjMcpA==",
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+        }
+      ],
+      "unpackedSize": 686297
+    }
+  },
+  "eligible": {
+    "version": "2.9.1",
+    "publishedAt": "2026-09-11T20:30:10.905Z",
+    "engines": {
+      "node": ">= 14.6"
+    },
+    "scripts": {
+      "docs": "cd docs-slate && bundle exec middleman server",
+      "lint": "eslint config/ src/",
+      "test": "jest --config config/jest.config.js",
+      "build": "npm run build:node && npm run build:browser",
+      "clean": "git clean -fdxe node_modules",
+      "start": "node --enable-source-maps -i -e 'YAML=require(\"./dist/index.js\");const{parse,parseDocument,parseAllDocuments}=YAML'",
+      "predocs": "node docs/prepare-docs.mjs",
+      "prestart": "rollup --sourcemap -c config/rollup.node-config.mjs",
+      "prettier": "prettier --write .",
+      "test:all": "npm test && npm run test:types && npm run test:dist && npm run test:dist:types",
+      "test:dist": "npm run build:node && jest --config config/jest.config.js",
+      "build:node": "rollup -c config/rollup.node-config.mjs",
+      "preversion": "npm test && npm run build",
+      "test:types": "tsc --noEmit && tsc --noEmit -p tests/tsconfig.json",
+      "docs:deploy": "cd docs-slate && ./deploy.sh",
+      "docs:install": "cd docs-slate && bundle install",
+      "build:browser": "rollup -c config/rollup.browser-config.mjs",
+      "test:browsers": "cd playground && npm test",
+      "predocs:deploy": "node docs/prepare-docs.mjs",
+      "prepublishOnly": "npm run clean && npm test && npm run build",
+      "test:dist:types": "tsc --allowJs --moduleResolution node --noEmit --target es5 dist/index.js"
+    },
+    "dist": {
+      "shasum": "c16233fb31944e705cfefaff38795587f57588ce",
+      "tarball": "https://registry.npmjs.org/yaml/-/yaml-2.9.1.tgz",
+      "fileCount": 233,
+      "integrity": "sha512-3NxN8+78OdzbT7C/WjGsyfPAtJaN3FNDsWxv7Y7mcDsT/oOmgW8BpyQQFFBnvZE3j9Y2Sdz1ULFLezL7Eb2yFw==",
+      "signatures": [
+        {
+          "sig": "MEYCIQCXweoDJonUiEWYTyxwNhwkcM8EXhvt9mDlbSZLSz5y+AIhANjA4bIT0WVdnUVFH8/fMfgste4HrAyiPTXuCIhRWrwO",
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+        },
+        {
+          "sig": "MEQCIH44ZynxSWIsGoaau+xjdzwJYPox6tD96SXMBvb2bdD1AiA16ZB3In4BqY1xyaT9TLO1cFCFGDZ8ovTGdN6yzjMcpA==",
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+        }
+      ],
+      "unpackedSize": 686297
+    }
+  }
+}
