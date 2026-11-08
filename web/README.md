@@ -6,7 +6,7 @@
 
 ## 開く
 
-Node.js 24.22.1以上を使います。プロジェクトルートから実行します。
+Node.js 26.13.0以上を使います。プロジェクトルートから実行します。
 
 ```sh
 # 初回だけ。web/package-lock.jsonに固定した依存関係を復元する
@@ -59,7 +59,7 @@ Viteは今回、CSSを変換してファイル名にハッシュを付けます�
 | [config/resources.ts](config/resources.ts) | 今の記事から参照する素材だけを明示的に登録 |
 | [scripts/serve.ts](scripts/serve.ts) | 完成したファイルを127.0.0.1へ配信 |
 
-TypeScriptはNode.js 24の型消去で直接実行します。実行とは別に `tsc --noEmit` で型を検査します。Vite設定はこの段階では `scripts/build.ts` 内に置いています。
+TypeScriptはNode.js 26の型消去で直接実行します。実行とは別に `tsc --noEmit` で型を検査します。Vite設定はこの段階では `scripts/build.ts` 内に置いています。
 
 ## ビルドと確認
 

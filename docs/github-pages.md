@@ -58,7 +58,7 @@ Node.jsはビルドに使います。公開先ではHTML・CSS・JavaScript・�
 | 起動 | `workflow_dispatch` のみ。`publish` の初期値は `false` |
 | `publish=false` | ビルド・内部リンク確認・artifact保存まで。deployジョブはスキップ |
 | `publish=true` | 上記に加え、公開用チェック後にdeployを実行 |
-| ビルド環境 | GitHub-hosted Ubuntu / Node.js 24.22.1。ローカルで確認した版を固定 |
+| ビルド環境 | GitHub-hosted Ubuntu / Node.js 26.13.0。ローカルで確認した版を固定 |
 | 依存復元 | `site/` と `talks/brotli/` の両方で `npm ci`。両方のlockfileを管理する |
 | URL | `configure-pages` の `origin` と `base_path` を使う。ownerをソースに埋め込まない |
 | 下書き | `INCLUDE_DRAFTS=0` 固定。公開チェックで下書きプレビューやBrotli記事の欠落を拒否 |

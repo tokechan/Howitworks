@@ -13,7 +13,7 @@
 
 ## ローカルで動かす
 
-現在はAstro版とHono＋Vite版をローカルで検証しています。以下はHono＋Vite版の起動方法です。Node.js 24.22.1以上を使います。
+現在はAstro版とHono＋Vite版をローカルで検証しています。以下はHono＋Vite版の起動方法です。Node.js 26.13.0以上を使います。
 
 ```sh
 npm --prefix web ci --ignore-scripts
