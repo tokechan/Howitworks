@@ -2,9 +2,49 @@
 import Base from '../../layouts/Base.astro';
 import ArticleCard from '../../components/ArticleCard.astro';
 import SearchBox from '../../components/SearchBox.astro';
-import { articles } from '../../lib/content';
+import { articles, topics } from '../../lib/content';
+import { href } from '../../../scripts/config.mjs';
 const entries = await articles();
+const topicCss = [
+  ...topics.map((topic) => `
+html[data-topic="${topic.id}"] [data-filterable] .entry:not([data-topics~="${topic.id}"]) { display: none; }
+html[data-topic="${topic.id}"] .blurb[data-topic-panel="${topic.id}"],
+html[data-topic="${topic.id}"] .result-count[data-count-for="${topic.id}"] { display: block; }
+html[data-topic="${topic.id}"] a[data-topic-link="${topic.id}"] {
+  font-weight: 700;
+  border-bottom-color: var(--ink);
+  background: var(--wash);
+}`),
+  `@media (forced-colors: active) {`,
+  ...topics.map((topic) => `
+html[data-topic="${topic.id}"] a[data-topic-link="${topic.id}"] {
+  border: 2px solid CanvasText;
+  background: transparent;
+}`),
+  `}`,
+].join('\n');
 ---
-<Base title="記事一覧"><header class="page-heading"><p class="eyebrow">THE NOTEBOOK</p><h1>記事一覧<span class="count">{entries.length}</span></h1><p>疑問から始まった調査と、手元で確かめたこと。</p></header><SearchBox compact />
-  <section class="article-list">{entries.map((article, i) => <ArticleCard article={article} index={i + 1} />)}{!entries.length && <p class="empty-note">公開記事を準備しています。</p>}</section>
+<Base title="記事一覧" description="調べて確かめた記事を、テーマで絞り込んで読む。" filterTopic>
+  <style is:inline set:html={topicCss}></style>
+  <header class="page-heading">
+    <h1>記事</h1>
+  </header>
+  <noscript>
+    <p class="note">スクリプトが無効です。テーマごとの見た目の絞り込みと、戻ったときの位置の復元は動きません。記事自体は各リンクから読めます。テーマ別のページは「テーマ」からも開けます。</p>
+  </noscript>
+  <SearchBox compact />
+  <section class="blurb" data-topic-panel="all">
+    <h2>更新日の新しい順</h2>
+    <p>疑問から始まった調査と、手元で確かめたことです。並びは更新日の新しい順で、人気順ではありません。1本の記事が複数のテーマに入ることがあります。件数は、いま見えている記事の数です。</p>
+  </section>
+  {topics.map((topic) => <section class="blurb" data-topic-panel={topic.id}><h2>{topic.label}</h2><p>{topic.description}</p></section>)}
+  <nav class="topics" aria-label="テーマで絞り込む">
+    <ul>
+      <li><a id="filter-all" data-topic-link="all" href={href('articles/')}>すべて</a></li>
+      {topics.map((topic) => <li><a id={`filter-${topic.id}`} data-topic-link={topic.id} href={href(`articles/?topic=${topic.id}`)}>{topic.label}</a></li>)}
+    </ul>
+  </nav>
+  <p class="result-count" data-count-for="all">{entries.length}件を表示</p>
+  {topics.map((topic) => <p class="result-count" data-count-for={topic.id}>{entries.filter((entry) => entry.data.tags.includes(topic.label)).length}件を表示</p>)}
+  {entries.length ? <ol class="entries" data-filterable>{entries.map((article) => <ArticleCard article={article} />)}</ol> : <p class="empty-note">公開記事を準備しています。</p>}
 </Base>

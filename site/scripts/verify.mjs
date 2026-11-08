@@ -54,4 +54,35 @@ if (info.brotli ?? info.drafts) {
   await access(path.join(outDir, 'demos/brotli/app.mjs'));
   await access(path.join(outDir, 'decks/brotli/evidence/patch-flow.jpg'));
 }
+const indexHtml = await readFile(path.join(outDir, 'articles/index.html'), 'utf8');
+for (const id of ['all', 'nodejs', 'http', 'compression', 'security']) {
+  assert.ok(indexHtml.includes(`data-topic-link="${id}"`), `missing topic filter ${id}`);
+}
+assert.ok(indexHtml.includes('件を表示'), 'missing result count');
+assert.ok(indexHtml.includes('js/list.js'), 'missing list restore script');
+assert.ok(indexHtml.includes('html[data-topic="nodejs"]'), 'topic filter css missing');
+assert.ok(indexHtml.includes('history.scrollRestoration'), 'list scroll boot missing');
+for (const leaked of ['サンプル原稿', '行長を先に決める', '紙面']) assert.ok(!indexHtml.includes(leaked), `prototype sample leaked: ${leaked}`);
+const license = await readFile(path.join(outDir, 'licenses/LINESeedJP-OFL.txt'), 'utf8');
+assert.ok(license.includes('SIL OPEN FONT LICENSE'), 'LINE Seed OFL missing');
+assert.ok(license.includes('LY Corporation'), 'LINE Seed copyright missing');
+const cssParts = [];
+async function walkCss(dir) {
+  for (const entry of await readdir(dir, { withFileTypes: true })) {
+    const file = path.join(dir, entry.name);
+    if (entry.isDirectory()) await walkCss(file);
+    else if (entry.name.endsWith('.css')) cssParts.push(await readFile(file, 'utf8'));
+  }
+}
+await walkCss(outDir);
+const css = cssParts.join('\n');
+for (const text of ['LINE Seed JP', '#1a2740', '#3a4c62', '#f3f0e8', 'prefers-reduced-motion']) {
+  assert.ok(css.includes(text), `missing design token ${text}`);
+}
+assert.ok(css.includes('.woff2'), 'self-hosted font was not bundled');
+if (info.brotli ?? info.drafts) {
+  const articleHtml = await readFile(path.join(outDir, `articles/${articleId}/index.html`), 'utf8');
+  assert.ok(!articleHtml.includes('js/list.js'), 'article page must leave reading position to the browser');
+  assert.ok(!articleHtml.includes('scrollRestoration'), 'article page must not force manual scroll restoration');
+}
 console.log(`PASS: ${files.length} HTML files, ${links} local links/assets/anchors; base=${info.base}; draft preview=${info.drafts}${release ? '; release checks passed' : ''}.`);

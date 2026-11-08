@@ -1,0 +1,15 @@
+---
+import { topics } from '../lib/content';
+const { filter = false } = Astro.props;
+const topicIds = topics.map((topic) => topic.id);
+---
+<script is:inline define:vars={{ topicIds, enableTopic: filter }}>
+  (function () {
+    var known = Object.create(null);
+    for (var i = 0; i < topicIds.length; i += 1) known[topicIds[i]] = true;
+    if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+    if (!enableTopic) return;
+    var topic = new URLSearchParams(location.search).get("topic");
+    if (topic && known[topic]) document.documentElement.setAttribute("data-topic", topic);
+  })();
+</script>

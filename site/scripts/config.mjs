@@ -40,13 +40,21 @@ export const downloads = [
   'talks/brotli/slides.md',
   'talks/brotli/rehearsal.md',
   'talks/brotli/verification.md',
+  'talks/brotli/components/CompressionFlow.vue',
+  'talks/brotli/components/ParcelWorkbench.vue',
+  'talks/brotli/styles/talk.css',
+  'talks/brotli/references/local-fetch-measurement.md',
+  'talks/brotli/.draft-backups/2026-10-30-before-workbench/README.md',
+  'talks/brotli/.draft-backups/2026-10-30-before-removing-measurement/README.md',
+  'talks/brotli/.draft-backups/2026-10-29-before-simple/README.md',
 ];
 
 export function resolveContentLink(url, source) {
   if (url === 'http://127.0.0.1:4177/' || url === 'http://localhost:4177/') return href('labs/brotli/');
   if (/^(?:https?:|mailto:|#|\/)/.test(url)) return url;
   const [filename, fragment] = url.split('#');
-  const target = path.posix.normalize(path.posix.join(path.posix.dirname(source), filename));
+  let target = path.posix.normalize(path.posix.join(path.posix.dirname(source), filename));
+  if (target.endsWith('/')) target += 'README.md';
   let result;
   if (target === `articles/${articleId}.md`) result = href(`articles/${articleId}/`);
   else if (documents.some(d => d.file === target)) result = href(`evidence/${documents.find(d => d.file === target).id}/`);

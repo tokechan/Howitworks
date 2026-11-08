@@ -63,7 +63,7 @@ Markdownの相対リンクはビルド時にサイト内URLへ変換します。
 - 既存シミュレーター → `/demos/brotli/`。ブログの `/labs/brotli/` 内に表示。
 - 既存Slidev → `/decks/brotli/`。発表者ノートを含めます。
 - 実行ログとコード → `/downloads/`。コードは閲覧用の `.txt` として配信。
-- フォントはローカル配信。ライセンスは `/licenses/`。
+- フォントはローカル配信で、実行時に外部のフォント配信へは接続しません。LINE Seed JP Regular / Bold は試作の文字と仮名に絞った改変版で、ライセンス全文は `/licenses/LINESeedJP-OFL.txt`（SIL Open Font License 1.1、© LY Corporation）です。サブセットに無い字は、同梱の Noto Sans JP で表示します。Inter と Noto Sans JP のライセンスも `/licenses/` にあります。
 
 検索対象は記事・検証記録・シミュレーターとLTの紹介文です。スライド内部のノート全文をPagefindが実行・収集する構成ではありません。検索結果は記事、体験用ページ、検証記録・ガイドの順に優先し、同種の結果はPagefindの順位を保ちます。
 
