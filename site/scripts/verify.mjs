@@ -1,6 +1,7 @@
 import { readdir, readFile, stat, access } from 'node:fs/promises';
 import path from 'node:path';
 import assert from 'node:assert/strict';
+import { fontCoverage, characters } from './line-seed.mjs';
 import { outDir, articleId } from './config.mjs';
 
 const info = JSON.parse(await readFile(path.join(outDir, 'build-info.json'), 'utf8'));
@@ -85,4 +86,7 @@ if (info.brotli ?? info.drafts) {
   assert.ok(!articleHtml.includes('js/list.js'), 'article page must leave reading position to the browser');
   assert.ok(!articleHtml.includes('scrollRestoration'), 'article page must not force manual scroll restoration');
 }
-console.log(`PASS: ${files.length} HTML files, ${links} local links/assets/anchors; base=${info.base}; draft preview=${info.drafts}${release ? '; release checks passed' : ''}.`);
+const fonts = await fontCoverage();
+assert.equal(fonts.missing.length, 0, `LINE Seed subset is missing ${characters(fonts.missing)}`);
+assert.equal(fonts.notInUpstream, fonts.recordedNotInUpstream, `LINE Seed upstream gaps changed: ${fonts.notInUpstream}`);
+console.log(`PASS: ${files.length} HTML files, ${links} local links/assets/anchors; base=${info.base}; draft preview=${info.drafts}${release ? '; release checks passed' : ''}; LINE Seed subset covers ${fonts.required} characters, upstream gaps ${fonts.notInUpstream.length}.`);

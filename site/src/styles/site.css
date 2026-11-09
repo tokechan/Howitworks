@@ -1,5 +1,6 @@
-/* LINE Seed JP is the bundled subset (prototype glyphs and kana).
-   Glyphs it does not contain fall back to self-hosted Noto Sans JP. */
+/* LINE Seed JP Regular / Bold, subset from the OFL release (line/seed v20260828).
+   Coverage is the text this site can publish, plus ASCII and kana. Glyphs the
+   upstream font does not contain fall back to self-hosted Noto Sans JP. */
 @font-face {
   font-family: "LINE Seed JP";
   src: url("../fonts/LINESeedJP-Regular.woff2") format("woff2");
