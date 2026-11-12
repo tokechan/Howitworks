@@ -1,7 +1,7 @@
 {
   "recordedAt": "2026-11-09",
   "algorithm": "sha256",
-  "purpose": "Current intended baseline for files listed on 2026-10-31. The 2026-10-31 ledger is unchanged and pinned by historical.sha256. Screenshot paths that are not in git are listed without hashes. Generated copies are checked through their tracked sources.",
+  "purpose": "Current intended baseline for files listed on 2026-10-31. The 2026-10-31 ledger is unchanged and pinned by historical.sha256. Screenshot paths that are not in git are listed without hashes. Generated copies are checked through their tracked sources. On 2026-11-12 the Node.js floor was raised for the 2026-11-11 security release. sha256_20261112 is the current hash of those files; sha256_20261109 remains the 2026-11-09 value.",
   "historical": {
     "path": "web/verification/stage-0-source-hashes.json",
     "recordedAt": "2026-10-31",
@@ -11,9 +11,10 @@
   "changedSince20261031": [
     {
       "path": "talks/brotli/README.md",
-      "reason": "Node.js 26.13.0 の起動手順",
+      "reason": "Node.js 26.13.1 の起動手順（2026-11-11 セキュリティリリース）",
       "sha256_20261031": "3aceeff09ecbc13d95dbe6a8043aa48cc54d62c151e8ba0621842d7a212560ea",
-      "sha256_20261109": "1456390db6311c3283dd527af8269e4eb230b29ae4eb7fc17cd0990a7ebad549"
+      "sha256_20261109": "1456390db6311c3283dd527af8269e4eb230b29ae4eb7fc17cd0990a7ebad549",
+      "sha256_20261112": "4f9cf72162bd3313acdf93f6c5a96b86b894a9eddbd7e0b3d5062ddc709eda86"
     },
     {
       "path": "talks/brotli/.gitignore",
@@ -23,15 +24,17 @@
     },
     {
       "path": "talks/brotli/package-lock.json",
-      "reason": "Node.js 26.13.0 の engines",
+      "reason": "Node.js 26.13.1 の engines（2026-11-11 セキュリティリリース）",
       "sha256_20261031": "10e7ba9a9ad7b6c673089320f3e7a6b04c3bac0292e8f3ce58215b70c6bd810a",
-      "sha256_20261109": "3d2c3fc824816985515a72f6a724549e0ff14f8270eff8694879fc4fb9bf00bd"
+      "sha256_20261109": "3d2c3fc824816985515a72f6a724549e0ff14f8270eff8694879fc4fb9bf00bd",
+      "sha256_20261112": "36f09f08cb8f71607c3b62c8c4e1a3268b4af7bdce96b5c664cbfb0c87ea856b"
     },
     {
       "path": "talks/brotli/package.json",
-      "reason": "Node.js 26.13.0 の engines",
+      "reason": "Node.js 26.13.1 の engines（2026-11-11 セキュリティリリース）",
       "sha256_20261031": "8dec6545ff6c09c75c10e69500e77dc66f3d999c95cb4c33310836ef329b7163",
-      "sha256_20261109": "91e519d171e8bf1bec6fbc7a7ae810cf7b96a9c8908bf822a2fc6290ab145965"
+      "sha256_20261109": "91e519d171e8bf1bec6fbc7a7ae810cf7b96a9c8908bf822a2fc6290ab145965",
+      "sha256_20261112": "8c8f5562e86e8e16da38ca60804675faa62d131f14c98cc986f76190c9ed6ef4"
     },
     {
       "path": "site/README.md",
@@ -41,15 +44,17 @@
     },
     {
       "path": "site/package-lock.json",
-      "reason": "Node.js 26.13.0 の engines",
+      "reason": "Node.js 26.13.1 の engines（2026-11-11 セキュリティリリース）",
       "sha256_20261031": "54741b89cdc58e7b65e67c9d84879a2b2f49387f399a4cd06b65cb09d5d6f885",
-      "sha256_20261109": "9365d0d4ec6a12f9f1e204264dab20d202eeed3d10c2634949d1e7266277f2da"
+      "sha256_20261109": "9365d0d4ec6a12f9f1e204264dab20d202eeed3d10c2634949d1e7266277f2da",
+      "sha256_20261112": "38582469d4a0fceb508b73a374879b243ac6415187876049ca2315e649d11dd5"
     },
     {
       "path": "site/package.json",
-      "reason": "Node.js 26.13.0 の engines と、フォント再生成スクリプト",
+      "reason": "Node.js 26.13.1 の engines（2026-11-11 セキュリティリリース）と、フォント再生成スクリプト",
       "sha256_20261031": "951a09b28de819cf61c6b3dba54e7e2866a8e9fe167a79608ae7d16135a50834",
-      "sha256_20261109": "bf737f09434af03615668cdc04acc8a9158183d0bbc7ce057debe1f1b9e761ff"
+      "sha256_20261109": "bf737f09434af03615668cdc04acc8a9158183d0bbc7ce057debe1f1b9e761ff",
+      "sha256_20261112": "f28615af3d9c1f957de9c0d6b351d1dde808b0b252fbdec7185e9edf6cf20154"
     },
     {
       "path": "site/public/favicon.svg",
@@ -215,11 +220,11 @@
     "notes/brotli-http-auto-decode-2026-10-27.md": "aafbc214eb0204bbb0ca58ca5651ab0c72416e5671f267d9f8f1546b440d693e",
     "talks/brotli/slides.md": "dc0b380d6129b47b7fe817a2286ead255e0a547f765f55237da7a5fb977d0771",
     "talks/brotli/global-bottom.vue": "11ef070bfd3d4fc9c6545edbf7ebf53ff9784affe4eb6eb0532b3d26a4826dd1",
-    "talks/brotli/README.md": "1456390db6311c3283dd527af8269e4eb230b29ae4eb7fc17cd0990a7ebad549",
+    "talks/brotli/README.md": "4f9cf72162bd3313acdf93f6c5a96b86b894a9eddbd7e0b3d5062ddc709eda86",
     "talks/brotli/verification.md": "2028da50528a915aa41d28ce86f53a0caf6c3a85d161c09921840b1472bf8490",
     "talks/brotli/.gitignore": "982181285abade5b5a9be5da43c46ecb8ec493bbb56c1b30a5f1734fe6e2fd55",
-    "talks/brotli/package-lock.json": "3d2c3fc824816985515a72f6a724549e0ff14f8270eff8694879fc4fb9bf00bd",
-    "talks/brotli/package.json": "91e519d171e8bf1bec6fbc7a7ae810cf7b96a9c8908bf822a2fc6290ab145965",
+    "talks/brotli/package-lock.json": "36f09f08cb8f71607c3b62c8c4e1a3268b4af7bdce96b5c664cbfb0c87ea856b",
+    "talks/brotli/package.json": "8c8f5562e86e8e16da38ca60804675faa62d131f14c98cc986f76190c9ed6ef4",
     "talks/brotli/rehearsal.md": "8391ed6b4073f7bec3ee0b8928a24cf48af9a33df6657b0c15903b967e64de5c",
     "talks/brotli/references/local-fetch-measurement.md": "16bbc108ef46661f68768bd18654889df1231fd4053ed5571c9a6ce6beb2b31c",
     "talks/brotli/styles/talk.css": "fc789c54fc6f7c6c8311c9a95cd1222a0c3db164b740f3149e820b8efe104513",
@@ -257,8 +262,8 @@
     "site/README.md": "92771ac7257bc9f245cfea22abed844cba386179dee14d414ef2b4f36fcf4688",
     "site/verification.md": "4f2a64dbb9309c94add7dfb0222cf5be1a6e13811bb2e1cc5c8e4f7da8a40b34",
     "site/.gitignore": "d86cbe2275c57ac2db4904623a359bcbc1ff7b4abcd2b9cbd9f4ae5d255eebf9",
-    "site/package-lock.json": "9365d0d4ec6a12f9f1e204264dab20d202eeed3d10c2634949d1e7266277f2da",
-    "site/package.json": "bf737f09434af03615668cdc04acc8a9158183d0bbc7ce057debe1f1b9e761ff",
+    "site/package-lock.json": "38582469d4a0fceb508b73a374879b243ac6415187876049ca2315e649d11dd5",
+    "site/package.json": "f28615af3d9c1f957de9c0d6b351d1dde808b0b252fbdec7185e9edf6cf20154",
     "site/tsconfig.json": "3b26bcd1eb0f4de19eb74674755e77a9a10f857934748d5af615b9903da6bea5",
     "site/public/favicon.svg": "279269d4dc9c67df1897ae55c0d0c576c68d1632b02a7994bb656ebc10c42000",
     "site/scripts/start.mjs": "baab457a90ce53bc5bcecd310501f6183d40009181c07dec8ca342528430b998",
@@ -288,5 +293,6 @@
     "site/src/pages/topics/index.astro": "1431c566b4f6978b7c3ef350ea5fb1a9c28c754ba8f07b7ad705510000d92996",
     "templates/research-note.md": "f09e0b7a87644a9c1cb4ff5bb185f8701acba741430aa7243f15fc4df2ec13cd",
     "templates/article.md": "f085a50952243a6903311a25ed766ca49279e2427fa72542c8629a5129d790d5"
-  }
+  },
+  "updatedAt": "2026-11-12"
 }

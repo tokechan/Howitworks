@@ -15,12 +15,12 @@
 
 | ファイル | 理由 |
 | --- | --- |
-| `talks/brotli/README.md` | Node.js 26.13.0 の起動手順 |
-| `talks/brotli/package.json` | Node.js 26.13.0 の `engines` |
-| `talks/brotli/package-lock.json` | Node.js 26.13.0 の `engines` |
+| `talks/brotli/README.md` | Node.js 26.13.1 の起動手順（2026-11-11 セキュリティリリース） |
+| `talks/brotli/package.json` | Node.js 26.13.1 の `engines`（2026-11-11 セキュリティリリース） |
+| `talks/brotli/package-lock.json` | Node.js 26.13.1 の `engines`（2026-11-11 セキュリティリリース） |
 | `talks/brotli/.gitignore` | 台帳にあるライセンス本文を clone でも照合できるよう、`public/licenses/` を追跡対象にした |
-| `site/package.json` | Node.js 26.13.0 の `engines` と、フォント再生成スクリプト |
-| `site/package-lock.json` | Node.js 26.13.0 の `engines` |
+| `site/package.json` | Node.js 26.13.1 の `engines`（2026-11-11 セキュリティリリース）と、フォント再生成スクリプト |
+| `site/package-lock.json` | Node.js 26.13.1 の `engines`（2026-11-11 セキュリティリリース） |
 | `site/README.md` | 紙面の書体説明と、公式 LINE Seed からの再サブセット |
 | `site/public/favicon.svg` | 紙面の配色 |
 | `site/scripts/config.mjs` | 下書きビルドが参照するローカル資料の登録 |
@@ -33,5 +33,7 @@
 | `site/src/pages/articles/index.astro` | 紙面の記事一覧 |
 | `site/src/pages/articles/[id].astro` | 紙面の記事ページ |
 | `site/src/pages/topics/[id].astro` | 紙面のテーマページ |
+
+2026-11-12 に、2026-11-11 のセキュリティリリースへ下限を上げた。起動手順、`engines`、未配置の Pages 雛形が対象です。台帳に含まれる5ファイルは、`tracked` と `sha256_20261112` をその日のバイト列へ更新した。`sha256_20261031` と `sha256_20261109` は、それぞれの日付の値のまま残している。
 
 再生成したフォント、その cmap、OFL、この文書、`web/scripts/verify.ts` は 2026-10-31 の台帳の対象外です。フォントの収録は `site` の `check` が検査します。

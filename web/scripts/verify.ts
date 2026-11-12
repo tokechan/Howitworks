@@ -57,7 +57,7 @@ const baseline = JSON.parse(await readFile(path.join(webRoot, 'verification/sour
   tracked: Record<string, string>;
   absent: Record<string, string>;
   generatedCopies: { path: string; source: string; sha256: string }[];
-  changedSince20261031: { path: string; reason: string }[];
+  changedSince20261031: { path: string; reason: string; sha256_20261031: string; sha256_20261109: string; sha256_20261112?: string }[];
 };
 assert.equal(createHash('sha256').update(historicalBytes).digest('hex'), baseline.historical.sha256, '2026-10-31 ledger was modified');
 assert.equal(historical.recordedAt, baseline.historical.recordedAt);
@@ -96,5 +96,9 @@ for (const item of baseline.generatedCopies) assert.ok(Object.hasOwn(historical.
 const accounted = Object.keys(baseline.tracked).length + Object.keys(baseline.absent).length + baseline.generatedCopies.length;
 assert.equal(accounted, Object.keys(historical.files).length, '2026-11-09 baseline does not cover the 2026-10-31 ledger');
 assert.deepEqual(drifted, baseline.changedSince20261031.map(item => item.path), 'Changed-file record does not match the 2026-10-31 ledger');
-for (const item of baseline.changedSince20261031) assert.ok(item.reason.trim().length > 0, `Missing reason: ${item.path}`);
+for (const item of baseline.changedSince20261031) {
+  assert.ok(item.reason.trim().length > 0, `Missing reason: ${item.path}`);
+  assert.equal(historical.files[item.path], item.sha256_20261031, `2026-10-31 hash record changed: ${item.path}`);
+  assert.equal(baseline.tracked[item.path], item.sha256_20261112 ?? item.sha256_20261109, `Current hash record does not match the tracked baseline: ${item.path}`);
+}
 console.log(`PASS: ${checked} local links/assets/anchors; ${Object.keys(baseline.tracked).length} tracked originals match 2026-11-09; ${baseline.generatedCopies.length} generated copies checked via tracked sources; ${Object.keys(baseline.absent).length} local-only paths not hashed; base=${info.base}; draft preview=${info.includeDrafts}`);
