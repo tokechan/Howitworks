@@ -2,5 +2,6 @@ node_modules/
 dist/
 public/simulator/
 public/evidence/
-public/licenses/
+# public/licenses/ is tracked. The 2026-10-31 ledger hashes those three texts,
+# and a fresh clone does not contain talks/brotli/node_modules.
 screenshots/

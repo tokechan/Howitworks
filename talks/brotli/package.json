@@ -9,7 +9,7 @@
     "preview": "node scripts/serve-build.mjs"
   },
   "engines": {
-    "node": ">=22.12.0"
+    "node": ">=26.13.1"
   },
   "overrides": {
     "floating-vue": "5.2.2"

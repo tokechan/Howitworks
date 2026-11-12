@@ -7,4 +7,12 @@ export function getStaticPaths() { return topics.map(topic => ({ params: { id: t
 const { topic } = Astro.props;
 const entries = (await articles()).filter(e => e.data.tags.includes(topic.label));
 ---
-<Base title={`${topic.label}の記事`}><nav class="breadcrumb"><a href={href('topics/')}>テーマ</a><span>/</span><span>{topic.label}</span></nav><header class="page-heading"><p class="eyebrow">TOPIC / {entries.length} NOTES</p><h1>{topic.label}</h1><p>{topic.description}</p></header>{entries.map((article, i) => <ArticleCard article={article} index={i+1} />)}{!entries.length && <p class="empty-note">このテーマの記事を準備しています。</p>}</Base>
+<Base title={`${topic.label}の記事`} restoreList>
+  <nav class="breadcrumb" aria-label="パンくず"><a href={href('topics/')}>テーマ</a><span>/</span><span aria-current="page">{topic.label}</span></nav>
+  <header class="page-heading">
+    <p class="eyebrow">{entries.length}件</p>
+    <h1>{topic.label}</h1>
+    <p>{topic.description}</p>
+  </header>
+  {entries.length ? <ol class="entries">{entries.map((article) => <ArticleCard article={article} />)}</ol> : <p class="empty-note">このテーマの記事を準備しています。</p>}
+</Base>

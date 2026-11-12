@@ -1,16 +1,23 @@
 ---
 import { href } from '../../scripts/config.mjs';
 import { date, topicSlug } from '../lib/content';
-const { article, index = 1 } = Astro.props;
+const { article } = Astro.props;
 const { data, id } = article;
+const tags = data.tags.map((tag: string) => ({ label: tag, slug: topicSlug(tag) }));
 ---
-<article class="article-card">
-  <div class="article-number">{String(index).padStart(2, '0')}<span>NOTE</span></div>
-  <div class="article-card-body">
-    <div class="meta-row"><time datetime={data.updatedAt}>{date(data.updatedAt)}</time><span>更新</span>{data.status === 'draft' && <span class="draft-label">下書き</span>}</div>
-    <h2><a href={href(`articles/${id}/`)}>{data.title}<span aria-hidden="true">↗</span></a></h2>
-    <p>{data.description}</p>
-    <div class="tag-row">{data.tags.map((tag: string) => <a class="tag" href={href(`topics/${topicSlug(tag)}/`)}>{tag}</a>)}</div>
-    <div class="article-formats"><span class="format-label"><i class="dot blue"></i>解説記事</span>{data.simulator && <a href={href(`labs/${data.simulator}/`)}><i class="dot mint"></i>シミュレーター <span>↗</span></a>}{data.talk && <a href={href(`talks/${data.talk}/`)}><i class="dot coral"></i>5分LT <span>↗</span></a>}</div>
-  </div>
-</article>
+<li class="entry" data-topics={tags.map((tag) => tag.slug).join(' ')}>
+  <article>
+    <p class="entry-kicker">
+      <time datetime={data.updatedAt}>{date(data.updatedAt)}</time>
+      <span>更新</span>
+      {data.status === 'draft' && <span class="draft-label">下書き</span>}
+    </p>
+    <h2 class="entry-title"><a id={`link-${id}`} href={href(`articles/${id}/`)}>{data.title}</a></h2>
+    <p class="dek">{data.description}</p>
+    {tags.length > 0 && <ul class="tag-row">{tags.map((tag) => <li><a id={`tag-${id}-${tag.slug}`} href={href(`articles/?topic=${tag.slug}`)}>{tag.label}</a></li>)}</ul>}
+    {(data.simulator || data.talk) && <p class="entry-links">
+      {data.simulator && <a id={`lab-${id}`} href={href(`labs/${data.simulator}/`)}>シミュレーター</a>}
+      {data.talk && <a id={`talk-${id}`} href={href(`talks/${data.talk}/`)}>5分LT</a>}
+    </p>}
+  </article>
+</li>

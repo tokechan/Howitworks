@@ -1,8 +1,10 @@
 ---
 import { href } from '../../scripts/config.mjs';
-const { simulator, talk, small = false } = Astro.props;
+const { simulator, talk, small = false, idPrefix = '' } = Astro.props;
+const labId = idPrefix ? `${idPrefix}-lab` : undefined;
+const talkId = idPrefix ? `${idPrefix}-talk` : undefined;
 ---
 <div class:list={['resource-links', { small }]}>
-  {simulator && <a class="resource-link mint-resource" href={href(`labs/${simulator}/`)}><span class="resource-icon" aria-hidden="true">▷</span><span><span class="eyebrow">INTERACTIVE</span><strong>動かして理解する</strong><small>1ステップずつ、データの流れをたどる</small></span><span class="resource-arrow" aria-hidden="true">↗</span></a>}
-  {talk && <a class="resource-link coral-resource" href={href(`talks/${talk}/`)}><span class="resource-icon" aria-hidden="true">▤</span><span><span class="eyebrow">LIGHTNING TALK</span><strong>5分LTを見る</strong><small>要点をスライドで。詳しくは発表者ノートへ</small></span><span class="resource-arrow" aria-hidden="true">↗</span></a>}
+  {simulator && <a class="resource-link mint-resource" id={labId} href={href(`labs/${simulator}/`)}><span class="resource-icon" aria-hidden="true">▷</span><span><span class="eyebrow">INTERACTIVE</span><strong>動かして理解する</strong><small>1ステップずつ、データの流れをたどる</small></span><span class="resource-arrow" aria-hidden="true">↗</span></a>}
+  {talk && <a class="resource-link coral-resource" id={talkId} href={href(`talks/${talk}/`)}><span class="resource-icon" aria-hidden="true">▤</span><span><span class="eyebrow">LIGHTNING TALK</span><strong>5分LTを見る</strong><small>要点をスライドで。詳しくは発表者ノートへ</small></span><span class="resource-arrow" aria-hidden="true">↗</span></a>}
 </div>

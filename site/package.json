@@ -6,10 +6,11 @@
     "dev": "node scripts/start.mjs",
     "build": "node scripts/build.mjs",
     "preview": "node scripts/serve.mjs",
-    "check": "node scripts/verify.mjs"
+    "check": "node scripts/verify.mjs",
+    "fonts:subset": "node scripts/subset-line-seed.mjs"
   },
   "engines": {
-    "node": ">=22.23.4"
+    "node": ">=26.13.1"
   },
   "dependencies": {
     "@astrojs/markdown-remark": "^7.3.3",

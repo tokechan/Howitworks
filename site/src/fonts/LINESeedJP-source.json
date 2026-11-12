@@ -1,0 +1,25 @@
+{
+  "release": "v20260828",
+  "url": "https://github.com/line/seed/releases/download/v20260828/seed-v20260828.zip",
+  "zipSha256": "58dee0e2b140c3b3d4769b34059fa7150aee7d3c8326358bd87c0879ef98a5b7",
+  "ttf": {
+    "LINESeedJP-Regular.ttf": {
+      "bytes": 3663744,
+      "sha256": "5bd423688e032442b377e14687a629e7b2429998c10b9b06936537e7263493a5"
+    },
+    "LINESeedJP-Bold.ttf": {
+      "bytes": 3776608,
+      "sha256": "53490f437af892d2ae7cf3bdc5ebef9db33ded119d2a53a6d447ac451d61fbd7"
+    }
+  },
+  "cmapCount": 8341,
+  "cmapSha256": "7e2b7dd7dd4228b79faef6120721ecdd5b32a0c3db3e94d3912096a1a254bf60",
+  "notInUpstream": [
+    "↗",
+    "↻",
+    "⌕",
+    "⌘",
+    "▤"
+  ],
+  "subset": "Characters used by articles (including drafts), the notes and guides rendered with this font, and site UI, plus ASCII, kana, and related punctuation that the upstream font contains."
+}
